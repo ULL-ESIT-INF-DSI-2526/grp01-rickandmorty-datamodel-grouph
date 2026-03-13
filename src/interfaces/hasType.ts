@@ -5,5 +5,6 @@
  * - PlanetType: (Ejemplo: Planeta, Estación espacial, Dimensión de bolsillo, Simulación virtual).
  */
 export interface HasType<T> {
-  type: T
+  getType(): T
+  setType(): T
 }

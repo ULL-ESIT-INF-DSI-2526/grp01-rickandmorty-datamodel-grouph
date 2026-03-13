@@ -9,5 +9,6 @@ import { DimensionState } from "../types/dimensionState.js";
  * DUDA: sigue los principios SOLID?
  */
 export interface HasState<T extends (CharacterState | DimensionState)> {
-  state: T
+  getState(): T
+  setState(): T
 }
