@@ -2,7 +2,7 @@ import { describe, test, expect } from 'vitest'
 import { Location } from '../src/classes/location'
 import { Dimension } from '../src/classes/dimension'
 
-const dimension = new Dimension('1', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5)
+const dimension = new Dimension('C-123', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5)
 
 describe("Location function tests", () => {
   test("Instance of Location", () => {

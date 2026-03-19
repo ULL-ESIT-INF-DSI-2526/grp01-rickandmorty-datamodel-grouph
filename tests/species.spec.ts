@@ -4,12 +4,12 @@ import { Location } from "../src/classes/location.js";
 import { SpeciesType } from "../src/types/speciesType.js";
 import { Dimension } from "../src/classes/dimension.js";
 
-const dimension = new Dimension('1', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5)
+const dimension = new Dimension('C-124', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5)
 const location = new Location('C-000', "Tierra", "Planeta de origen de los humanos", 'Planeta', dimension, 48932489124)
 
 describe("Tests para la clase Specie", () => {
   test('Objeto Specie se crea correctamente', () => {
-    const dimension = new Dimension('1', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5);
+    const dimension = new Dimension('C-124', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5);
     const Tierra = new Location('C-000', "Tierra", "Planeta de origen de los humanos", 'Planeta', dimension, 48932489124);
     const humanSpecie = new Specie("C-001", "Human", "Especie común en todas las dimensiones", Tierra, "Humanoide", 80);
     expect(humanSpecie).toBeInstanceOf(Specie);
@@ -30,7 +30,7 @@ describe("Tests para la clase Specie", () => {
   })
 
   test('Se puede cambiar type', () => {
-    const dimension = new Dimension('1', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5);
+    const dimension = new Dimension('C-124', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5);
     const Tierra = new Location('C-000', "Tierra", "Planeta de origen de los humanos", 'Planeta', dimension, 48932489124);
     const humanSpecie = new Specie("C-001", "Human", "Especie común en todas las dimensiones", Tierra, "Humanoide", 80);
     humanSpecie.type = 'Parásito'
@@ -38,7 +38,7 @@ describe("Tests para la clase Specie", () => {
   })
 
   test('Se puede cambiar averageLifespan', () => {
-    const dimension = new Dimension('1', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5);
+    const dimension = new Dimension('C-124', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5);
     const Tierra = new Location('C-000', "Tierra", "Planeta de origen de los humanos", 'Planeta', dimension, 48932489124);
     const humanSpecie = new Specie("C-001", "Human", "Especie común en todas las dimensiones", Tierra, "Humanoide", 80);
     humanSpecie.averageLifespan = 90;
@@ -46,7 +46,7 @@ describe("Tests para la clase Specie", () => {
   })
   
   test('No se puede cambiar originLocation', () => {
-    const dimension = new Dimension('1', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5);
+    const dimension = new Dimension('C-124', "Dimensión Cronenberg", "Dimensión loca e irascible.", 'Activa', 5);
     const Tierra = new Location('C-000', "Tierra", "Planeta de origen de los humanos", 'Planeta', dimension, 48932489124);
     const humanSpecie = new Specie("C-001", "Human", "Especie común en todas las dimensiones", Tierra, "Humanoide", 80);
     expect(() => humanSpecie.originLocation = new Location('C-001', "Marte", "Planeta rojo", 'Planeta', dimension, 0)).toThrowError()
