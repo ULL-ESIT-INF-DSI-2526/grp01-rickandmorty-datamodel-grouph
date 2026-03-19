@@ -1,17 +1,12 @@
 import { describe, test, expect } from 'vitest'
 import { Character } from '../src/classes/character'
+import { Specie } from '../src/classes/species'
 import { Dimension } from '../src/classes/dimension'
+import { Location } from '../src/classes/location'
 
-let dimension: Dimension = new Dimension('1', "Dimensión Cronenberg", 'Activa', 5, "Dimensión loca e irascible.")
-let vader: Character = new Character('Personaje1', 'Vader', 'Humano', dimension, 'Robot-sustituto', 'Federación Galáctica', 8, 'Era el elegido')
-// ID único.
-// Nombre. (Ejemplo: Rick Sanchez, Morty Smith, Evil Morty, Pickle Rick).
-// Especie. Referencia a la especie a la que pertenece el personaje (véase la sección Especies).
-// Dimensión de origen. Referencia a la dimensión de la que procede.
-// Estado. (Ejemplo: Vivo, Muerto, Desconocido, Robot-sustituto).
-// Afiliación. (Ejemplo: Federación Galáctica, Consejo de Ricks, Familia Smith, Independiente).
-// Nivel de inteligencia. Escala del 1 al 10.
-// Descripción. Breve biografía o notas relevantes sobre el personaje.
+const dimension = new Dimension('C-137', 'Dimension Canonica', 'Dimensión original de Rick y Morty', 'Activa', 5)
+const humano: Specie = new Specie('idhumano', 'Humano', 'Especie común en la Tierra', new Location('idlocation', 'Tierra', 'Planeta natal de los humanos', 'Planeta', dimension, 8000000000), 'Humanoide', 80)
+const vader: Character = new Character('Personaje1', 'Vader', 'Era el elegido', humano, dimension, 'Robot-sustituto', 'Federación Galáctica', 8)
 
 describe('Character function test', () => {
   test('vader is instance ofCharacter', () => {
@@ -21,12 +16,46 @@ describe('Character function test', () => {
   test('vader initializes correctly', () => {
     expect(vader.id).toEqual('Personaje1')
     expect(vader.name).toEqual('Vader')
-    expect(vader.specie).toEqual('Humano')
+    expect(vader.specie).toEqual(humano)
     expect(vader.dimension).toEqual(dimension)
     expect(vader.state).toEqual('Robot-sustituto')
     expect(vader.affiliation).toEqual('Federación Galáctica')
     expect(vader.intelligence).toEqual(8)
-    expect(vader.desc).toEqual('Era el elegido')
+    expect(vader.description).toEqual('Era el elegido')
   })
-  
+
+  test('vader throws error with invalid parameters', () => {
+    expect(() => new Character('Personaje2', 'Luke', 'Es un Jedi', humano, dimension, 'Vivo', 'Familia Smith', 11)).toThrowError('Intelligence debe estar en el rango 1-10')
+  })
+
+  test('vader state can be updated', () => {
+    vader.state = 'Vivo'
+    expect(vader.state).toEqual('Vivo')
+  })
+
+  test('vader affiliation can be updated', () => {
+    vader.affiliation = 'Familia Smith'
+    expect(vader.affiliation).toEqual('Familia Smith')
+  })
+
+  test('vader intelligence can be updated', () => {
+    vader.intelligence = 9
+    expect(vader.intelligence).toEqual(9)
+  })
+
+  test('vader specie and dimension cannot be updated', () => {
+    expect(() => vader.specie = humano).toThrowError()
+    expect(() => vader.dimension = dimension).toThrowError()
+  })
+
+  test('vader id and name cannot be updated', () => {
+    expect(() => vader.id = 'Personaje4').toThrowError()
+    expect(() => vader.name = 'Anakin').toThrowError()
+  })
+
+  test('vader intelligence cannot be set to invalid value', () => {
+    expect(() => vader.intelligence = 0).toThrowError('Intelligence debe estar en el rango 1-10')
+    expect(() => vader.intelligence = 11).toThrowError('Intelligence debe estar en el rango 1-10')
+  })
+
 })

@@ -1,0 +1,1 @@
+export type ItemType = 'Arma' | 'Dispositivo de viaje' | 'Biotecnología' | 'Objeto cotidiano absurdo'

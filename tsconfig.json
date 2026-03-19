@@ -1,6 +1,6 @@
 {
   "exclude": [
-    "./tests",
+    "./tests/*.spec.ts",
     "./dist",
     "./docs",
     "./node_modules"
@@ -39,7 +39,7 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
+    //"strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
