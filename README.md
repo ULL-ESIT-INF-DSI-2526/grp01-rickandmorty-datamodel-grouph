@@ -1,1 +1,3 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/U8NqX9JL)
+[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2526/grp01-rickandmorty-datamodel-grouph/badge.svg?branch=main)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2526/grp01-rickandmorty-datamodel-grouph?branch=main)
+[![CI test](https://github.com/ULL-ESIT-INF-DSI-2526/grp01-rickandmorty-datamodel-grouph/actions/workflows/ci.yml/badge.svg)](https://github.com/ULL-ESIT-INF-DSI-2526/grp01-rickandmorty-datamodel-grouph/actions/workflows/ci.yml)
