@@ -8,6 +8,7 @@ const dimension = new Dimension('C-137', 'Dimension Canonica', 'Dimensión origi
 const humano: Specie = new Specie('idhumano', 'Humano', 'Especie común en la Tierra', new Location('idlocation', 'Tierra', 'Planeta natal de los humanos', 'Planeta', dimension, 8000000000), 'Humanoide', 80)
 const vader: Character = new Character('Personaje1', 'Vader', 'Era el elegido', humano, dimension, 'Robot-sustituto', 'Federación Galáctica', 8)
 
+
 describe('Character function test', () => {
   test('vader is instance ofCharacter', () => {
     expect(vader).toBeInstanceOf(Character)
