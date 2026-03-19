@@ -6,10 +6,10 @@ import { HasType } from "../interfaces/hasType.js";
 /**
  * Clase que representa una especie en el universo
  */
-export class Specie extends BasicUniversalObject implements HasType<SpeciesType> {
+export class Species extends BasicUniversalObject implements HasType<SpeciesType> {
   //preguntar si origen debe ser una union de tipos de planeta o dimension
     readonly #originLocation: Location;
-    #specieType: SpeciesType;
+    #speciesType: SpeciesType;
     #averageLifespan: number;
 
     /**
@@ -18,10 +18,10 @@ export class Specie extends BasicUniversalObject implements HasType<SpeciesType>
      * @param name - El nombre de la especie.
      * @param description - Una descripción de la especie.
      * @param originLocation - La ubicación de origen de la especie.
-     * @param specieType - El tipo de la especie.
+     * @param speciesType - El tipo de la especie.
      * @param averageLifespan - El tiempo de vida medio de la especie en años. Debe ser un número no negativo.
      */
-    constructor(id: string, name: string, description: string, originLocation: Location, specieType: SpeciesType, averageLifespan: number) {
+    constructor(id: string, name: string, description: string, originLocation: Location, speciesType: SpeciesType, averageLifespan: number) {
         if (averageLifespan < 0) {throw new Error("El tiempo de vida medio no puede ser negativo");}
         if (originLocation === null) {throw new Error("La ubicación de origen no puede ser nula");}
         /**
@@ -29,7 +29,7 @@ export class Specie extends BasicUniversalObject implements HasType<SpeciesType>
          */
         super(id, name, description);
         this.#originLocation = originLocation;
-        this.#specieType = specieType;
+        this.#speciesType = speciesType;
         this.#averageLifespan = averageLifespan;
     }
 
@@ -38,7 +38,7 @@ export class Specie extends BasicUniversalObject implements HasType<SpeciesType>
      * @returns - un objeto de tipo SpeciesType que representa el tipo de la especie.
      */
     get type(): SpeciesType {
-        return this.#specieType;
+        return this.#speciesType;
     }
 
     /**
@@ -46,7 +46,7 @@ export class Specie extends BasicUniversalObject implements HasType<SpeciesType>
      * @param newType - un objeto de tipo SpeciesType que representa el nuevo tipo de la especie.
      */
     set type(newType: SpeciesType) {
-        this.#specieType = newType;
+        this.#speciesType = newType;
     }
 
     /**
@@ -62,7 +62,7 @@ export class Specie extends BasicUniversalObject implements HasType<SpeciesType>
      * @returns - un objeto de tipo SpeciesType que representa el tipo de la especie.
      */
     get specieType(): SpeciesType {
-        return this.#specieType;
+        return this.#speciesType;
     }
 
     /**

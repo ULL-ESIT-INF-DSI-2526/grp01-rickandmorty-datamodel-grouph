@@ -1,0 +1,2339 @@
+{
+  "dimensiones": [
+    {
+      "id": "C-120",
+      "name": "Dimensión Cronenberg",
+      "description": "Dimensión loca e irascible.",
+      "state": "Activa",
+      "technologyLevel": 5
+    },
+    {
+      "id": "C-121",
+      "name": "Dimensión de los sueños",
+      "description": "Dimensión donde todo es posible, pero también peligrosa.",
+      "state": "Cuarentena",
+      "technologyLevel": 3
+    },
+    {
+      "id": "C-122",
+      "name": "Dimensión de los zombis",
+      "description": "Dimensión infestada de zombis.",
+      "state": "Activa",
+      "technologyLevel": 2
+    },
+    {
+      "id": "C-123",
+      "name": "Dimensión de los robots",
+      "description": "Dimensión dominada por robots inteligentes.",
+      "state": "Activa",
+      "technologyLevel": 8
+    },
+    {
+      "id": "C-124",
+      "name": "Dimensión de los vampiros",
+      "description": "Dimensión oscura y tenebrosa, habitada por vampiros.",
+      "state": "Destruida",
+      "technologyLevel": 1
+    },
+    {
+      "id": "C-125",
+      "name": "Dimensión de los superhéroes",
+      "description": "Dimensión donde existen superhéroes con poderes extraordinarios.",
+      "state": "Activa",
+      "technologyLevel": 7
+    },
+    {
+      "id": "C-126",
+      "name": "Dimensión de los piratas espaciales",
+      "description": "Dimensión llena de piratas espaciales y aventuras intergalácticas.",
+      "state": "Destruida",
+      "technologyLevel": 4
+    },
+    {
+      "id": "C-127",
+      "name": "Dimensión de los magos",
+      "description": "Dimensión donde la magia es real y poderosa.",
+      "state": "Activa",
+      "technologyLevel": 6
+    },
+    {
+      "id": "C-128",
+      "name": "Dimensión de los dinosaurios",
+      "description": "Dimensión prehistórica habitada por dinosaurios.",
+      "state": "Destruida",
+      "technologyLevel": 0
+    },
+    {
+      "id": "C-129",
+      "name": "Dimensión de los alienígenas",
+      "description": "Dimensión habitada por diversas especies de alienígenas.",
+      "state": "Activa",
+      "technologyLevel": 9
+    },
+    {
+      "id": "C-130",
+      "name": "Dimensión de los supervillanos",
+      "description": "Dimensión donde los supervillanos gobiernan y causan caos.",
+      "state": "Destruida",
+      "technologyLevel": 7
+    },
+    {
+      "id": "C-131",
+      "name": "Dimensión de los animales parlantes",
+      "description": "Dimensión donde los animales pueden hablar y tienen sociedades complejas.",
+      "state": "Activa",
+      "technologyLevel": 2
+    },
+    {
+      "id": "C-132",
+      "name": "Dimensión de los sueños lúcidos",
+      "description": "Dimensión donde las personas pueden controlar sus sueños y vivir aventuras increíbles.",
+      "state": "Cuarentena",
+      "technologyLevel": 4
+    },
+    {
+      "id": "C-133",
+      "name": "Dimensión de los superhéroes caídos",
+      "description": "Dimensión donde los superhéroes han caído en desgracia y se han convertido en villanos.",
+      "state": "Activa",
+      "technologyLevel": 6
+    },
+    {
+      "id": "C-134",
+      "name": "Dimensión de los robots asesinos",
+      "description": "Dimensión donde los robots han tomado el control y exterminan a los humanos.",
+      "state": "Cuarentena",
+      "technologyLevel": 9
+    },
+    {
+      "id": "C-135",
+      "name": "Dimensión de los superhéroes adolescentes",
+      "description": "Dimensión donde los superhéroes son adolescentes con problemas típicos  de esa edad.",
+      "state": "Activa",
+      "technologyLevel": 5
+    }
+  ],
+  "localizaciones": [
+    {
+      "id": "idlocation1",
+      "name": "Coruscant",
+      "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 8000000000
+    },
+    {
+      "id": "idlocation2",
+      "name": "Felucia",
+      "description": "Planeta habitado por una especie violenta y primitiva.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 5000000
+    },
+    {
+      "id": "idlocation3",
+      "name": "Alderaan",
+      "description": "Planeta pacífico y próspero, destruido por la Estrella de la Muerte en la peli IV.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 100
+    },
+    {
+      "id": "idlocation4",
+      "name": "Kamino",
+      "description": "Planeta donde se crea",
+      "type": "Ciudadela",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 10000
+    },
+    {
+      "id": "idlocation5",
+      "name": "Geonosis",
+      "description": "Planeta donde residen los geonosianos. Y murió Jango Fett",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 200000
+    },
+    {
+      "id": "idlocation6",
+      "name": "Tatooine",
+      "description": "Planeta desértico, hogar de Anakin y Luke Skywalker.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 200000
+    },
+    {
+      "id": "idlocation7",
+      "name": "Hoth",
+      "description": "Planeta helado, escenario de la batalla entre el Imperio y la Alianza Rebelde en la peli V.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 0
+    },
+    {
+      "id": "idlocation8",
+      "name": "Endor",
+      "description": "Planeta boscoso, hogar de los ewoks y escenario de la batalla final en la peli VI.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 300000
+    },
+    {
+      "id": "idlocation9",
+      "name": "Mustafar",
+      "description": "Planeta volcánico, escenario del duelo entre Anakin y Obi-Wan en la peli III.",
+      "type": "Planeta",
+      "dimension":{
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 1000
+    },
+    {
+      "id": "idlocation10",
+      "name": "Naboo",
+      "description": "Planeta pacífico y hermoso, hogar de Padmé Amidala, mi amor platónico.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 4500000000
+    },
+    {
+      "id": "idlocation11",
+      "name": "Dantooine",
+      "description": "Planeta desértico, escenario de la base rebelde en la peli IV.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 100000
+    },
+    {
+      "id": "idlocation12",
+      "name": "Yavin IV",
+      "description": "Planeta selvático, escenario de la batalla entre el Imperio y la Alianza Rebelde en la peli IV.",
+      "type": "Planeta",
+      "dimension":{
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 10000
+    },
+    {
+      "id": "idlocation13",
+      "name": "Kashyyyk",
+      "description": "Planeta boscoso, hogar de los wookiees y escenario de la batalla en la peli III.",
+      "type": "Planeta",
+      "dimension":{
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 45000000
+    },
+    {
+      "id": "idlocation14",
+      "name": "Mandalore",
+      "description": "Planeta desértico, hogar de los mandalorianos y escenario de varias batallas en las series animadas.",
+      "type": "Planeta",
+      "dimension":{
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 2000000
+    },
+    {
+      "id": "idlocation15",
+      "name": "Sullust",
+      "description": "Planeta volcánico, escenario de la batalla en la peli VI.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 1000000
+    },
+    {
+      "id": "idlocation16",
+      "name": "Dathomir",
+      "description": "Planeta oscuro y peligroso, hogar de las brujas de las sombras y escenario de varias batallas en las series animadas.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 500000
+    },
+    {
+      "id": "idlocation17",
+      "name": "Ilum",
+      "description": "Planeta helado, hogar de los cristales kyber utilizados para construir sables de luz.",
+      "type": "Planeta",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 0
+    },
+    {
+      "id": "idlocation18",
+      "name": "Poliss Massa",
+      "description": "Estación Espacial en donde nacen Luke y Leia tras el duelo en Mustafar",
+      "type": "Estación Espacial",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 1000
+    },
+    {
+      "id": "idlocation19",
+      "name": "Tantive IV",
+      "description": "Nave espacial de la princesa Leia, escenario de la batalla en la peli IV.",
+      "type": "Estación Espacial",
+      "dimension": {
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 100
+     },
+    {
+      "id": "idlocation20",
+      "name": "Death Star",
+      "description": "Estación espacial con capacidad para destruir planetas, escenario de varias batallas en las pelis IV, VI y Rogue One.",
+      "type": "Estación Espacial",
+      "dimension":{
+        "id": "C-120",
+        "name": "Dimensión Cronenberg",
+        "description": "Dimensión loca e irascible.",
+        "state": "Activa",
+        "technologyLevel": 5
+      },
+      "population": 1000000
+    }
+  ],
+  "especies": [
+    {
+      "id": "idspecies1",
+      "name": "Humano",
+      "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Humanoide",
+      "averageLifespan": 80
+    },
+    {
+      "id": "idspecies2",
+      "name": "Wookiee",
+      "description": "Seres peludos y fuertes, conocidos por su lealtad y habilidades de combate.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Humanoide",
+      "averageLifespan": 400
+    },
+    {
+      "id": "idspecies3",
+      "name": "Twilek",
+      "description": "Seres con piel de colores y tentáculos en la cabeza, conocidos por sus mujeres bellas y hombres horrendos.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Humanoide",
+      "averageLifespan": 150
+    },
+    {
+      "id": "idspecies4",
+      "name": "Droid",
+      "description": "Máquinas inteligentes creadas para realizar tareas específicas, desde la limpieza hasta el combate.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Robótico",
+      "averageLifespan": 1000
+    },
+    {
+      "id": "idspecies5",
+      "name": "Ewok",
+      "description": "Seres pequeños y peludos, conocidos por su valentía y habilidades de supervivencia en la naturaleza.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Humanoide",
+      "averageLifespan": 60
+    },
+    {
+      "id": "idspecies6",
+      "name": "Zabrak",
+      "description": "Seres con cuernos en la cabeza y tatuajes faciales, conocidos por su ferocidad en el combate.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Humanoide",
+      "averageLifespan": 70
+    },
+    {
+      "id": "idspecies7",
+      "name": "Togruta",
+      "description": "Seres con piel de colores y grandes orejas, conocidos por su agilidad y habilidades de caza.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Humanoide",
+      "averageLifespan": 85
+    },
+    {
+      "id": "idspecies8",
+      "name": "Mon Calamari",
+      "description": "Seres acuáticos con piel escamosa, conocidos por su habilidad para la ingeniería naval.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Acuático",
+      "averageLifespan": 120
+    },
+    {
+      "id": "idspecies9",
+      "name": "Rodiano",
+      "description": "Seres con piel verde y ojos grandes, conocidos por su habilidad para la caza y el rastreo.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Humanoide",
+      "averageLifespan": 70
+    },
+    {
+      "id": "idspecies10",
+      "name": "Hutt",
+      "description": "Seres grandes y gordos, conocidos por su poder y riqueza en el mundo del crimen.",
+      "originLocation": {
+        "id": "idlocation1",
+        "name": "Coruscant",
+        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+        "type": "Planeta",
+        "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+        },
+        "population": 8000000000
+      },
+      "specieType": "Amorfo",
+      "averageLifespan": 1000
+    }
+  ],
+  "personajes": [
+    {
+      "id": "idcharacter1",
+      "name": "Darth Vader",
+      "desc": "El badass de la galaxia, un villano icónico con una historia trágica y redentora.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Robot-sustituto",
+      "affiliation": "Federación Galáctica",
+      "intelligence": "8"
+    },
+    {
+      "id": "idcharacter2",
+      "name": "Luke Skywalker",
+      "desc": "El héroe de la saga, un joven granjero que se convierte en un poderoso Jedi y salva la galaxia.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter3",
+      "name": "Leia Organa",
+      "desc": "La princesa rebelde, una líder valiente y astuta que lucha por la libertad de la galaxia.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter4",
+      "name": "Han Solo",
+      "desc": "El contrabandista carismático, un piloto habilidoso y un amigo leal que se une a la lucha contra el Imperio.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 8
+    },
+    {
+      "id": "idcharacter5",
+      "name": "Obi-Wan Kenobi",
+      "desc": "El maestro Jedi, un sabio y poderoso guerrero que entrena a Luke Skywalker y lucha contra el lado oscuro.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter6",
+      "name": "Anakin Skywalker",
+      "desc": "El elegido, un joven Jedi con un gran potencial que cae al lado oscuro y se convierte en Darth Vader.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter7",
+      "name": "Yoda",
+      "desc": "El maestro Jedi más sabio y poderoso, un pequeño ser verde con una gran conexión con la Fuerza.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter8",
+      "name": "Emperor Palpatine",
+      "desc": "El malvado emperador, un maestro del lado oscuro que manipula a la galaxia para su propio beneficio.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Federación Galáctica",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter9",
+      "name": "Boba Fett",
+      "desc": "El cazarrecompensas más temido de la galaxia, un guerrero habilidoso y un mercenario implacable.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 8
+    },
+    {
+      "id": "idcharacter10",
+      "name": "Darth Maul",
+      "desc": "El aprendiz de Darth Sidious, un guerrero feroz con una apariencia aterradora y habilidades de combate excepcionales.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 8
+    },
+    {
+      "id": "idcharacter11",
+      "name": "Darth Sidious",
+      "desc": "El maestro del lado oscuro, un manipulador astuto y un estratega brillante que busca el control total de la galaxia.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter12",
+      "name": "Jango Fett",
+      "desc": "El cazarecompensas mandaloriano que sirvio de base para la creación del ejército de clones, un guerrero habilidoso y un mercenario implacable.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter13",
+      "name": "Mace Windu",
+      "desc": "El maestro Jedi n**** con una gran habilidad en el combate con sables de luz, un líder valiente y un defensor de la justicia en la galaxia.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter14",
+      "name": "Qui-Gon Jinn",
+      "desc": "El maestro Jedi rebelde, un sabio y poderoso guerrero que desafía las normas del Consejo Jedi y sigue su propia intuición.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter15",
+      "name": "Plo Koon",
+      "desc": "El maestro Jedi con una apariencia única, un ser sabio y poderoso",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter16",
+      "name": "Kit Fisto",
+      "desc": "El maestro Jedi con una apariencia acuática, un ser sabio y poderoso con habilidades excepcionales en el combate submarino.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter17",
+      "name": "Saesee Tiin",
+      "desc": "El maestro Jedi con una apariencia única, un ser sabio y poderoso con habilidades excepcionales en el combate aéreo.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter18",
+      "name": "Eeth Koth",
+      "desc": "El maestro Jedi con una apariencia única, un ser sabio y poderoso con habilidades excepcionales en el combate cuerpo a cuerpo.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter19",
+      "name": "Admiral Ackbar",
+      "desc": "El almirante rebelde, un líder valiente y astuto que lucha por la libertad de la galaxia.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Familia Smith",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter20",
+      "name": "General Grievous",
+      "desc": "El general cyborg, un guerrero temible con habilidades excepcionales en el combate con sables de luz.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 9
+    },
+    {
+      "id": "idcharacter21",
+      "name": "Count Dooku",
+      "desc": "El conde Sith, un maestro del lado oscuro y un líder carismático que busca el control total de la galaxia.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter22",
+      "name": "Darth Plagueis",
+      "desc": "El maestro Sith legendario, un ser tan poderoso que se dice que podía manipular la vida y la muerte.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter23",
+      "name": "Darth Bane",
+      "desc": "El fundador de la regla de dos, un maestro Sith que estableció que solo puede haber un maestro y un aprendiz en el lado oscuro.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter24",
+      "name": "Darth Revan",
+      "desc": "El maestro Sith redimido, un ser poderoso que cayó al lado oscuro pero luego se arrepintió y luchó por la luz.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter25",
+      "name": "Darth Malgus",
+      "desc": "El guerrero Sith implacable, un ser poderoso que busca la dominación total de la galaxia a través de la fuerza y el miedo.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter26",
+      "name": "Darth Nihilus",
+      "desc": "El señor de la hambre, un ser oscuro y poderoso que se alimenta de la fuerza vital de otros seres para mantener su propia existencia.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter27",
+      "name": "Darth Sion",
+      "desc": "El señor de la ira, un ser oscuro y poderoso que se alimenta de su propio dolor y sufrimiento para mantener su existencia.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter28",
+      "name": "Darth Talon",
+      "desc": "La aprendiz Sith letal, un ser oscuro y poderoso con habilidades excepcionales en el combate cuerpo a cuerpo y el uso de la fuerza.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter29",
+      "name": "Darth Zannah",
+      "desc": "La aprendiz Sith astuta, un ser oscuro y poderoso con habilidades excepcionales en la manipulación de la mente y el uso de la fuerza.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    },
+    {
+      "id": "idcharacter30",
+      "name": "Darth Cognus",
+      "desc": "La aprendiz Sith misteriosa, un ser oscuro y poderoso con habilidades excepcionales en la manipulación de la fuerza y el uso de la tecnología Sith.",
+      "specie": {
+        "id": "idspecies1",
+        "name": "Humano",
+        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+        "originLocation": {
+          "id": "idlocation1",
+          "name": "Coruscant",
+          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+          "type": "Planeta",
+          "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+          },
+          "population": 8000000000
+        },
+        "specieType": "Humanoide",
+        "averageLifespan": 80
+      },
+      "dimension": {
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
+      },
+      "state": "Vivo",
+      "affiliation": "Independiente",
+      "intelligence": 10
+    }
+  ],
+  "inventos": [
+    {
+      "id" : "idarma1",
+      "name" : "Sable de Luz",
+      "desc" : "Objeto cortante y punzante no apto para niños menores de 6 años o usuarios no sensibles a la fuerza.",
+      "inventor" : {
+        "id": "idcharacter1",
+        "name": "Darth Vader",
+        "desc": "El badass de la galaxia, un villano icónico con una historia trágica y redentora.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Robot-sustituto",
+        "affiliation": "Federación Galáctica",
+        "intelligence": "8"
+      },
+      "type" : "Arma",
+      "dangerLevel" : "10"
+    },
+    {
+      "id" : "idarma2",
+      "name" : "Blaster",
+      "desc" : "Arma de fuego de energía, utilizada por soldados, cazarrecompensas y criminales en toda la galaxia.",
+      "inventor" : {
+        "id": "idcharacter2",
+        "name": "Luke Skywalker",
+        "desc": "El héroe de la saga, un joven granjero que se convierte en un poderoso Jedi y lucha contra el malvado Imperio.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 8
+    },
+    {
+      "id" : "idarma3",
+      "name" : "Caza Estelar",
+      "desc" : "Nave espacial utilizada para el combate aéreo, equipada con armas y sistemas de defensa avanzados.",
+      "inventor" : {
+        "id": "idcharacter3",
+        "name": "Han Solo",
+        "desc": "El contrabandista carismático, un piloto habilidoso y un aliado valioso en la lucha contra el Imperio.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 9
+    },
+    {
+      "id" : "idarma4",
+      "name" : "Destructor Estelar",
+      "desc" : "Una estación espacial masiva y poderosa, equipada con armas de destrucción masiva y capaz de destruir planetas enteros.",
+      "inventor" : {
+        "id": "idcharacter4",
+        "name": "Leia Organa",
+        "desc": "La princesa rebelde, una líder valiente y una guerrera habilidosa que lucha por la libertad de la galaxia.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 10
+    },
+    {
+      "id" : "idarma5",
+      "name" : "Sith Holocron",
+      "desc" : "Un dispositivo de almacenamiento de conocimiento Sith, que contiene secretos oscuros y poderosos que pueden ser peligrosos si caen en las manos equivocadas.",
+      "inventor" : {
+        "id": "idcharacter5",
+        "name": "Obi-Wan Kenobi",
+        "desc": "El maestro Jedi sabio, un mentor paciente y un defensor de la justicia en la galaxia.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 10
+    },
+    {
+      "id" : "idarma6",
+      "name" : "Droide de Combate",
+      "desc" : "Un robot diseñado para el combate, equipado con armas y sistemas de defensa avanzados.",
+      "inventor" : {
+        "id": "idcharacter6",
+        "name": "Yoda",
+        "desc": "El maestro Jedi más sabio, un ser pequeño pero poderoso que ha entrenado a generaciones de Jedi en la galaxia.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 9
+    },
+    {
+      "id" : "idarma7",
+      "name" : "Cortador de Plasma",
+      "desc" : "Una herramienta de corte de alta energía, utilizada para cortar a través de metales y otros materiales resistentes.",
+      "inventor" : {
+        "id": "idcharacter7",
+        "name": "Mace Windu",
+        "desc": "El maestro Jedi valiente, un guerrero habilidoso y un líder respetado en la Orden Jedi.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 8
+    },
+    {
+      "id" : "idarma8",
+      "name" : "Generador de Escudo",
+      "desc" : "Un dispositivo que genera un campo de energía protectora, utilizado para defenderse contra ataques y proteger a las personas y las naves espaciales.",
+      "inventor" : {
+        "id": "idcharacter8",
+        "name": "Qui-Gon Jinn",
+        "desc": "El maestro Jedi rebelde, un ser sabio y poderoso que desafía las normas de la Orden Jedi en busca de la verdad y la justicia.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 7
+    },
+    {
+      "id" : "idarma9",
+      "name" : "Cortina de Humo",
+      "desc" : "Un dispositivo que emite una nube de humo denso, utilizado para ocultar movimientos y confundir a los enemigos.",
+      "inventor" : {
+        "id": "idcharacter9",
+        "name": "Anakin Skywalker",
+        "desc": "El elegido, un joven talentoso que se convierte en un poderoso Jedi pero luego cae al lado oscuro como Darth Vader.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 6
+    },
+    {
+      "id" : "idarma10",
+      "name" : "Granada de Fragmentación",
+      "desc" : "Un dispositivo explosivo que emite fragmentos de metal al detonar, utilizado para causar daño a múltiples objetivos en un área determinada.",
+      "inventor" : {
+        "id": "idcharacter10",
+        "name": "Padmé Amidala",
+        "desc": "La senadora valiente, una líder política y una defensora de la justicia en la galaxia.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Familia Smith",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 7
+    },
+    {
+      "id" : "idarma11",
+      "name" : "Lanzallamas",
+      "desc" : "Un dispositivo que emite un chorro de fuego, utilizado para quemar objetivos y crear barreras de fuego.",
+      "inventor" : {
+        "id": "idcharacter11",
+        "name": "Boba Fett",
+        "desc": "El cazarrecompensas legendario, un mercenario implacable con habilidades excepcionales en el combate y la caza de objetivos.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Independiente",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 8
+    },
+    {
+      "id" : "idarma12",
+      "name" : "Cañón de Partículas",
+      "desc" : "Un arma de energía que dispara partículas subatómicas a alta velocidad, utilizada para causar daño a objetivos a larga distancia.",
+      "inventor" : {
+        "id": "idcharacter12",
+        "name": "Darth Maul",
+        "desc": "El aprendiz Sith letal, un ser oscuro y poderoso con habilidades excepcionales en el combate cuerpo a cuerpo y el uso de la fuerza.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Independiente",
+        "intelligence": 9
+      },
+      "type" : "Arma",
+      "dangerLevel" : 9
+    },
+    {
+      "id" : "idarma13",
+      "name" : "Cañón de iones",
+      "desc" : "Un arma de energía que dispara iones a alta velocidad, utilizada para deshabilitar naves espaciales y sistemas electrónicos.",
+      "inventor" : {
+        "id": "idcharacter13",
+        "name": "Darth Sidious",
+        "desc": "El emperador malvado, un ser oscuro y poderoso que manipula la política y la fuerza para lograr sus objetivos de dominación galáctica.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Independiente",
+        "intelligence": 10
+      },
+      "type" : "Arma",
+      "dangerLevel" : 9
+    },
+    {
+      "id" : "idarma14",
+      "name" : "Cañón de Disrupción",
+      "desc" : "Un arma de energía que dispara una onda de energía disruptiva, utilizada para causar daño a objetivos a corta distancia y desestabilizar estructuras y sistemas.",
+      "inventor" : {
+        "id": "idcharacter14",
+        "name": "Darth Plagueis",
+        "desc": "El maestro Sith inmortal, un ser oscuro y poderoso que busca la inmortalidad y el control total sobre la fuerza.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Independiente",
+        "intelligence": 10
+      },
+      "type" : "Arma",
+      "dangerLevel" : 9
+    },
+    {
+      "id" : "idarma15",
+      "name" : "Panzer IV",
+      "desc" : "Un arma de energía que manipula la gravedad para atraer o repeler objetos, utilizada para causar daño a objetivos a larga distancia y controlar el campo de batalla.",
+      "inventor" : {
+        "id": "idcharacter15",
+        "name": "Darth Revan",
+        "desc": "El señor de la guerra redimido, un ser oscuro y poderoso que lucha por la redención y la justicia en la galaxia.",
+        "specie": {
+          "id": "idspecies1",
+          "name": "Humano",
+          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
+          "originLocation": {
+            "id": "idlocation1",
+            "name": "Coruscant",
+            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
+            "type": "Planeta",
+            "dimension": {
+              "id": "C-120",
+              "name": "Dimensión Cronenberg",
+              "description": "Dimensión loca e irascible.",
+              "state": "Activa",
+              "technologyLevel": 5
+            },
+            "population": 8000000000
+          },
+          "specieType": "Humanoide",
+          "averageLifespan": 80
+        },
+        "dimension": {
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
+        },
+        "state": "Vivo",
+        "affiliation": "Independiente",
+        "intelligence": 10
+       },
+      "type" : "Arma",
+      "dangerLevel" : 10
+    }
+  ]
+}

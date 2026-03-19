@@ -1,13 +1,13 @@
 import { describe, test, expect } from 'vitest'
 import { Character } from '../src/classes/character.js'
 import { Item } from '../src/classes/item.js'
-import { Specie } from '../src/classes/species.js'
+import { Species } from '../src/classes/species.js'
 import { Dimension } from '../src/classes/dimension.js'
 import { Location } from '../src/classes/location.js'
 
 
 const dimension = new Dimension('C-137', 'Dimension Canonica', 'Dimensión original de Rick y Morty', 'Activa', 5)
-const humano: Specie = new Specie('idhumano', 'Humano', 'Especie común en la Tierra', new Location('idlocation', 'Tierra', 'Planeta natal de los humanos', 'Planeta', dimension, 8000000000), 'Humanoide', 80)
+const humano: Species = new Species('idhumano', 'Humano', 'Especie común en la Tierra', new Location('idlocation', 'Tierra', 'Planeta natal de los humanos', 'Planeta', dimension, 8000000000), 'Humanoide', 80)
 const vader: Character = new Character('Personaje1', 'Vader', 'Era el elegido', humano, dimension, 'Robot-sustituto', 'Federación Galáctica', 8)
 
 describe("Pruebas de Item", () => {
@@ -41,6 +41,7 @@ describe("Pruebas de Item", () => {
     const inventor = new Character('1', 'Inventor', 'Un gran inventor', humano, dimension, 'Vivo', 'Federación Galáctica', 10)
     const item = new Item('1', "Sable laser", 'Haz de luz rojo', inventor, 'Arma', 10)
     expect(item.inventor).toEqual(inventor)
+     // @ts-expect-error
     expect(() => item.inventor = new Character('2', 'Otro Inventor', 'Otro gran inventor', humano, dimension, 'Vivo', 'Federación Galáctica', 10)).toThrowError()
   })
 })

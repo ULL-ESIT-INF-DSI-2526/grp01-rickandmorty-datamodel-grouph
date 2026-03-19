@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run",
-    "start": "tsc-watch --onSuccess \"node dist/classes/index.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/index.js\"",
     "coverage": "vitest run --coverage --coverage.include \"src/**/*.ts\"",
     "doc": "rm -rf docs && typedoc"
   },
@@ -18,14 +18,11 @@
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-tsdoc": "^0.5.0",
+    "lowdb": "^7.0.1",
     "tsc-watch": "^7.2.0",
     "typedoc": "^0.28.16",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.55.0",
     "vitest": "^4.0.18"
-  },
-  "dependencies": {
-    "lowdb": "^7.0.1",
-    "prompts": "^2.4.2"
   }
 }

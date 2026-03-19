@@ -1,11 +1,11 @@
 import { describe, test, expect } from 'vitest'
 import { Character } from '../src/classes/character'
-import { Specie } from '../src/classes/species'
+import { Species } from '../src/classes/species'
 import { Dimension } from '../src/classes/dimension'
 import { Location } from '../src/classes/location'
 
 const dimension = new Dimension('C-137', 'Dimension Canonica', 'Dimensión original de Rick y Morty', 'Activa', 5)
-const humano: Specie = new Specie('idhumano', 'Humano', 'Especie común en la Tierra', new Location('idlocation', 'Tierra', 'Planeta natal de los humanos', 'Planeta', dimension, 8000000000), 'Humanoide', 80)
+const humano: Species = new Species('idhumano', 'Humano', 'Especie común en la Tierra', new Location('idlocation', 'Tierra', 'Planeta natal de los humanos', 'Planeta', dimension, 8000000000), 'Humanoide', 80)
 const vader: Character = new Character('Personaje1', 'Vader', 'Era el elegido', humano, dimension, 'Robot-sustituto', 'Federación Galáctica', 8)
 
 
@@ -45,12 +45,16 @@ describe('Character function test', () => {
   })
 
   test('vader specie and dimension cannot be updated', () => {
+    // @ts-expect-error
     expect(() => vader.specie = humano).toThrowError()
+    // @ts-expect-error
     expect(() => vader.dimension = dimension).toThrowError()
   })
 
   test('vader id and name cannot be updated', () => {
+    // @ts-expect-error
     expect(() => vader.id = 'Personaje4').toThrowError()
+    // @ts-expect-error
     expect(() => vader.name = 'Anakin').toThrowError()
   })
 
