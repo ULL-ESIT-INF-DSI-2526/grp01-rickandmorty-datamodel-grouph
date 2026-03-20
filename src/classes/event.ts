@@ -3,14 +3,14 @@ import { TravelEvent } from "./travelEvent.js";
 
 export class Event {
   private _description: string;
-  private typeOfEvent: TypeOfEvent;
+  private _typeOfEvent: TypeOfEvent;
 
   constructor(typeOfEvent: TypeOfEvent) {
-    this.typeOfEvent = typeOfEvent;
+    this._typeOfEvent = typeOfEvent;
   }
 
   setTypeOfEvent(typeOfEvent: TypeOfEvent) {
-    this.typeOfEvent = typeOfEvent;
+    this._typeOfEvent = typeOfEvent;
   }
 
   get description(): string {
@@ -21,8 +21,12 @@ export class Event {
     this._description = desc;
   }
 
+  get typeOfEvent(): TypeOfEvent {
+    return this._typeOfEvent;
+  }
+
   register() {
-    this.description = this.typeOfEvent.createDescription();
+    this.description = this._typeOfEvent.createDescription();
   }
 }
 

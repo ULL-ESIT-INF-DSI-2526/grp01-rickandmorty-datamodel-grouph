@@ -3,7 +3,15 @@ import { database } from "../db/db.js";
 
 export class DeployEvent implements TypeOfEvent {
 
-  constructor(private itemId: string, private locationId: string) {}
+  constructor(private _itemId: string, private _locationId: string) {}
+
+  get itemId(): string {
+    return this._itemId;
+  }
+
+  get locationId(): string{
+    return this._locationId;
+  }
 
   createDescription(): string {
     const item = database.data.inventos.find(item => item.id === this.itemId);

@@ -1,8 +1,18 @@
 import { database } from "../db/db.js";
 import { Character } from "./character.js";
+import { Location } from "./location.js";
+import { Dimension } from "./dimension.js";
+import { Species } from "./species.js";
+import { Affiliation } from "../types/affiliation.js";
+import { CharacterState } from "../types/characterState.js";
 import { CRUD } from "./crud/isCRUD.js";
+import { ItemCRUD } from "./crud/itemCRUD.js";
 import { Event } from "./event.js";
+import { DeployEvent } from "./deployEvent.js";
 import { BasicUniversalObject } from "./basicUniversalObject.js";
+import { ItemType } from "../types/itemType.js";
+import { LocationType } from "../types/locationType.js";
+import { Item } from "./item.js";
 
 /**
  * Clase MultiverseManager que implementa el patrón Singleton para gestionar el multiverso de Rick y Morty. 
@@ -84,6 +94,128 @@ export class MultiverseManager {
    }
    
 
+   public consultLocationByName(name: string): Location[] {
+      const locations: Location[] = database.data.localizaciones.filter(loc => loc.name.toLowerCase().includes(name.toLowerCase()));
+      if (locations.length === 0) throw new Error(`La localización con name ${name} no existe.`)
+      return locations;
+   }
+
+   public consultLocationByType(type: LocationType): Location[] {
+      const locations: Location[] = database.data.localizaciones.filter(loc => loc.type.toLowerCase().includes(type.toLowerCase()));
+      if (locations.length === 0) throw new Error(`La localización con type ${type} no existe.`)
+      return locations;
+   }
+
+   public consultLocationByDimension(dim: string): Location[] {
+      const locations: Location[] = database.data.localizaciones.filter(loc => loc.dimension.id == dim);
+      if (locations.length === 0) throw new Error(`La localización con dimensión ${dim} no existe.`)
+      return locations;
+   }
+
+   public consultCharacterByDimension(dim: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+      let characters: Character[] = database.data.personajes.filter(pj => pj.dimension.id == dim);
+      if (characters.length === 0) throw new Error(`El personaje con dimensión ${dim} no existe.`)
+
+      if (nameOrIntelligence == "name" && sorttype == "asc") {
+        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
+      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
+         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
+         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
+         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
+      }
+      return characters;
+   }
+
+   public consultCharacterBySpecies(sp: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+      let characters: Character[] = database.data.personajes.filter(pj => pj.specie.name == sp);
+      if (characters.length === 0) throw new Error(`El personaje con especie ${sp} no existe.`)
+
+      if (nameOrIntelligence == "name" && sorttype == "asc") {
+        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
+      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
+         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
+         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
+         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
+      }
+      return characters;
+   }
+
+   public consultCharacterByLocation(affi: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+      let characters: Character[] = database.data.personajes.filter(pj => pj.affiliation == affi);
+      if (characters.length === 0) throw new Error(`El personaje con afiliación ${affi} no existe.`)
+
+      if (nameOrIntelligence == "name" && sorttype == "asc") {
+        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
+      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
+         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
+         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
+         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
+      }
+      return characters;
+   }
+
+   public consultCharacterByState(state: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+      let characters: Character[] = database.data.personajes.filter(pj => pj.state == state);
+      if (characters.length === 0) throw new Error(`El personaje con  ${state} no existe.`)
+
+      if (nameOrIntelligence == "name" && sorttype == "asc") {
+        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
+      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
+         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
+         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
+         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
+      }
+      return characters;
+   }
+
+   public consultCharacterByName(name: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+     let characters: Character[] = database.data.personajes.filter(pj => pj.name == name);
+      if (characters.length === 0) throw new Error(`El personaje con name ${name} no existe.`)
+      
+      if (nameOrIntelligence == "name" && sorttype == "asc") {
+        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
+      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
+         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
+         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
+      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
+         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
+      }
+      return characters;
+   }
+
+      public consultItemByName(name: string): Item[]{
+         const items: Item[] = database.data.inventos.filter(inv => inv.name.toLowerCase().includes(name.toLowerCase()));
+         if (items.length === 0) throw new Error(`El invento con name ${name} no existe.`)
+         return items;
+      }
+
+      public consultItemByType(type: ItemType): Item[]{
+         const items: Item[] = database.data.inventos.filter(inv => inv.type.toLowerCase().includes(type.toLowerCase()));
+         if (items.length === 0) throw new Error(`El invento con type ${type} no existe.`)
+         return items;
+      }
+
+      public consultItemByInventor(inventor: string): Item[]{
+         const items: Item[] = database.data.inventos.filter(inv => inv.inventor.name.toLowerCase().includes(inventor.toLowerCase()));
+         if (items.length === 0) throw new Error(`El invento con inventor ${inventor} no existe.`)
+         return items;
+      }
+
+      public consultItemByDanger(danger: number): Item[]{
+         const items: Item[] = database.data.inventos.filter(inv => inv.danger == danger);
+         if (items.length === 0) throw new Error(`El invento con nivel de peligro ${danger} no existe.`)
+         return items;
+      }
+      
    /**
     * Registra un evento interdimensional en el historial de eventos del multiverso. 
     * Este método se puede utilizar para llevar un registro de los viajes interdimensionales, 
@@ -124,8 +256,70 @@ export class MultiverseManager {
    /**
     * Detecta las dimensiones destruidas o personajes que cuya dimensión de origen ya no existe
     */
-   public controlStateMultiverse(mode: "dimensions" | "characters") {
+   public controlStateMultiverse(mode: "dimensions" | "characters"): BasicUniversalObject[] | undefined {
+     if (mode == "dimensions") {
+        const dimension: Dimension[] = database.data.dimensiones.filter(dim => dim.state == "Destruida");
+        return dimension;
+     } else if (mode == "characters") {
+        const character: Character[] = database.data.personajes.filter(pj => pj.dimension.state == "Destruida");
+        return character;
+     } else {  // En caso de que no existan dimensiones destruidas
+         const dim: Dimension[] = []
+        return dim;
+     }
+   }
+
+   //reporte de dimensiones activas con su nivel tecnológico, debe devolver un array de pares (dimensionid, nivel tecnológico)
+   public reportDimensions(): {dimensionId: string, techLevel: number}[] {
+      const dimensions = database.data.dimensiones.filter(dim => dim.state == "Activa");
+      return dimensions.map(dim => ({dimensionId: dim.id, techLevel: dim.tecnologyLevel}));
+   }
+
+   public reportCharacters(): Character[] {
+     const characters = database.data.personajes.filter(pj => pj);
+
+     let maxVersions: number = this.getAlternativeVersions(characters[0].name).length
+
+     // Buscamos el número máximo de versiones
+     for (let i = 0; i < characters.length; i++) {
+       let newMax = this.getAlternativeVersions(characters[i].name).length
+       if (maxVersions < newMax) {
+         maxVersions = newMax
+       }
+     }
+
+     // Guardamos los personajes con el número máximo de versiones
+     let result: Character[] = [];
+     for (let i = 0; i < characters.length; i++) {
+       if (maxVersions == this.getAlternativeVersions(characters[i].name).length) {
+         result.push(characters[i])
+       }
+     }
+
+     return result;
+   }
+
+   public reportItems(): Item[] {
+     // Primero filtramos los eventos tipo Deploy
+     const events: Event[] = this._eventHistory.filter(event => typeof(event.typeOfEvent) == typeof(DeployEvent))
+     
+     const dpev: DeployEvent = new DeployEvent("iditem", "idlocation");
+      events[0].setTypeOfEvent(dpev);
+
+     // Sacamos una lista de los items de esos eventos
+     let items: Item[] = [];
+     for (let i = 0; i < events.length; i++) {
+       let event = events[i].typeOfEvent
+       if () {
+       let item = database.data.inventos.find(item => item.id == events[i].typeOfEvent.itemId)
+       items.push()
+       }
+     }
      
    }
 
+   public reportInterdimensionalTravels(characterName: string): Event[] {
+     const travelEvents: Event[] = this._eventHistory.filter(event => event.description.includes(characterName) && event.description.includes("viaje interdimensional"));
+       return travelEvents;
+    }
 }
