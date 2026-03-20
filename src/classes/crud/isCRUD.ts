@@ -6,8 +6,8 @@ import { BasicUniversalObject } from "../basicUniversalObject.js"
 
 export abstract class CRUD<T extends BasicUniversalObject> implements isAddable<T>, isDeleteable, isReadable<T>, isUpdatable<T> {
   constructor() {}
-  abstract add(item: T): void;
-  abstract delete(id: string): void;
-  abstract read(id: string): T;
-  abstract update(id: string, item: T): void;
+  abstract add(item: T): Promise<void>;
+  abstract delete(id: string): Promise<void>;
+  abstract read(id: string):T;
+  abstract update(id: string, item: T): Promise<void>;
 }

@@ -14,19 +14,21 @@ export class SpeciesCRUD extends CRUD<Species> {
    * Añade una nueva especie a la base de datos
    * @param item - Species que queremos añadir
    */
-  add(item: Species): void {
+  async add(item: Species): Promise<void> {
     if (database.data.especies.some(d => d.id === item.id)) throw new Error(`La especie con id ${item.id} ya existe.`)
     database.data.especies.push(item)
+    await database.write()
   }
 
   /**
    * Elimina la especie con identificador igual a id de la base de datos
    * @param id - id de la especie que queremos eliminar
    */
-  delete(id: string): void {
+  async delete(id: string): Promise<void> {
     const index = database.data.especies.findIndex(d => d.id === id)
     if (index === -1) throw new Error(`La especie con id ${id} no existe.`)
     database.data.especies.splice(index, 1)
+    await database.write()
   }
 
   /**
@@ -35,8 +37,9 @@ export class SpeciesCRUD extends CRUD<Species> {
    * @returns La especie con el identificador igual a id
    */
   read(id: string): Species {
-    if (database.data.especies.find(d => d.id === id) === undefined) throw new Error(`La especie con id ${id} no existe.`)
-    return database.data.especies.find(d => d.id === id) as Species
+    const species = database.data.especies.find(d => d.id === id)
+    if (!species) throw new Error(`La especie con id ${id} no existe.`)
+    return species
   }
 
   /**
@@ -44,9 +47,10 @@ export class SpeciesCRUD extends CRUD<Species> {
    * @param id - id de la especie que queremos actualizar
    * @param item - Nuevo estado de la especie
    */
-  update(id: string, item: Species): void {
+  async update(id: string, item: Species): Promise <void> {
     const index = database.data.especies.findIndex(d => d.id === id)
     if (index === -1) throw Error(`La especie con id ${id} no existe`)
     database.data.especies[index] = item
+    await database.write()
   }
 }

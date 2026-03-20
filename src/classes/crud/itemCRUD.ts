@@ -14,19 +14,21 @@ export class ItemCRUD extends CRUD<Item> {
    * Añade un nueva invento a la base de datos
    * @param item - Item que queremos añadir
    */
-  add(item: Item): void {
+  async add(item: Item): Promise<void> {
     if (database.data.inventos.some(d => d.id === item.id)) throw new Error(`El invento con id ${item.id} ya existe.`)
     database.data.inventos.push(item)
+    await database.write()
   }
 
   /**
    * Elimina el invento con identificador igual a id de la base de datos
    * @param id - id de el invento que queremos eliminar
    */
-  delete(id: string): void {
+  async delete(id: string): Promise<void> {
     const index = database.data.inventos.findIndex(d => d.id === id)
     if (index === -1) throw new Error(`El invento con id ${id} no existe.`)
     database.data.inventos.splice(index, 1)
+    await database.write();
   }
 
   /**
@@ -35,8 +37,9 @@ export class ItemCRUD extends CRUD<Item> {
    * @returns el invento con el identificador igual a id
    */
   read(id: string): Item {
-    if (database.data.inventos.find(d => d.id === id) === undefined) throw new Error(`El invento con id ${id} no existe.`)
-    return database.data.inventos.find(d => d.id === id) as Item
+    const item = database.data.inventos.find(d => d.id === id)
+    if (!item) throw new Error(`El invento con id ${id} no existe.`)
+    return item
   }
 
   /**
@@ -44,9 +47,10 @@ export class ItemCRUD extends CRUD<Item> {
    * @param id - id de el invento que queremos actualizar
    * @param item - Nuevo estado de el invento
    */
-  update(id: string, item: Item): void {
-    const index = database.data.inventos.findIndex(d => d.id === id)
-    if (index === -1) throw Error(`El invento con id ${id} no existe`)
-    database.data.inventos[index] = item
+  async update(id: string, item: Item): Promise<void> {
+    const index = database.data.inventos.findIndex(d => d.id === id);
+    if (index === -1) throw Error(`El invento con id ${id} no existe`);
+    database.data.inventos[index] = item;
+    await database.write();
   }
 }

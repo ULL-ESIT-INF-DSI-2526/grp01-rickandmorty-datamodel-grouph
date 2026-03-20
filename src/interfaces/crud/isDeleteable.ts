@@ -1,3 +1,3 @@
 export interface isDeleteable {
-  delete(id: string): void;
+  delete(id: string): Promise <void>;
 }

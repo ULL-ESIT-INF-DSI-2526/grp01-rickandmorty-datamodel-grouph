@@ -14,19 +14,23 @@ export class CharacterCRUD extends CRUD<Character> {
    * Añade un nuevo personaje a la base de datos
    * @param item - Character que queremos añadir
    */
-  add(item: Character): void {
+  async add(item: Character): Promise<void> {
     if (database.data.personajes.some(d => d.id === item.id)) throw new Error(`El personaje con id ${item.id} ya existe.`)
     database.data.personajes.push(item)
+
+    await database.write()
   }
 
   /**
    * Elimina el personaje con identificador igual a id de la base de datos
    * @param id - id de el personaje que queremos eliminar
    */
-  delete(id: string): void {
+  async delete(id: string): Promise<void> {
     const index = database.data.personajes.findIndex(d => d.id === id)
     if (index === -1) throw new Error(`El personaje con id ${id} no existe.`)
     database.data.personajes.splice(index, 1)
+
+    await database.write()
   }
 
   /**
@@ -35,8 +39,9 @@ export class CharacterCRUD extends CRUD<Character> {
    * @returns el personaje con el identificador igual a id
    */
   read(id: string): Character {
-    if (database.data.personajes.find(d => d.id === id) === undefined) throw new Error(`El personaje con id ${id} no existe.`)
-    return database.data.personajes.find(d => d.id === id) as Character
+    const character = database.data.personajes.find(d => d.id === id)
+    if (!character) throw new Error(`El personaje con id ${id} no existe.`)
+    return character
   }
 
   /**
@@ -44,9 +49,11 @@ export class CharacterCRUD extends CRUD<Character> {
    * @param id - id de el personaje que queremos actualizar
    * @param item - Nuevo estado de la dimensión
    */
-  update(id: string, item: Character): void {
+  async update(id: string, item: Character): Promise<void> {
     const index = database.data.personajes.findIndex(d => d.id === id)
     if (index === -1) throw Error(`El personaje con id ${id} no existe`)
     database.data.personajes[index] = item
+
+    await database.write()
   }
 }

@@ -18,7 +18,7 @@ export class TravelEvent implements TypeOfEvent {
     if (this.date > new Date()) {
       throw new Error("Evento fallido. Fecha no válida");
     }
-    const event = ` ${character.name} viajó a la dimensión ${dimension.name}. Motivo del viaje: ${this.reason}. Fecha: ${this.date.toLocaleString()}.`;
+    const event = `${character.name} viajó a la dimensión ${dimension.name}. Motivo del viaje: ${this.reason}. Fecha: ${this.date.toLocaleString()}.`;
     return event;
   }
 }

@@ -1,3 +1,3 @@
 export interface isAddable<T> {
-  add(item: T): void;
+  add(item: T): Promise<void>;
 }

@@ -14,19 +14,21 @@ export class LocationCRUD extends CRUD<Location> {
    * Añade una nueva localización a la base de datos
    * @param item - Location que queremos añadir
    */
-  add(item: Location): void {
+  async add(item: Location): Promise<void> {
     if (database.data.localizaciones.some(d => d.id === item.id)) throw new Error(`La localización con id ${item.id} ya existe.`)
     database.data.localizaciones.push(item)
+    await database.write()
   }
 
   /**
    * Elimina la localización con identificador igual a id de la base de datos
    * @param id - id de la localización que queremos eliminar
    */
-  delete(id: string): void {
-    const index = database.data.localizaciones.findIndex(d => d.id === id)
-    if (index === -1) throw new Error(`La localización con id ${id} no existe.`)
-    database.data.localizaciones.splice(index, 1)
+  async delete(id: string): Promise<void> {
+    const index = database.data.localizaciones.findIndex(d => d.id === id);
+    if (index === -1) throw new Error(`La localización con id ${id} no existe.`);
+    database.data.localizaciones.splice(index, 1);
+    await database.write();
   }
 
   /**
@@ -35,8 +37,9 @@ export class LocationCRUD extends CRUD<Location> {
    * @returns La localización con el identificador igual a id
    */
   read(id: string): Location {
-    if (database.data.localizaciones.find(d => d.id === id) === undefined) throw new Error(`La localización con id ${id} no existe.`)
-    return database.data.localizaciones.find(d => d.id === id) as Location
+    const location = database.data.localizaciones.find(d => d.id === id)
+    if (!location) throw new Error(`La localización con id ${id} no existe.`)
+    return location
   }
 
   /**
@@ -44,9 +47,10 @@ export class LocationCRUD extends CRUD<Location> {
    * @param id - id de la localización que queremos actualizar
    * @param item - Nuevo estado de la localización
    */
-  update(id: string, item: Location): void {
+  async update(id: string, item: Location): Promise<void> {
     const index = database.data.localizaciones.findIndex(d => d.id === id)
     if (index === -1) throw Error(`La localización con id ${id} no existe`)
     database.data.localizaciones[index] = item
+    await database.write()
   }
 }

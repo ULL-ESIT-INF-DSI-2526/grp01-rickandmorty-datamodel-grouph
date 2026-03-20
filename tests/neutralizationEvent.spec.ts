@@ -7,7 +7,12 @@ describe("Pruebas de NeutralizationEvent", () => {
   })
 
   test("createDescription()", () => {
-    const neutralizationEvent = new NeutralizationEvent("C-120", "Thanos chascó los dedos");
-    expect(neutralizationEvent.createDescription()).toBe("Neutralización del artefacto Sable de luz en la localización Tatooine");
+    const neutralizationEvent = new NeutralizationEvent("idarma1", "idlocation6");
+    expect(neutralizationEvent.createDescription()).toBe("Neutralización del artefacto Sable de Luz en la localización Tatooine");
+  
+    const neutralization2Event = new NeutralizationEvent("idarma99", "idlocation6");
+    expect(() => neutralization2Event.createDescription()).toThrowError("Evento fallido. No se encontró el personaje con ID idarma99.");
+     const neutralization3Event = new NeutralizationEvent("idarma1", "idlocation99");
+    expect(() => neutralization3Event.createDescription()).toThrowError("Evento fallido. No se encontró la localización con ID idlocation99.")
   });
 })

@@ -83,63 +83,6 @@ export class MultiverseManager {
       return this._crudManager.read(x);
    }
    
-   // /**
-   //  * Añade un nuevo personaje a la base de datos. Antes de agregarlo, verifica si ya existe un personaje
-   //  * con el mismo ID para evitar duplicados.
-   //  * @param character - El personaje que se desea agregar a la base de datos.
-   //  */
-   // public async addCharacter(character: Character): Promise<void> {
-   //   const existingCharacter = database.data.personajes.find(pj => pj.id === character.id);
-   //   if (existingCharacter) {
-   //     throw new Error(`El personaje con ID ${character.id} ya existe en la base de datos.`);
-   //   }
-   //   database.data.personajes.push(character);
-   //   await database.write();
-   // }
-   // /**
-   //  * Añade un nuevo invento a la base de datos. Antes de agregarlo, verifica si ya existe un invento,
-   //  * con el mismo ID para evitar duplicados.
-   //  * @param item - El invento que se desea agregar a la base de datos.
-   //  */
-   // public async addItem(item: Item): Promise<void> {
-   //    const existingItem = database.data.inventos.find(inv => inv.id === item.id);
-   //     if (existingItem) {
-   //       throw new Error(`El ítem con ID ${item.id} ya existe en la base de datos.`);
-   //        return;
-   //     }
-   //     database.data.inventos.push(item);
-   //     await database.write();
-   // }
-
-   // /**
-   //  * Añade una nueva localización a la base de datos. Antes de agregarla, verifica si ya existe 
-   //  * una localización
-   //  * @param location - La localización que se desea agregar a la base de datos.
-   //  */
-   // public async addLocation(location: Location): Promise <void>{
-   //    const existingLocation = database.data.localizaciones.find(loc => loc.id === location.id);
-   //       if (existingLocation) {
-   //          throw new Error(`La localización con ID ${location.id} ya existe en la base de datos.`);
-   //          return;
-   //       }
-   //       database.data.localizaciones.push(location);
-   //       await database.write();
-   // }
-
-   // /**
-   //  * Añade una nueva especie a la base de datos. Antes de agregarla, verifica si ya existe una especie
-   //  * con el mismo ID para evitar duplicados.
-   //  * @param species - La especie que se desea agregar a la base de datos.
-   //  */
-   // public async addSpecies(species: Species): Promise<void> {
-   //    const existingSpecies = database.data.especies.find(esp => esp.id === species.id);
-   //     if (existingSpecies) {
-   //        console.log(`La especie con ID ${species.id} ya existe en la base de datos.`);
-   //        return;
-   //     }
-   //     database.data.especies.push(species);
-   //     await database.write();
-   // }
 
    /**
     * Registra un evento interdimensional en el historial de eventos del multiverso. 
@@ -177,4 +120,12 @@ export class MultiverseManager {
       const alternativeVersions: Character[] = database.data.personajes.filter(pj => pj.name.toLowerCase().includes(characterName.toLowerCase()));
       return alternativeVersions;
    }
+
+   /**
+    * Detecta las dimensiones destruidas o personajes que cuya dimensión de origen ya no existe
+    */
+   public controlStateMultiverse(mode: "dimensions" | "characters") {
+     
+   }
+
 }
