@@ -231,7 +231,7 @@
       "name": "Mustafar",
       "description": "Planeta volcánico, escenario del duelo entre Anakin y Obi-Wan en la peli III.",
       "type": "Planeta",
-      "dimension": {
+      "dimension":{
         "id": "C-120",
         "name": "Dimensión Cronenberg",
         "description": "Dimensión loca e irascible.",
@@ -273,7 +273,7 @@
       "name": "Yavin IV",
       "description": "Planeta selvático, escenario de la batalla entre el Imperio y la Alianza Rebelde en la peli IV.",
       "type": "Planeta",
-      "dimension": {
+      "dimension":{
         "id": "C-120",
         "name": "Dimensión Cronenberg",
         "description": "Dimensión loca e irascible.",
@@ -287,7 +287,7 @@
       "name": "Kashyyyk",
       "description": "Planeta boscoso, hogar de los wookiees y escenario de la batalla en la peli III.",
       "type": "Planeta",
-      "dimension": {
+      "dimension":{
         "id": "C-120",
         "name": "Dimensión Cronenberg",
         "description": "Dimensión loca e irascible.",
@@ -301,7 +301,7 @@
       "name": "Mandalore",
       "description": "Planeta desértico, hogar de los mandalorianos y escenario de varias batallas en las series animadas.",
       "type": "Planeta",
-      "dimension": {
+      "dimension":{
         "id": "C-120",
         "name": "Dimensión Cronenberg",
         "description": "Dimensión loca e irascible.",
@@ -379,13 +379,13 @@
         "technologyLevel": 5
       },
       "population": 100
-    },
+     },
     {
       "id": "idlocation20",
       "name": "Death Star",
       "description": "Estación espacial con capacidad para destruir planetas, escenario de varias batallas en las pelis IV, VI y Rogue One.",
       "type": "Estación Espacial",
-      "dimension": {
+      "dimension":{
         "id": "C-120",
         "name": "Dimensión Cronenberg",
         "description": "Dimensión loca e irascible.",
@@ -634,11 +634,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Robot-sustituto",
       "affiliation": "Federación Galáctica",
@@ -670,11 +670,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -706,11 +706,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -742,11 +742,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -778,11 +778,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -814,11 +814,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -850,11 +850,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -886,11 +886,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Federación Galáctica",
@@ -922,11 +922,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -958,11 +958,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -994,11 +994,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1030,11 +1030,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1066,11 +1066,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -1102,11 +1102,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -1138,11 +1138,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -1174,11 +1174,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -1210,11 +1210,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -1246,11 +1246,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -1282,11 +1282,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Familia Smith",
@@ -1318,11 +1318,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1354,11 +1354,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1390,11 +1390,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1426,11 +1426,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1462,11 +1462,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1498,11 +1498,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1534,11 +1534,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1570,11 +1570,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1606,11 +1606,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1642,11 +1642,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1678,11 +1678,11 @@
         "averageLifespan": 80
       },
       "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
+          "id": "C-120",
+          "name": "Dimensión Cronenberg",
+          "description": "Dimensión loca e irascible.",
+          "state": "Activa",
+          "technologyLevel": 5
       },
       "state": "Vivo",
       "affiliation": "Independiente",
@@ -1691,10 +1691,10 @@
   ],
   "inventos": [
     {
-      "id": "idarma1",
-      "name": "Sable de Luz",
-      "desc": "Objeto cortante y punzante no apto para niños menores de 6 años o usuarios no sensibles a la fuerza.",
-      "inventor": {
+      "id" : "idarma1",
+      "name" : "Sable de Luz",
+      "desc" : "Objeto cortante y punzante no apto para niños menores de 6 años o usuarios no sensibles a la fuerza.",
+      "inventor" : {
         "id": "idcharacter1",
         "name": "Darth Vader",
         "desc": "El badass de la galaxia, un villano icónico con una historia trágica y redentora.",
@@ -1720,24 +1720,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Robot-sustituto",
         "affiliation": "Federación Galáctica",
         "intelligence": "8"
       },
-      "type": "Arma",
-      "dangerLevel": "10"
+      "type" : "Arma",
+      "dangerLevel" : "10"
     },
     {
-      "id": "idarma2",
-      "name": "Blaster",
-      "desc": "Arma de fuego de energía, utilizada por soldados, cazarrecompensas y criminales en toda la galaxia.",
-      "inventor": {
+      "id" : "idarma2",
+      "name" : "Blaster",
+      "desc" : "Arma de fuego de energía, utilizada por soldados, cazarrecompensas y criminales en toda la galaxia.",
+      "inventor" : {
         "id": "idcharacter2",
         "name": "Luke Skywalker",
         "desc": "El héroe de la saga, un joven granjero que se convierte en un poderoso Jedi y lucha contra el malvado Imperio.",
@@ -1763,24 +1763,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 8
+      "type" : "Arma",
+      "dangerLevel" : 8
     },
     {
-      "id": "idarma3",
-      "name": "Caza Estelar",
-      "desc": "Nave espacial utilizada para el combate aéreo, equipada con armas y sistemas de defensa avanzados.",
-      "inventor": {
+      "id" : "idarma3",
+      "name" : "Caza Estelar",
+      "desc" : "Nave espacial utilizada para el combate aéreo, equipada con armas y sistemas de defensa avanzados.",
+      "inventor" : {
         "id": "idcharacter3",
         "name": "Han Solo",
         "desc": "El contrabandista carismático, un piloto habilidoso y un aliado valioso en la lucha contra el Imperio.",
@@ -1806,24 +1806,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "type" : "Arma",
+      "dangerLevel" : 9
     },
     {
-      "id": "idarma4",
-      "name": "Destructor Estelar",
-      "desc": "Una estación espacial masiva y poderosa, equipada con armas de destrucción masiva y capaz de destruir planetas enteros.",
-      "inventor": {
+      "id" : "idarma4",
+      "name" : "Destructor Estelar",
+      "desc" : "Una estación espacial masiva y poderosa, equipada con armas de destrucción masiva y capaz de destruir planetas enteros.",
+      "inventor" : {
         "id": "idcharacter4",
         "name": "Leia Organa",
         "desc": "La princesa rebelde, una líder valiente y una guerrera habilidosa que lucha por la libertad de la galaxia.",
@@ -1849,24 +1849,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 10
+      "type" : "Arma",
+      "dangerLevel" : 10
     },
     {
-      "id": "idarma5",
-      "name": "Sith Holocron",
-      "desc": "Un dispositivo de almacenamiento de conocimiento Sith, que contiene secretos oscuros y poderosos que pueden ser peligrosos si caen en las manos equivocadas.",
-      "inventor": {
+      "id" : "idarma5",
+      "name" : "Sith Holocron",
+      "desc" : "Un dispositivo de almacenamiento de conocimiento Sith, que contiene secretos oscuros y poderosos que pueden ser peligrosos si caen en las manos equivocadas.",
+      "inventor" : {
         "id": "idcharacter5",
         "name": "Obi-Wan Kenobi",
         "desc": "El maestro Jedi sabio, un mentor paciente y un defensor de la justicia en la galaxia.",
@@ -1892,24 +1892,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 10
+      "type" : "Arma",
+      "dangerLevel" : 10
     },
     {
-      "id": "idarma6",
-      "name": "Droide de Combate",
-      "desc": "Un robot diseñado para el combate, equipado con armas y sistemas de defensa avanzados.",
-      "inventor": {
+      "id" : "idarma6",
+      "name" : "Droide de Combate",
+      "desc" : "Un robot diseñado para el combate, equipado con armas y sistemas de defensa avanzados.",
+      "inventor" : {
         "id": "idcharacter6",
         "name": "Yoda",
         "desc": "El maestro Jedi más sabio, un ser pequeño pero poderoso que ha entrenado a generaciones de Jedi en la galaxia.",
@@ -1935,24 +1935,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "type" : "Arma",
+      "dangerLevel" : 9
     },
     {
-      "id": "idarma7",
-      "name": "Cortador de Plasma",
-      "desc": "Una herramienta de corte de alta energía, utilizada para cortar a través de metales y otros materiales resistentes.",
-      "inventor": {
+      "id" : "idarma7",
+      "name" : "Cortador de Plasma",
+      "desc" : "Una herramienta de corte de alta energía, utilizada para cortar a través de metales y otros materiales resistentes.",
+      "inventor" : {
         "id": "idcharacter7",
         "name": "Mace Windu",
         "desc": "El maestro Jedi valiente, un guerrero habilidoso y un líder respetado en la Orden Jedi.",
@@ -1978,24 +1978,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 8
+      "type" : "Arma",
+      "dangerLevel" : 8
     },
     {
-      "id": "idarma8",
-      "name": "Generador de Escudo",
-      "desc": "Un dispositivo que genera un campo de energía protectora, utilizado para defenderse contra ataques y proteger a las personas y las naves espaciales.",
-      "inventor": {
+      "id" : "idarma8",
+      "name" : "Generador de Escudo",
+      "desc" : "Un dispositivo que genera un campo de energía protectora, utilizado para defenderse contra ataques y proteger a las personas y las naves espaciales.",
+      "inventor" : {
         "id": "idcharacter8",
         "name": "Qui-Gon Jinn",
         "desc": "El maestro Jedi rebelde, un ser sabio y poderoso que desafía las normas de la Orden Jedi en busca de la verdad y la justicia.",
@@ -2021,24 +2021,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 7
+      "type" : "Arma",
+      "dangerLevel" : 7
     },
     {
-      "id": "idarma9",
-      "name": "Cortina de Humo",
-      "desc": "Un dispositivo que emite una nube de humo denso, utilizado para ocultar movimientos y confundir a los enemigos.",
-      "inventor": {
+      "id" : "idarma9",
+      "name" : "Cortina de Humo",
+      "desc" : "Un dispositivo que emite una nube de humo denso, utilizado para ocultar movimientos y confundir a los enemigos.",
+      "inventor" : {
         "id": "idcharacter9",
         "name": "Anakin Skywalker",
         "desc": "El elegido, un joven talentoso que se convierte en un poderoso Jedi pero luego cae al lado oscuro como Darth Vader.",
@@ -2064,24 +2064,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 6
+      "type" : "Arma",
+      "dangerLevel" : 6
     },
     {
-      "id": "idarma10",
-      "name": "Granada de Fragmentación",
-      "desc": "Un dispositivo explosivo que emite fragmentos de metal al detonar, utilizado para causar daño a múltiples objetivos en un área determinada.",
-      "inventor": {
+      "id" : "idarma10",
+      "name" : "Granada de Fragmentación",
+      "desc" : "Un dispositivo explosivo que emite fragmentos de metal al detonar, utilizado para causar daño a múltiples objetivos en un área determinada.",
+      "inventor" : {
         "id": "idcharacter10",
         "name": "Padmé Amidala",
         "desc": "La senadora valiente, una líder política y una defensora de la justicia en la galaxia.",
@@ -2107,24 +2107,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Familia Smith",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 7
+      "type" : "Arma",
+      "dangerLevel" : 7
     },
     {
-      "id": "idarma11",
-      "name": "Lanzallamas",
-      "desc": "Un dispositivo que emite un chorro de fuego, utilizado para quemar objetivos y crear barreras de fuego.",
-      "inventor": {
+      "id" : "idarma11",
+      "name" : "Lanzallamas",
+      "desc" : "Un dispositivo que emite un chorro de fuego, utilizado para quemar objetivos y crear barreras de fuego.",
+      "inventor" : {
         "id": "idcharacter11",
         "name": "Boba Fett",
         "desc": "El cazarrecompensas legendario, un mercenario implacable con habilidades excepcionales en el combate y la caza de objetivos.",
@@ -2150,24 +2150,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Independiente",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 8
+      "type" : "Arma",
+      "dangerLevel" : 8
     },
     {
-      "id": "idarma12",
-      "name": "Cañón de Partículas",
-      "desc": "Un arma de energía que dispara partículas subatómicas a alta velocidad, utilizada para causar daño a objetivos a larga distancia.",
-      "inventor": {
+      "id" : "idarma12",
+      "name" : "Cañón de Partículas",
+      "desc" : "Un arma de energía que dispara partículas subatómicas a alta velocidad, utilizada para causar daño a objetivos a larga distancia.",
+      "inventor" : {
         "id": "idcharacter12",
         "name": "Darth Maul",
         "desc": "El aprendiz Sith letal, un ser oscuro y poderoso con habilidades excepcionales en el combate cuerpo a cuerpo y el uso de la fuerza.",
@@ -2193,24 +2193,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Independiente",
         "intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "type" : "Arma",
+      "dangerLevel" : 9
     },
     {
-      "id": "idarma13",
-      "name": "Cañón de iones",
-      "desc": "Un arma de energía que dispara iones a alta velocidad, utilizada para deshabilitar naves espaciales y sistemas electrónicos.",
-      "inventor": {
+      "id" : "idarma13",
+      "name" : "Cañón de iones",
+      "desc" : "Un arma de energía que dispara iones a alta velocidad, utilizada para deshabilitar naves espaciales y sistemas electrónicos.",
+      "inventor" : {
         "id": "idcharacter13",
         "name": "Darth Sidious",
         "desc": "El emperador malvado, un ser oscuro y poderoso que manipula la política y la fuerza para lograr sus objetivos de dominación galáctica.",
@@ -2236,24 +2236,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Independiente",
         "intelligence": 10
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "type" : "Arma",
+      "dangerLevel" : 9
     },
     {
-      "id": "idarma14",
-      "name": "Cañón de Disrupción",
-      "desc": "Un arma de energía que dispara una onda de energía disruptiva, utilizada para causar daño a objetivos a corta distancia y desestabilizar estructuras y sistemas.",
-      "inventor": {
+      "id" : "idarma14",
+      "name" : "Cañón de Disrupción",
+      "desc" : "Un arma de energía que dispara una onda de energía disruptiva, utilizada para causar daño a objetivos a corta distancia y desestabilizar estructuras y sistemas.",
+      "inventor" : {
         "id": "idcharacter14",
         "name": "Darth Plagueis",
         "desc": "El maestro Sith inmortal, un ser oscuro y poderoso que busca la inmortalidad y el control total sobre la fuerza.",
@@ -2279,24 +2279,24 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Independiente",
         "intelligence": 10
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "type" : "Arma",
+      "dangerLevel" : 9
     },
     {
-      "id": "idarma15",
-      "name": "Panzer IV",
-      "desc": "Un arma de energía que manipula la gravedad para atraer o repeler objetos, utilizada para causar daño a objetivos a larga distancia y controlar el campo de batalla.",
-      "inventor": {
+      "id" : "idarma15",
+      "name" : "Panzer IV",
+      "desc" : "Un arma de energía que manipula la gravedad para atraer o repeler objetos, utilizada para causar daño a objetivos a larga distancia y controlar el campo de batalla.",
+      "inventor" : {
         "id": "idcharacter15",
         "name": "Darth Revan",
         "desc": "El señor de la guerra redimido, un ser oscuro y poderoso que lucha por la redención y la justicia en la galaxia.",
@@ -2322,18 +2322,18 @@
           "averageLifespan": 80
         },
         "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+            "id": "C-120",
+            "name": "Dimensión Cronenberg",
+            "description": "Dimensión loca e irascible.",
+            "state": "Activa",
+            "technologyLevel": 5
         },
         "state": "Vivo",
         "affiliation": "Independiente",
         "intelligence": 10
-      },
-      "type": "Arma",
-      "dangerLevel": 10
+       },
+      "type" : "Arma",
+      "dangerLevel" : 10
     }
   ]
 }

@@ -2,7 +2,7 @@ import { HasState } from "../interfaces/hasState.js";
 import { CharacterState } from "../types/characterState.js";
 import { BasicUniversalObject } from "./basicUniversalObject.js";
 import { Dimension } from "./dimension.js";
-import { Specie } from "./species.js";
+import { Species } from "./species.js";
 import { Affiliation } from "../types/affiliation.js";
 
 
@@ -10,43 +10,42 @@ import { Affiliation } from "../types/affiliation.js";
  * Clase para representar un personaje
  */
 export class Character extends BasicUniversalObject implements HasState<CharacterState> {
-  readonly #specie: Specie
+  readonly #Species: Species
   readonly #dimension: Dimension
   #state: CharacterState
   #affiliation: Affiliation
   #intelligence: number
-  #desc: string
+  
   
   /**
    * Crea un nuevo personaje
    * @param id - ID del personaje
    * @param name - Nombre del personaje
    * @param desc - Descripción del personaje
-   * @param specie - Especie del personaje
+   * @param Species - ESpecies del personaje
    * @param dimension - Dimensión del personaje
    * @param state - Estado del personaje
    * @param affiliation - Afiliación del personaje
    * @param intelligence - Inteligencia del personaje (1-10)
    * @throws Error si la inteligencia no está en el rango 1-10 o si la descripción está vacía
    */
-  constructor(id: string, name: string, desc: string, specie: Specie, dimension: Dimension, state: CharacterState, affiliation: Affiliation, intelligence: number) {
+  constructor(id: string, name: string, desc: string, Species: Species, dimension: Dimension, state: CharacterState, affiliation: Affiliation, intelligence: number) {
     super(id, name, desc)
     if (intelligence < 1 || intelligence > 10) throw Error('Intelligence debe estar en el rango 1-10')
     if (desc.length === 0) throw Error('Descripción no puede ser vacío')
     
-    this.#specie = specie
+    this.#Species = Species
     this.#dimension = dimension
     this.#state = state
     this.#affiliation = affiliation
     this.#intelligence = intelligence
-    this.#desc = desc
   }
 
   /**
-   * Devuelve la especie
-   * @returns La especie del personaje
+   * Devuelve la eSpecies
+   * @returns La eSpecies del personaje
    */
-  get specie(): Specie { return this.#specie }
+  get specie(): Species { return this.#Species }
   
   /**
    * Devuelve la dimensión

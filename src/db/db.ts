@@ -36,4 +36,4 @@ export const database = new Low<DBMultiverso>(adapter, defaultData);
 
 await database.read();
 
-await databa.write(); 
+await database.write(); 

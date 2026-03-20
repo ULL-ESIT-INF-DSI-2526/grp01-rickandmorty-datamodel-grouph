@@ -61,7 +61,7 @@ export class Species extends BasicUniversalObject implements HasType<SpeciesType
      * Obtiene el tipo de la especie.
      * @returns - un objeto de tipo SpeciesType que representa el tipo de la especie.
      */
-    get specieType(): SpeciesType {
+    get speciesType(): SpeciesType {
         return this.#speciesType;
     }
 
