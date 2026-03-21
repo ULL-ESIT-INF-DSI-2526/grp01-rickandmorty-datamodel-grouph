@@ -14,6 +14,7 @@ import { ItemType } from "../types/itemType.js";
 import { LocationType } from "../types/locationType.js";
 import { Item } from "./item.js";
 import { access } from "node:fs";
+import { TravelEvent } from "./travelEvent.js";
 
 /**
  * Clase MultiverseManager que implementa el patrón Singleton para gestionar el multiverso de Rick y Morty. 
@@ -29,7 +30,6 @@ export class MultiverseManager {
    /**
     * Historial de eventos interdimensionales que se han registrado en el multiverso. 
     */
-   private _eventHistory: Event[] = [];
 
    /**
     * Gestor CRUD para manejar las operaciones de creación, lectura, actualización y eliminación en la base de datos.
@@ -39,8 +39,8 @@ export class MultiverseManager {
    /**
     * 
     */
-   private constructor(eventHistory: Event[] = []) {
-      this._eventHistory = eventHistory
+   private constructor() {
+     
    }
 
    /**
@@ -190,7 +190,6 @@ export class MultiverseManager {
     * @param event - El evento interdimensional que se desea registrar en el historial de eventos del multiverso.
     */
    public async addEvent(event: Event): Promise<void> {
-      this._eventHistory.push(event);
       database.data.eventos.push(event);
       await database.write();
    }
@@ -200,11 +199,11 @@ export class MultiverseManager {
     * @returns array de string representando historial de eventos interdimensionales registrados en el multiverso.
     */
    get eventHistory(): Event[] {
-      return this._eventHistory;
+      return database.data.eventos;
    }
 
    public eventHistoryString(): string[] {
-      return this._eventHistory.map(event => event.description);
+      return this.eventHistory.map(event => event.description);
    }
 
    set crudManager(crud: CRUD<BasicUniversalObject>) {
@@ -225,17 +224,23 @@ export class MultiverseManager {
    /**
     * Detecta las dimensiones destruidas o personajes que cuya dimensión de origen ya no existe
     */
-   public controlStateMultiverse(mode: "dimensions" | "characters"): BasicUniversalObject[] | undefined {
-     if (mode == "dimensions") {
-        const dimension: Dimension[] = database.data.dimensiones.filter(dim => dim.state == "Destruida");
-        return dimension;
-     } else if (mode == "characters") {
-        const character: Character[] = database.data.personajes.filter(pj => pj.dimension.state == "Destruida");
-        return character;
-     } else {  // En caso de que no existan dimensiones destruidas
-         const dim: Dimension[] = []
-        return dim;
-     }
+   public controlStateMultiverse(): string[] {
+      const alerts: string[] = [];
+      const destroyedDimensions = database.data.dimensiones.filter(dim => dim.state === "Destruida");
+      for (const dim of destroyedDimensions) {
+         alerts.push(`La dimensión ${dim.id} ha sido destruida`);
+      }
+
+      for (const pj of database.data.personajes) {
+         const originDim = database.data.dimensiones.find(dim => dim.id === pj.dimension.id);
+         if (!originDim || originDim.state === "Destruida") {
+            alerts.push(` Anomalía:El personaje ${pj.name} proviene de una dimensión destruida`);
+         }
+      }
+      if (alerts.length === 0) {
+         alerts.push("No se han detectado anomalías en el estado del multiverso");
+      }
+      return alerts;
    }
    
    public reportDimensions(): string {
@@ -297,30 +302,42 @@ export class MultiverseManager {
    //   return result;
    // }
 
-   public reportItems(): {Item: Item, Location: Location}[] {
-     // Primero filtramos los eventos tipo Deploy
-     const events: Event[] = this._eventHistory.filter(event => event instanceof DeployEvent)
-     
-     // Sacamos una lista de los items de esos eventos
-     let items: {Item: Item, Location: Location}[] = [];
-     for (let i = 0; i < events.length; i++) {
-       let event = events[i].typeOfEvent;
-       // Nos aseguramos de que event sea DeployEvent (Para que el compilador se asegure y podamos acceder a sus propiedades)
-       if (event instanceof DeployEvent) {
-       const item = database.data.inventos.find(item => item.id == event.itemId)
-       const location = database.data.localizaciones.find(loc => loc.id == event.locationId)
-       if(item && location) { items.push({Item: item, Location: location}) }
+   public reportItems(): string {
+     const deployEvents = database.data.eventos.filter(evento => evento.typeOfEvent && 'itemId' in evento.typeOfEvent);
+       if (deployEvents.length === 0) {
+         return "No hay eventos de despliegue de inventos registrados en el multiverso.";
        }
-     }
+       let deployedItems: { item: Item, locationId: string}[] = [];
 
-     // Los ordenamos según nivel de peligro
-     items = items.sort((a, b) => b.Item.danger - a.Item.danger);
-     
-     return items
+       for (const event of deployEvents) {
+         const deployDetails = event.typeOfEvent as DeployEvent;
+         const foundItem = database.data.inventos.find(inv => inv.id === deployDetails.itemId);
+
+         if (foundItem) {
+            deployedItems.push({ item: foundItem, locationId: deployDetails.locationId });
+         }
+       }
+
+       deployedItems.sort((a, b) => b.item.danger - a.item.danger);
+       
+       let report: string = "Inventos desplegados en el multiverso ordenados por nivel de peligro:\n";
+         for (const deployed of deployedItems) {
+           report += `Invento: ${deployed.item.name} - Nivel de peligro: ${deployed.item.danger}\n`;
+         }
+         return report;
    }
 
-   public reportInterdimensionalTravels(characterName: string): Event[] {
-     const travelEvents: Event[] = this._eventHistory.filter(event => event.description.includes(characterName) && event.description.includes("viaje interdimensional"));
-       return travelEvents;
-    }
+   public reportInterdimensionalTravels(characterName: string): string{
+      const travelEvents = database.data.eventos.filter(evento => evento.description.includes(`viajó`) && 
+      evento.description.toLowerCase().includes(characterName.toLowerCase()));
+      if (travelEvents.length === 0) {
+         return `No hay eventos de viajes interdimensionales registrados para este personaje`;
+      }
+      let report: string = `Viajes interdimensionales registrados para ${characterName}:\n`;
+      for (let i = 0; i < travelEvents.length; i++) {
+         report += `${i + 1}. ${travelEvents[i].description}\n`;
+      }
+      return report;
+   }
+
 }

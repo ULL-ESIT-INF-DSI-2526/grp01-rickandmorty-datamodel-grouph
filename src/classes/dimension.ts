@@ -60,5 +60,6 @@ export class Dimension extends BasicUniversalObject implements HasState<Dimensio
    */
   set tecnologyLevel(level: number) {
     if (level < 0 || level > 10) throw new Error("Nivel tecnológico no válido")
+    this.#tecnologyLevel = level;
   }
 }

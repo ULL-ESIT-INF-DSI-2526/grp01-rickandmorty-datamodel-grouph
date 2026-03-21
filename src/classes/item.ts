@@ -6,9 +6,9 @@ import { BasicUniversalObject } from "./basicUniversalObject.js"
  * Clase para representar un objeto del universo
  */
 export class Item extends BasicUniversalObject {
-  readonly #inventor: Character
-  #type: ItemType
-  #danger: number
+  private readonly _inventor: Character
+  private _type: ItemType
+  private _danger: number
 
   /**
    * Crea un nuevo objeto del universo
@@ -22,38 +22,38 @@ export class Item extends BasicUniversalObject {
   constructor(id: string, name: string, desc: string, inventor: Character, type: ItemType, danger: number) {
     super(id, name, desc)
     if (danger < 0 || danger > 10) throw new Error('Danger debe estar en el rango 0-10')
-    this.#inventor = inventor
-    this.#type = type
-    this.#danger = danger
+    this._inventor = inventor
+    this._type = type
+    this._danger = danger
   }
 
   /**
    * Devuelve el personaje inventor del objeto
    * @returns El personaje inventor del objeto
    */
-  get inventor() { return this.#inventor }
+  get inventor() { return this._inventor }
 
   /**
    * Devuelve type
    * @returns El tipo del objeto
    */
-  get type() { return this.#type }
+  get type() { return this._type }
 
   /**
    * Asigna un tipo a type
    * @param type - Nuevo tipo del objeto
    */
-  set type(type: ItemType) { this.#type = type }
+  set type(type: ItemType) { this._type = type }
 
   /**
    * Devuelve danger
    * @returns El nivel de peligrosidad del objeto
    */
-  get danger() { return this.#danger }
+  get danger() { return this._danger }
 
   /**
-   * Asigna un nivel de pelirosidad a danger
+   * Asigna un nivel de peligrosidad a danger
    * @param danger - Nuevo nivel de peligrosidad del objeto
    */
-  set danger(danger: number) { this.#danger = danger }
+  set danger(danger: number) { this._danger = danger }
 }

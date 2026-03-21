@@ -8,9 +8,9 @@ import { HasType } from "../interfaces/hasType.js";
  */
 export class Species extends BasicUniversalObject implements HasType<SpeciesType> {
   //preguntar si origen debe ser una union de tipos de planeta o dimension
-    readonly #originLocation: Location;
-    #speciesType: SpeciesType;
-    #averageLifespan: number;
+    private readonly _originLocation: Location;
+    private _speciesType: SpeciesType;
+    private _averageLifespan: number;
 
     /**
      * Crea una nueva instancia de la clase Specie.
@@ -28,9 +28,9 @@ export class Species extends BasicUniversalObject implements HasType<SpeciesType
          * Llamada al constructor de la clase padre BasicUniversalObject para inicializar las propiedades id, name y description. 
          */
         super(id, name, description);
-        this.#originLocation = originLocation;
-        this.#speciesType = speciesType;
-        this.#averageLifespan = averageLifespan;
+        this._originLocation = originLocation;
+        this._speciesType = speciesType;
+        this._averageLifespan = averageLifespan;
     }
 
     /**
@@ -38,7 +38,7 @@ export class Species extends BasicUniversalObject implements HasType<SpeciesType
      * @returns - un objeto de tipo SpeciesType que representa el tipo de la especie.
      */
     get type(): SpeciesType {
-        return this.#speciesType;
+        return this._speciesType;
     }
 
     /**
@@ -46,7 +46,7 @@ export class Species extends BasicUniversalObject implements HasType<SpeciesType
      * @param newType - un objeto de tipo SpeciesType que representa el nuevo tipo de la especie.
      */
     set type(newType: SpeciesType) {
-        this.#speciesType = newType;
+        this._speciesType = newType;
     }
 
     /**
@@ -54,7 +54,7 @@ export class Species extends BasicUniversalObject implements HasType<SpeciesType
      * @returns - un objeto de tipo Location que representa la ubicación de origen de la especie.
      */
     get originLocation(): Location {
-        return this.#originLocation;
+        return this._originLocation;
     }
 
     /**
@@ -62,7 +62,7 @@ export class Species extends BasicUniversalObject implements HasType<SpeciesType
      * @returns - un objeto de tipo SpeciesType que representa el tipo de la especie.
      */
     get speciesType(): SpeciesType {
-        return this.#speciesType;
+        return this._speciesType;
     }
 
     /**
@@ -70,12 +70,12 @@ export class Species extends BasicUniversalObject implements HasType<SpeciesType
      * @returns - un número que representa el tiempo de vida medio de la especie en años.
      */
     get averageLifespan(): number {
-        return this.#averageLifespan;
+        return this._averageLifespan;
     }
 
     set averageLifespan(newLifespan: number) {
         if (newLifespan < 0) {throw new Error("El tiempo de vida medio no puede ser negativo");}
-        this.#averageLifespan = newLifespan;
+        this._averageLifespan = newLifespan;
     }
   
 }

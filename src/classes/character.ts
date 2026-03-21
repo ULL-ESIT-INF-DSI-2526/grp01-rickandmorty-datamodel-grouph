@@ -10,11 +10,11 @@ import { Affiliation } from "../types/affiliation.js";
  * Clase para representar un personaje
  */
 export class Character extends BasicUniversalObject implements HasState<CharacterState> {
-  readonly #Species: Species
-  readonly #dimension: Dimension
-  #state: CharacterState
-  #affiliation: Affiliation
-  #intelligence: number
+  private readonly _Species: Species
+  private readonly _dimension: Dimension
+  private _state: CharacterState
+  private _affiliation: Affiliation
+  private _intelligence: number
   
   
   /**
@@ -34,54 +34,54 @@ export class Character extends BasicUniversalObject implements HasState<Characte
     if (intelligence < 1 || intelligence > 10) throw Error('Intelligence debe estar en el rango 1-10')
     if (desc.length === 0) throw Error('Descripción no puede ser vacío')
     
-    this.#Species = Species
-    this.#dimension = dimension
-    this.#state = state
-    this.#affiliation = affiliation
-    this.#intelligence = intelligence
+    this._Species = Species
+    this._dimension = dimension
+    this._state = state
+    this._affiliation = affiliation
+    this._intelligence = intelligence
   }
 
   /**
    * Devuelve la eSpecies
    * @returns La eSpecies del personaje
    */
-  get specie(): Species { return this.#Species }
+  get specie(): Species { return this._Species }
   
   /**
    * Devuelve la dimensión
    * @returns La dimensión del personaje
    */
-  get dimension(): Dimension { return this.#dimension }
+  get dimension(): Dimension { return this._dimension }
   
   /**
    * Devuelve el estado
    * @returns El estado del personaje
    */
-  get state(): CharacterState { return this.#state }
+  get state(): CharacterState { return this._state }
   
   /**
    * Devuelve la afiliación
    * @returns La afiliación del personaje
    */
-  get affiliation(): Affiliation { return this.#affiliation }
+  get affiliation(): Affiliation { return this._affiliation }
   
   /**
    * Devuelve el nivel de inteligencia
    * @returns El nivel de inteligencia del personaje
    */
-  get intelligence(): number { return this.#intelligence }
+  get intelligence(): number { return this._intelligence }
 
   /**
    * Asigna un nuevo estado al personaje
    * @param x - Nuevo estado del personaje
    */
-  set state(x: CharacterState) { this.#state = x }
+  set state(x: CharacterState) { this._state = x }
 
   /**
    * Asigna una nueva afiliación al personaje
    * @param x - Nueva afiliación del personaje
    */
-  set affiliation(x: Affiliation) { this.#affiliation = x }
+  set affiliation(x: Affiliation) { this._affiliation = x }
 
   /**
    * Asigna un nuevo nivel de inteligencia al personaje
@@ -90,6 +90,6 @@ export class Character extends BasicUniversalObject implements HasState<Characte
    */
   set intelligence(x: number) { 
     if (x < 1 || x > 10) throw Error('Intelligence debe estar en el rango 1-10')
-    this.#intelligence = x 
+    this._intelligence = x 
   }
 }

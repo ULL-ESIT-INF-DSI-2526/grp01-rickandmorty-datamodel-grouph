@@ -7,9 +7,9 @@ import { HasType } from '../interfaces/hasType.js';
  * Clase para crear una localización
  */
 export class Location extends BasicUniversalObject implements HasType<LocationType>{
-  #type: LocationType;
-  #dimension: Dimension;
-  #population: number;
+  private _type: LocationType;
+  private _dimension: Dimension;
+  private _population: number;
 
   /**
    * Inicializa los atributos de BasicUniversalObject
@@ -23,42 +23,42 @@ export class Location extends BasicUniversalObject implements HasType<LocationTy
    */
   constructor(id: string, name: string, description: string, type: LocationType, dimension: Dimension, population: number) {
     super(id, name, description);
-    this.#type = type;
-    this.#dimension = dimension;
+    this._type = type;
+    this._dimension = dimension;
     // Control de population
     if (population < 0) throw new Error("Población no puede ser negativa")
-    this.#population = population;
+    this._population = population;
   }
 
   /**
    * Devuelve el type del objeto
    * @returns La type del objeto
    */
-  get type(): LocationType { return this.#type}
+  get type(): LocationType { return this._type}
 
   /**
    * Devuelve la dimension del objeto
    * @returns La dimension del objeto
    */
-  get dimension(): Dimension { return this.#dimension}
+  get dimension(): Dimension { return this._dimension}
 
   /**
    * Devuelve la población del objeto
    * @returns La population del objeto
    */
-  get population(): number { return this.#population }
+  get population(): number { return this._population }
 
   /**
    * Asigna un nuevo tipo al objeto
    * @param type - Nuevo tipo del objeto
    */
-  set type(type: LocationType) { this.#type = type }
+  set type(type: LocationType) { this._type = type }
 
   /**
    * Asigna una nueva dimensión al objeto
    * @param dimension - Nueva dimensión del objeto
    */
-  set dimension(dimension: Dimension) { this.#dimension = dimension }
+  set dimension(dimension: Dimension) { this._dimension = dimension }
 
 
   /**
@@ -68,7 +68,7 @@ export class Location extends BasicUniversalObject implements HasType<LocationTy
    */
   set population(population: number) { 
     if (population < 0) throw new Error("Población no puede ser negativo")
-    this.#population = population 
+    this._population = population 
   }
 
 
