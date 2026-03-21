@@ -13,6 +13,7 @@ import { BasicUniversalObject } from "./basicUniversalObject.js";
 import { ItemType } from "../types/itemType.js";
 import { LocationType } from "../types/locationType.js";
 import { Item } from "./item.js";
+import { access } from "node:fs";
 
 /**
  * Clase MultiverseManager que implementa el patrón Singleton para gestionar el multiverso de Rick y Morty. 
@@ -112,84 +113,50 @@ export class MultiverseManager {
       return locations;
    }
 
-   public consultCharacterByDimension(dim: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      let characters: Character[] = database.data.personajes.filter(pj => pj.dimension.id == dim);
-      if (characters.length === 0) throw new Error(`El personaje con dimensión ${dim} no existe.`)
-
-      if (nameOrIntelligence == "name" && sorttype == "asc") {
-        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
-      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
-         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
-         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
-         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
+   private sortCharacters(characters: Character[], nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+      if (nameOrIntelligence === "name") {
+         if (sorttype === "asc") {
+            return characters.sort((a, b) => a.name.localeCompare(b.name));
+         } else {
+            return characters.sort((a, b) => b.name.localeCompare(a.name));
+         }
+      } else {
+         if (sorttype === "asc") {
+            return characters.sort((a, b) => a.intelligence - b.intelligence);
+         } else {
+            return characters.sort((a, b) => b.intelligence - a.intelligence);
+         }
       }
-      return characters;
+   }
+
+   public consultCharacterByDimension(dim: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+      const characters = database.data.personajes.filter(pj => pj.dimension.id == dim);
+      if (characters.length === 0) throw new Error(`El personaje con dimensión ${dim} no existe.`);
+      return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
    public consultCharacterBySpecies(sp: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      let characters: Character[] = database.data.personajes.filter(pj => pj.specie.name == sp);
-      if (characters.length === 0) throw new Error(`El personaje con especie ${sp} no existe.`)
-
-      if (nameOrIntelligence == "name" && sorttype == "asc") {
-        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
-      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
-         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
-         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
-         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
-      }
-      return characters;
+      const characters = database.data.personajes.filter(pj => pj.specie.name == sp);
+      if (characters.length === 0) throw new Error(`El personaje con especie ${sp} no existe.`);
+      return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
    public consultCharacterByAffiliation(affi: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      let characters: Character[] = database.data.personajes.filter(pj => pj.affiliation == affi);
+      const characters = database.data.personajes.filter(pj => pj.affiliation == affi);
       if (characters.length === 0) throw new Error(`El personaje con afiliación ${affi} no existe.`)
-
-      if (nameOrIntelligence == "name" && sorttype == "asc") {
-        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
-      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
-         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
-         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
-         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
-      }
-      return characters;
+      return this.sortCharacters(characters, nameOrIntelligence, sorttype);   
    }
 
    public consultCharacterByState(state: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      let characters: Character[] = database.data.personajes.filter(pj => pj.state == state);
+      const characters = database.data.personajes.filter(pj => pj.state == state);
       if (characters.length === 0) throw new Error(`El personaje con  ${state} no existe.`)
-
-      if (nameOrIntelligence == "name" && sorttype == "asc") {
-        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
-      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
-         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
-         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
-         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
-      }
-      return characters;
+      return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
    public consultCharacterByName(name: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-     let characters: Character[] = database.data.personajes.filter(pj => pj.name == name);
+     const characters = database.data.personajes.filter(pj => pj.name == name);
       if (characters.length === 0) throw new Error(`El personaje con name ${name} no existe.`)
-      
-      if (nameOrIntelligence == "name" && sorttype == "asc") {
-        characters = characters.sort((a, b) => a.name.localeCompare(b.name))   
-      } else if (nameOrIntelligence == "name" && sorttype == "desc") {
-         characters = characters.sort((a, b) => b.name.localeCompare(a.name))  
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "asc"){
-         characters = characters.sort((a, b) => a.intelligence - b.intelligence)
-      } else if (nameOrIntelligence == "intelligence" && sorttype == "desc"){
-         characters = characters.sort((a, b) => b.intelligence - a.intelligence)
-      }
-      return characters;
+      return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
       public consultItemByName(name: string): Item[]{
@@ -222,8 +189,10 @@ export class MultiverseManager {
     * que ocurra en el multiverso.
     * @param event - El evento interdimensional que se desea registrar en el historial de eventos del multiverso.
     */
-   public addEvent(event: Event): void {
+   public async addEvent(event: Event): Promise<void> {
       this._eventHistory.push(event);
+      database.data.eventos.push(event);
+      await database.write();
    }
 
    /**
@@ -269,34 +238,64 @@ export class MultiverseManager {
      }
    }
    
-   public reportDimensions(): {dimensionId: string, techLevel: number}[] {
-      const dimensions = database.data.dimensiones.filter(dim => dim.state == "Activa");
-      return dimensions.map(dim => ({dimensionId: dim.id, techLevel: dim.tecnologyLevel}));
+   public reportDimensions(): string {
+      const activeDimensions = database.data.dimensiones.filter(dim =>dim.state == "Activa");
+      if (activeDimensions.length === 0) {
+         return "No hay dimensiones activas en este momento en el multiverso.";
+      }
+      let report: string = "Dimensiones activas en el multiverso:\n";
+      let techSum: number = 0;
+      for ( const dim of activeDimensions) {
+         report += `Dimension: ${dim.name} - Nivel tecnológico: ${dim.tecnologyLevel}\n`;
+         techSum += dim.tecnologyLevel;
+      }
+      const averageTechLevel = techSum / activeDimensions.length;
+      report += `Nivel tecnológico medio de las dimensiones activas: ${averageTechLevel.toFixed(2)}`;
+      return report;
    }
 
-   public reportCharacters(): Character[] {
-     const characters = database.data.personajes.filter(pj => pj);
-
-     let maxVersions: number = this.getAlternativeVersions(characters[0].name).length
-
-     // Buscamos el número máximo de versiones
-     for (let i = 0; i < characters.length; i++) {
-       let newMax = this.getAlternativeVersions(characters[i].name).length
-       if (maxVersions < newMax) {
-         maxVersions = newMax
-       }
-     }
-
-     // Guardamos los personajes con el número máximo de versiones
-     let result: Character[] = [];
-     for (let i = 0; i < characters.length; i++) {
-       if (maxVersions == this.getAlternativeVersions(characters[i].name).length) {
-         result.push(characters[i])
-       }
-     }
-
-     return result;
+   public reportCharacter(): string {
+      const characters = database.data.personajes.filter(pj => pj);
+      if (characters.length === 0) {
+         return "No hay personajes en este momento en el multiverso.";
+      }
+      const uniqueNames = Array.from(new Set(characters.map(pj => pj.name)));
+      let versionCounter: { characterName: string, versions: number }[] = [];
+      for (const name of uniqueNames) {
+         const numberOfVersions = this.getAlternativeVersions(name).length;
+         versionCounter.push({ characterName: name, versions: numberOfVersions });
+      }
+      versionCounter.sort((a, b) => b.versions - a.versions);
+      let report: string = "Personajes con más versiones alternativas en el multiverso:\n";
+      for (const character of versionCounter) {
+         report += `Personaje: ${character.characterName} - Versiones alternativas: ${character.versions}\n`;
+      }
+      return report;
    }
+
+   // public reportCharacters(): Character[] {
+   //   const characters = database.data.personajes.filter(pj => pj);
+
+   //   let maxVersions: number = this.getAlternativeVersions(characters[0].name).length
+
+   //   // Buscamos el número máximo de versiones
+   //   for (let i = 0; i < characters.length; i++) {
+   //     let newMax = this.getAlternativeVersions(characters[i].name).length
+   //     if (maxVersions < newMax) {
+   //       maxVersions = newMax
+   //     }
+   //   }
+
+   //   // Guardamos los personajes con el número máximo de versiones
+   //   let result: Character[] = [];
+   //   for (let i = 0; i < characters.length; i++) {
+   //     if (maxVersions == this.getAlternativeVersions(characters[i].name).length) {
+   //       result.push(characters[i])
+   //     }
+   //   }
+
+   //   return result;
+   // }
 
    public reportItems(): {Item: Item, Location: Location}[] {
      // Primero filtramos los eventos tipo Deploy

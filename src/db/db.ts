@@ -5,7 +5,7 @@ import { Dimension } from '../classes/dimension.js';
 import { Location } from '../classes/location.js';
 import { Item } from '../classes/item.js';
 import { Species } from '../classes/species.js';
-
+import { Event } from '../classes/event.js';
 /**
  * Definimos la estructura de la base de datos 
  */
@@ -15,6 +15,7 @@ export type DBMultiverso = {
   especies: Species[];
   localizaciones: Location[];
   inventos: Item[];
+  eventos: Event[];
 }
 
 /**
@@ -28,7 +29,8 @@ const defaultData: DBMultiverso = {
   dimensiones: [],
   especies: [],
   localizaciones: [],
-  inventos: []
+  inventos: [],
+  eventos: []
 }
 
 // Creamos la instancia de la base de datos con los datos por defecto
