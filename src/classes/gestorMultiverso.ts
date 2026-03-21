@@ -144,7 +144,7 @@ export class MultiverseManager {
       return characters;
    }
 
-   public consultCharacterByLocation(affi: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+   public consultCharacterByAffiliation(affi: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
       let characters: Character[] = database.data.personajes.filter(pj => pj.affiliation == affi);
       if (characters.length === 0) throw new Error(`El personaje con afiliación ${affi} no existe.`)
 
@@ -268,8 +268,7 @@ export class MultiverseManager {
         return dim;
      }
    }
-
-   //reporte de dimensiones activas con su nivel tecnológico, debe devolver un array de pares (dimensionid, nivel tecnológico)
+   
    public reportDimensions(): {dimensionId: string, techLevel: number}[] {
       const dimensions = database.data.dimensiones.filter(dim => dim.state == "Activa");
       return dimensions.map(dim => ({dimensionId: dim.id, techLevel: dim.tecnologyLevel}));
@@ -299,23 +298,26 @@ export class MultiverseManager {
      return result;
    }
 
-   public reportItems(): Item[] {
+   public reportItems(): {Item: Item, Location: Location}[] {
      // Primero filtramos los eventos tipo Deploy
-     const events: Event[] = this._eventHistory.filter(event => typeof(event.typeOfEvent) == typeof(DeployEvent))
+     const events: Event[] = this._eventHistory.filter(event => event instanceof DeployEvent)
      
-     const dpev: DeployEvent = new DeployEvent("iditem", "idlocation");
-      events[0].setTypeOfEvent(dpev);
-
      // Sacamos una lista de los items de esos eventos
-     let items: Item[] = [];
+     let items: {Item: Item, Location: Location}[] = [];
      for (let i = 0; i < events.length; i++) {
-       let event = events[i].typeOfEvent
-       if () {
-       let item = database.data.inventos.find(item => item.id == events[i].typeOfEvent.itemId)
-       items.push()
+       let event = events[i].typeOfEvent;
+       // Nos aseguramos de que event sea DeployEvent (Para que el compilador se asegure y podamos acceder a sus propiedades)
+       if (event instanceof DeployEvent) {
+       const item = database.data.inventos.find(item => item.id == event.itemId)
+       const location = database.data.localizaciones.find(loc => loc.id == event.locationId)
+       if(item && location) { items.push({Item: item, Location: location}) }
        }
      }
+
+     // Los ordenamos según nivel de peligro
+     items = items.sort((a, b) => b.Item.danger - a.Item.danger);
      
+     return items
    }
 
    public reportInterdimensionalTravels(characterName: string): Event[] {
