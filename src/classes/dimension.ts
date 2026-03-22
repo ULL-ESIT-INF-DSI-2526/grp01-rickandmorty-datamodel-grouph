@@ -7,8 +7,8 @@ import { HasState } from '../interfaces/hasState.js';
  */
 export class Dimension extends BasicUniversalObject implements HasState<DimensionState> {
 
-  #state: DimensionState;
-  #tecnologyLevel: number;
+  private _state: DimensionState;
+  private _tecnologyLevel: number;
 
   /**
    * Crea una instancia de Dimension
@@ -23,10 +23,10 @@ export class Dimension extends BasicUniversalObject implements HasState<Dimensio
     const idRegex = /^[a-zA-Z]-?[a-zA-Z0-9]+$/;
     if (!idRegex.test(id)) throw new Error('El ID no sigue la nomenclatura del Consejo de Ricks');
     super(id, name, desc);
-    this.#state = state;
+    this._state = state;
     // Control de nivel tecnológico
     if (tecnologyLevel < 0 || tecnologyLevel > 10) throw new Error("Nivel tecnológico no válido")
-    this.#tecnologyLevel = tecnologyLevel;
+    this._tecnologyLevel = tecnologyLevel;
   }
 
   /**
@@ -34,7 +34,7 @@ export class Dimension extends BasicUniversalObject implements HasState<Dimensio
    * @returns El estado de la dimensión
    */
   get state() {
-    return this.#state 
+    return this._state 
   }
 
   /**
@@ -42,7 +42,7 @@ export class Dimension extends BasicUniversalObject implements HasState<Dimensio
    * @returns El nivel tecnológico de la dimensión
    */
   get tecnologyLevel() {
-    return this.#tecnologyLevel
+    return this._tecnologyLevel
   }
 
   /**
@@ -50,7 +50,7 @@ export class Dimension extends BasicUniversalObject implements HasState<Dimensio
    * @param state - El nuevo estado de la dimensión
    */
   set state(state: DimensionState) {
-    this.#state = state;
+    this._state = state;
   }
 
   /**
@@ -60,6 +60,6 @@ export class Dimension extends BasicUniversalObject implements HasState<Dimensio
    */
   set tecnologyLevel(level: number) {
     if (level < 0 || level > 10) throw new Error("Nivel tecnológico no válido")
-    this.#tecnologyLevel = level;
+    this._tecnologyLevel = level;
   }
 }

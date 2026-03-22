@@ -5,7 +5,7 @@ import { Dimension } from '../classes/dimension.js';
 import { Location } from '../classes/location.js';
 import { Item } from '../classes/item.js';
 import { Species } from '../classes/species.js';
-import { Event } from '../classes/event.js';
+import { EventClass } from '../classes/event.js';
 /**
  * Definimos la estructura de la base de datos 
  */
@@ -15,7 +15,7 @@ export type DBMultiverso = {
   especies: Species[];
   localizaciones: Location[];
   inventos: Item[];
-  eventos: Event[];
+  eventos: EventClass[];
 }
 
 /**

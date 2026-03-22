@@ -12,23 +12,32 @@ export class LocationCRUD extends CRUD<Location> {
 
   /**
    * Añade una nueva localización a la base de datos
-   * @param item - Location que queremos añadir
+   * @param location - Location que queremos añadir
    */
-  async add(item: Location): Promise<void> {
-    if (database.data.localizaciones.some(d => d.id === item.id)) throw new Error(`La localización con id ${item.id} ya existe.`)
-    database.data.localizaciones.push(item)
-    await database.write()
+  public async add(location: Location): Promise<void> {
+    const existingLocation = database.data.localizaciones.find(loc => {
+      const locId = (loc as any)._id;
+      return locId === location.id;
+    });
+    if (existingLocation) throw new Error(`La localización con id ${location.id} ya existe.`);
+    database.data.localizaciones.push(location);
+    await database.write();
+    console.log(`Localización ${location.name} añadida correctamente.`);
   }
 
   /**
    * Elimina la localización con identificador igual a id de la base de datos
    * @param id - id de la localización que queremos eliminar
    */
-  async delete(id: string): Promise<void> {
-    const index = database.data.localizaciones.findIndex(d => d.id === id);
+  public async delete(id: string): Promise<void> {
+    const index = database.data.localizaciones.findIndex(loc => {
+      const locId = (loc as any)._id;
+      return locId === id;
+    });
     if (index === -1) throw new Error(`La localización con id ${id} no existe.`);
     database.data.localizaciones.splice(index, 1);
     await database.write();
+    console.log(`Localización eliminada correctamente.`);
   }
 
   /**
@@ -36,21 +45,26 @@ export class LocationCRUD extends CRUD<Location> {
    * @param id - identificador de la localización que queremos leer
    * @returns La localización con el identificador igual a id
    */
-  read(id: string): Location {
-    const location = database.data.localizaciones.find(d => d.id === id)
-    if (!location) throw new Error(`La localización con id ${id} no existe.`)
-    return location
+  public read(id: string): Location | undefined {
+    return database.data.localizaciones.find(loc => {
+      const locId = (loc as any)._id;
+      return locId === id;
+    });
   }
 
   /**
    * Actualiza el estado de una localización en la base de datos
    * @param id - id de la localización que queremos actualizar
-   * @param item - Nuevo estado de la localización
+   * @param newLocation - Nuevo estado de la localización
    */
-  async update(id: string, item: Location): Promise<void> {
-    const index = database.data.localizaciones.findIndex(d => d.id === id)
-    if (index === -1) throw Error(`La localización con id ${id} no existe`)
-    database.data.localizaciones[index] = item
-    await database.write()
+  public async update(id: string, newLocation: Location): Promise<void> {
+    const index = database.data.localizaciones.findIndex(loc => {
+      const locId = (loc as any)._id;
+      return locId === id;
+    });
+    if (index === -1) throw new Error(`La localización con id ${id} no existe.`);
+    database.data.localizaciones[index] = newLocation;
+    await database.write();
+    console.log(`Localización actualizada correctamente.`);
   }
 }

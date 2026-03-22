@@ -1,2339 +1,2400 @@
 {
-  "dimensiones": [
+  "personajes": [
     {
-      "id": "C-120",
-      "name": "Dimensión Cronenberg",
-      "description": "Dimensión loca e irascible.",
-      "state": "Activa",
-      "technologyLevel": 5
+      "_id": "C-01",
+      "_name": "Rick Sanchez",
+      "_description": "Un científico brillante pero alcohólico y cínico, conocido por sus aventuras interdimensionales y su relación complicada con su familia",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
+      },
+      "_state": "Vivo",
+      "_affiliation": "Familia Smith",
+      "_intelligence": 10
     },
     {
-      "id": "C-121",
-      "name": "Dimensión de los sueños",
-      "description": "Dimensión donde todo es posible, pero también peligrosa.",
-      "state": "Cuarentena",
-      "technologyLevel": 3
+      "_id": "C-02",
+      "_name": "Morty Smith",
+      "_description": "El nieto de Rick, un adolescente inseguro y torpe que a menudo se ve arrastrado a las aventuras de su abuelo",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
+      },
+      "_state": "Vivo",
+      "_affiliation": "Familia Smith",
+      "_intelligence": 5
     },
     {
-      "id": "C-122",
-      "name": "Dimensión de los zombis",
-      "description": "Dimensión infestada de zombis.",
-      "state": "Activa",
-      "technologyLevel": 2
+      "_id": "C-03",
+      "_name": "Summer Smith",
+      "_description": "La hermana mayor de Morty, una adolescente popular y segura de sí misma que a menudo se siente excluida de las aventuras de su abuelo",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
+      },
+      "_state": "Vivo",
+      "_affiliation": "Familia Smith",
+      "_intelligence": 7
     },
     {
-      "id": "C-123",
-      "name": "Dimensión de los robots",
-      "description": "Dimensión dominada por robots inteligentes.",
-      "state": "Activa",
-      "technologyLevel": 8
+      "_id": "C-04",
+      "_name": "Beth Smith",
+      "_description": "La madre de Morty y Summer, una veterinaria que a menudo se siente insatisfecha con su vida y su matrimonio con Jerry",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
+      },
+      "_state": "Vivo",
+      "_affiliation": "Familia Smith",
+      "_intelligence": 8
     },
     {
-      "id": "C-124",
-      "name": "Dimensión de los vampiros",
-      "description": "Dimensión oscura y tenebrosa, habitada por vampiros.",
-      "state": "Destruida",
-      "technologyLevel": 1
+      "_id": "C-05",
+      "_name": "Jerry Smith",
+      "_description": "El padre de Morty y Summer, un hombre inseguro y mediocre que a menudo se siente eclipsado por su esposa y su suegro",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
+      },
+      "_state": "Vivo",
+      "_affiliation": "Familia Smith",
+      "_intelligence": 4
     },
     {
-      "id": "C-125",
-      "name": "Dimensión de los superhéroes",
-      "description": "Dimensión donde existen superhéroes con poderes extraordinarios.",
-      "state": "Activa",
-      "technologyLevel": 7
+      "_id": "C-06",
+      "_name": "Rick Sanchez (D-99)",
+      "_description": "Una versión alternativa de Rick que proviene de la dimensión D-99, donde tuvo una historia diferente y una relación diferente con su familia",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "D-99",
+        "_name": "Dimensión alternativa similar",
+        "_description": "Una dimensión alternativa con una historia diferente",
+        "_state": "Activa",
+        "_tecnologyLevel": 4
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 9
     },
     {
-      "id": "C-126",
-      "name": "Dimensión de los piratas espaciales",
-      "description": "Dimensión llena de piratas espaciales y aventuras intergalácticas.",
-      "state": "Destruida",
-      "technologyLevel": 4
+      "_id": "C-07",
+      "_name": "Morty malvado",
+      "_description": "Una versión alternativa de Morty que proviene de una dimensión donde se volvió malvado y se convirtió en un villano",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "E123",
+        "_name": "Dimensión exotica",
+        "_description": "Una dimensión exótica con características únicas",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 6
     },
     {
-      "id": "C-127",
-      "name": "Dimensión de los magos",
-      "description": "Dimensión donde la magia es real y poderosa.",
-      "state": "Activa",
-      "technologyLevel": 6
+      "_id": "C-08",
+      "_name": "Rick clon",
+      "_description": "Una versión alternativa de Rick que es un clon creado por el Consejo de Ricks para reemplazar a un Rick original que fue asesinado",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "F-456A",
+        "_name": "Dimensión futurista",
+        "_description": "Una dimensión futurista con tecnología avanzada",
+        "_state": "Activa",
+        "_tecnologyLevel": 10
+      },
+      "_state": "Vivo",
+      "_affiliation": "Consejo de Ricks",
+      "_intelligence": 8
     },
     {
-      "id": "C-128",
-      "name": "Dimensión de los dinosaurios",
-      "description": "Dimensión prehistórica habitada por dinosaurios.",
-      "state": "Destruida",
-      "technologyLevel": 0
+      "_id": "C-09",
+      "_name": "Morty clon",
+      "_description": "Una versión alternativa de Morty que es un clon creado por el Consejo de Ricks para reemplazar a un Morty original que fue asesinado",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "F-456A",
+        "_name": "Dimensión futurista",
+        "_description": "Una dimensión futurista con tecnología avanzada",
+        "_state": "Activa",
+        "_tecnologyLevel": 10
+      },
+      "_state": "Vivo",
+      "_affiliation": "Consejo de Ricks",
+      "_intelligence": 5
     },
     {
-      "id": "C-129",
-      "name": "Dimensión de los alienígenas",
-      "description": "Dimensión habitada por diversas especies de alienígenas.",
-      "state": "Activa",
-      "technologyLevel": 9
+      "_id": "C-10",
+      "_name": "Rick robot",
+      "_description": "Una versión alternativa de Rick que es un robot creado por un Rick original para servir como su asistente y compañero de aventuras",
+      "_Species": {
+        "_id": "S-09",
+        "_name": "Robot de cocina",
+        "_description": "Una especie de robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+        "_originLocation": {
+          "_id": "L-19",
+          "_name": "Planeta de los robots de cocina",
+          "_description": "Un planeta habitado por robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "N-555",
+            "_name": "Dimensión de la paradoja",
+            "_description": "Una dimensión de la paradoja con eventos contradictorios",
+            "_state": "Destruida",
+            "_tecnologyLevel": 2
+          },
+          "_population": 100000000
+        },
+        "_speciesType": "Robótico",
+        "_averageLifespan": 10
+      },
+      "_dimension": {
+        "_id": "G-789B",
+        "_name": "Dimensión post-apocalíptica",
+        "_description": "Una dimensión post-apocalíptica con un ambiente hostil",
+        "_state": "Destruida",
+        "_tecnologyLevel": 1
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 7
     },
     {
-      "id": "C-130",
-      "name": "Dimensión de los supervillanos",
-      "description": "Dimensión donde los supervillanos gobiernan y causan caos.",
-      "state": "Destruida",
-      "technologyLevel": 7
+      "_id": "C-11",
+      "_name": "Morty robot",
+      "_description": "Una versión alternativa de Morty que es un robot creado por un Rick original para servir como su asistente y compañero de aventuras",
+      "_Species": {
+        "_id": "S-09",
+        "_name": "Robot de cocina",
+        "_description": "Una especie de robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+        "_originLocation": {
+          "_id": "L-19",
+          "_name": "Planeta de los robots de cocina",
+          "_description": "Un planeta habitado por robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "N-555",
+            "_name": "Dimensión de la paradoja",
+            "_description": "Una dimensión de la paradoja con eventos contradictorios",
+            "_state": "Destruida",
+            "_tecnologyLevel": 2
+          },
+          "_population": 100000000
+        },
+        "_speciesType": "Robótico",
+        "_averageLifespan": 10
+      },
+      "_dimension": {
+        "_id": "G-789B",
+        "_name": "Dimensión post-apocalíptica",
+        "_description": "Una dimensión post-apocalíptica con un ambiente hostil",
+        "_state": "Destruida",
+        "_tecnologyLevel": 1
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 4
     },
     {
-      "id": "C-131",
-      "name": "Dimensión de los animales parlantes",
-      "description": "Dimensión donde los animales pueden hablar y tienen sociedades complejas.",
-      "state": "Activa",
-      "technologyLevel": 2
+      "_id": "C-12",
+      "_name": "Rick zombie",
+      "_description": "Una versión alternativa de Rick que se convirtió en un zombie después de ser infectado por un virus en una dimensión apocalíptica",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "H-321C",
+        "_name": "Dimensión desconocida",
+        "_description": "Una dimensión desconocida con misterios por descubrir",
+        "_state": "Activa",
+        "_tecnologyLevel": 2
+      },
+      "_state": "Muerto",
+      "_affiliation": "Independiente",
+      "_intelligence": 3
     },
     {
-      "id": "C-132",
-      "name": "Dimensión de los sueños lúcidos",
-      "description": "Dimensión donde las personas pueden controlar sus sueños y vivir aventuras increíbles.",
-      "state": "Cuarentena",
-      "technologyLevel": 4
+      "_id": "C-13",
+      "_name": "Morty zombi",
+      "_description": "Una versión alternativa de Morty que se convirtió en un zombie después de ser infectado por un virus en una dimensión apocalíptica",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "H-321C",
+        "_name": "Dimensión desconocida",
+        "_description": "Una dimensión desconocida con misterios por descubrir",
+        "_state": "Activa",
+        "_tecnologyLevel": 2
+      },
+      "_state": "Muerto",
+      "_affiliation": "Independiente",
+      "_intelligence": 2
     },
     {
-      "id": "C-133",
-      "name": "Dimensión de los superhéroes caídos",
-      "description": "Dimensión donde los superhéroes han caído en desgracia y se han convertido en villanos.",
-      "state": "Activa",
-      "technologyLevel": 6
+      "_id": "C-14",
+      "_name": "Clon de Beth",
+      "_description": "Una versión alternativa de Beth que es un clon creado por un Rick original para reemplazar a una Beth original que fue asesinada",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "I-654",
+        "_name": "Dimensión de bolsillo",
+        "_description": "Una dimensión de bolsillo con espacio limitado",
+        "_state": "Activa",
+        "_tecnologyLevel": 5
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 7
     },
     {
-      "id": "C-134",
-      "name": "Dimensión de los robots asesinos",
-      "description": "Dimensión donde los robots han tomado el control y exterminan a los humanos.",
-      "state": "Cuarentena",
-      "technologyLevel": 9
+      "_id": "C-15",
+      "_name": "Birdperson",
+      "_description": "Un personaje que es mitad humano y mitad pájaro, conocido por su personalidad excéntrica y su relación complicada con los demás personajes",
+      "_Species": {
+        "_id": "S-03",
+        "_name": "Squanchy",
+        "_description": "Una especie de gatos antropomórficos llamados Squanchy, caracterizados por su amor por la fiesta y el alcohol",
+        "_originLocation": {
+          "_id": "L-07",
+          "_name": "Planeta Squanch",
+          "_description": "Un planeta habitado por una especie de gatos antropomórficos llamados Squanchy",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "F-456A",
+            "_name": "Dimensión futurista",
+            "_description": "Una dimensión futurista con tecnología avanzada",
+            "_state": "Activa",
+            "_tecnologyLevel": 10
+          },
+          "_population": 200000000
+        },
+        "_speciesType": "Amorfo",
+        "_averageLifespan": 20
+      },
+      "_dimension": {
+        "_id": "J-987",
+        "_name": "Dimensión de ensueño",
+        "_description": "Una dimensión de ensueño con paisajes surrealistas",
+        "_state": "Activa",
+        "_tecnologyLevel": 3
+      },
+      "_state": "Vivo",
+      "_affiliation": "Federación Galáctica",
+      "_intelligence": 6
     },
     {
-      "id": "C-135",
-      "name": "Dimensión de los superhéroes adolescentes",
-      "description": "Dimensión donde los superhéroes son adolescentes con problemas típicos  de esa edad.",
-      "state": "Activa",
-      "technologyLevel": 5
+      "_id": "C-16",
+      "_name": "Squanchy",
+      "_description": "Un personaje que es un gato antropomórfico llamado Squanchy, conocido por su amor por la fiesta y el alcohol",
+      "_Species": {
+        "_id": "S-03",
+        "_name": "Squanchy",
+        "_description": "Una especie de gatos antropomórficos llamados Squanchy, caracterizados por su amor por la fiesta y el alcohol",
+        "_originLocation": {
+          "_id": "L-07",
+          "_name": "Planeta Squanch",
+          "_description": "Un planeta habitado por una especie de gatos antropomórficos llamados Squanchy",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "F-456A",
+            "_name": "Dimensión futurista",
+            "_description": "Una dimensión futurista con tecnología avanzada",
+            "_state": "Activa",
+            "_tecnologyLevel": 10
+          },
+          "_population": 200000000
+        },
+        "_speciesType": "Amorfo",
+        "_averageLifespan": 20
+      },
+      "_dimension": {
+        "_id": "I-654",
+        "_name": "Dimensión de bolsillo",
+        "_description": "Una dimensión de bolsillo con espacio limitado",
+        "_state": "Activa",
+        "_tecnologyLevel": 5
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 5
+    },
+    {
+      "_id": "C-17",
+      "_name": "Tammy Gueterman",
+      "_description": "Un personaje que es una agente de la federación galáctica, conocida por su traición a sus amigos y su lealtad a la federación",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
+      },
+      "_state": "Vivo",
+      "_affiliation": "Federación Galáctica",
+      "_intelligence": 4
+    },
+    {
+      "_id": "C-18",
+      "_name": "Abradolf Lincler",
+      "_description": "Un personaje que es una combinación genética de Abraham Lincoln y cierto personaje historico, conocido por su personalidad inestable y su relación complicada con los demás personajes",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "K-111",
+        "_name": "Dimensión de pesadilla",
+        "_description": "Una dimensión de pesadilla con criaturas aterradoras",
+        "_state": "Destruida",
+        "_tecnologyLevel": 1
+      },
+      "_state": "Muerto",
+      "_affiliation": "Independiente",
+      "_intelligence": 5
+    },
+    {
+      "_id": "C-19",
+      "_name": "Morty toxico",
+      "_description": "Una versión alternativa de Morty que se volvió tóxico y peligroso para los demás después de ser expuesto a una sustancia tóxica en una dimensión tóxica",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "M34A",
+        "_name": "Dimension tóxica",
+        "_description": "Un verdero físico de la toxicidad psicológica",
+        "_state": "Activa",
+        "_tecnologyLevel": 3
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 4
+    },
+    {
+      "_id": "C-20",
+      "_name": "Rick tóxico",
+      "_description": "Una versión alternativa de Rick que se volvió tóxico y peligroso para los demás después de ser expuesto a una sustancia tóxica en una dimensión tóxica",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "M34A",
+        "_name": "Dimension tóxica",
+        "_description": "Un verdero físico de la toxicidad psicológica",
+        "_state": "Activa",
+        "_tecnologyLevel": 3
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 8
+    },
+    {
+      "_id": "C-21",
+      "_name": "Rick pepinillo",
+      "_description": "Una versión alternativa de Rick que se convirtió en un pepinillo para evitar ir a terapia, conocido por su ingenio y su capacidad para sobrevivir en situaciones extremas",
+      "_Species": {
+        "_id": "S-02",
+        "_name": "Cronenberg",
+        "_description": "Una especie mutada que surgió después de un experimento fallido de Rick, caracterizada por su apariencia grotesca y su agresividad",
+        "_originLocation": {
+          "_id": "L-06",
+          "_name": "Planeta Cronenberg",
+          "_description": "Un planeta donde todos los seres vivos han sido mutados en criaturas horribles",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "G-789B",
+            "_name": "Dimensión post-apocalíptica",
+            "_description": "Una dimensión post-apocalíptica con un ambiente hostil",
+            "_state": "Destruida",
+            "_tecnologyLevel": 1
+          },
+          "_population": 1000000
+        },
+        "_speciesType": "Parásito",
+        "_averageLifespan": 50
+      },
+      "_dimension": {
+        "_id": "N-555",
+        "_name": "Dimensión de la paradoja",
+        "_description": "Una dimensión de la paradoja con eventos contradictorios",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
+      },
+      "_state": "Vivo",
+      "_affiliation": "Familia Smith",
+      "_intelligence": 9
+    },
+    {
+      "_id": "C-22",
+      "_name": "Rick Sanchez (D-222)",
+      "_description": "Una versión alternativa de Rick que proviene de la dimensión D-222, donde tuvo una historia diferente y una relación diferente con su familia",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "O-666",
+        "_name": "Dimensión de la locura",
+        "_description": "Una dimensión de la locura con un ambiente caótico",
+        "_state": "Activa",
+        "_tecnologyLevel": 1
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 7
+    },
+    {
+      "_id": "C-23",
+      "_name": "Meeseeks anciano",
+      "_description": "Una versión alternativa de un Meeseeks que ha existido durante mucho tiempo y ha cumplido muchos propósitos, conocido por su sabiduría y su paciencia",
+      "_Species": {
+        "_id": "S-04",
+        "_name": "Meeseeks",
+        "_description": "Una especie de criaturas azules llamadas Meeseeks, que existen para cumplir un propósito específico y luego desaparecen",
+        "_originLocation": {
+          "_id": "L-10",
+          "_name": "Cubo de los Meeseeks",
+          "_description": "Un Cubo habitado por criaturas azules llamadas Meeseeks, que existen para cumplir un propósito específico y luego desaparecen",
+          "_type": "Dimensión de bolsillo",
+          "_dimension": {
+            "_id": "H-321C",
+            "_name": "Dimensión desconocida",
+            "_description": "Una dimensión desconocida con misterios por descubrir",
+            "_state": "Activa",
+            "_tecnologyLevel": 2
+          },
+          "_population": 1000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 1
+      },
+      "_dimension": {
+        "_id": "P-777",
+        "_name": "Dimensión de la utopía",
+        "_description": "Una dimensión de la utopía con una sociedad perfecta",
+        "_state": "Activa",
+        "_tecnologyLevel": 10
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 6
+    },
+    {
+      "_id": "C-24",
+      "_name": "Fireball",
+      "_description": "Gato de fuego",
+      "_Species": {
+        "_id": "S-07",
+        "_name": "Perro parlante",
+        "_description": "Una especie de perros parlantes que son tratados como ciudadanos de segunda clase",
+        "_originLocation": {
+          "_id": "L-13",
+          "_name": "Planeta de los perros parlantes",
+          "_description": "Un planeta habitado por perros parlantes que son tratados como ciudadanos de segunda clase",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "K-111",
+            "_name": "Dimensión de pesadilla",
+            "_description": "Una dimensión de pesadilla con criaturas aterradoras",
+            "_state": "Destruida",
+            "_tecnologyLevel": 1
+          },
+          "_population": 50000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 15
+      },
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 6
+    },
+    {
+      "_id": "C-25",
+      "_name": "Gentlecat",
+      "_description": "Un personaje que es un gato parlante llamado Gentlecat, conocido por su elegancia y su actitud despreocupada",
+      "_Species": {
+        "_id": "S-08",
+        "_name": "Gato parlante",
+        "_description": "Una especie de gatos parlantes que son tratados como ciudadanos de primera clase",
+        "_originLocation": {
+          "_id": "L-14",
+          "_name": "Planeta de los gatos parlantes",
+          "_description": "Un planeta habitado por gatos parlantes que son tratados como ciudadanos de primera clase",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "L-222",
+            "_name": "Dimensión de la realidad alternativa",
+            "_description": "Una dimensión de la realidad alternativa con eventos históricos diferentes",
+            "_state": "Activa",
+            "_tecnologyLevel": 4
+          },
+          "_population": 50000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 20
+      },
+      "_dimension": {
+        "_id": "P-777",
+        "_name": "Dimensión de la utopía",
+        "_description": "Una dimensión de la utopía con una sociedad perfecta",
+        "_state": "Activa",
+        "_tecnologyLevel": 10
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 7
+    },
+    {
+      "_id": "C-26",
+      "_name": "Unity",
+      "_description": "Un personaje que es una mente colmena llamada Unity, conocida por su capacidad para controlar a otros seres a través de la telepatía y su relación complicada con Rick",
+      "_Species": {
+        "_id": "S-10",
+        "_name": "Mente colmena",
+        "_description": "Una especie de seres con una mente colmena que pueden controlar a otros seres a través de la telepatía",
+        "_originLocation": {
+          "_id": "L-20",
+          "_name": "Simulacion de los universos paralelos",
+          "_description": "Una simulación habitada por versiones alternativas de Rick y Morty que existen en diferentes universos paralelos",
+          "_type": "Simulación virtual",
+          "_dimension": {
+            "_id": "Q-888",
+            "_name": "Dimensión de la distopía",
+            "_description": "Una dimensión de la distopía con una sociedad opresiva",
+            "_state": "Destruida",
+            "_tecnologyLevel": 2
+          },
+          "_population": 1000000
+        },
+        "_speciesType": "Hivemind",
+        "_averageLifespan": 1000
+      },
+      "_dimension": {
+        "_id": "Q-888",
+        "_name": "Dimensión de la distopía",
+        "_description": "Una dimensión de la distopía con una sociedad opresiva",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 9
+    },
+    {
+      "_id": "C-27",
+      "_name": "Jessica",
+      "_description": "Un personaje que es la novia de Morty, conocida por su belleza y su relación complicada con Morty",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 5
+    },
+    {
+      "_id": "C-28",
+      "_name": "Rick senador",
+      "_description": "Una versión alternativa de Rick que se convirtió en senador, conocido por su habilidad para la política y su deseo de reformar el sistema político",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "P-777",
+        "_name": "Dimensión de la utopía",
+        "_description": "Una dimensión de la utopía con una sociedad perfecta",
+        "_state": "Activa",
+        "_tecnologyLevel": 10
+      },
+      "_state": "Vivo",
+      "_affiliation": "Consejo de Ricks",
+      "_intelligence": 7
+    },
+    {
+      "_id": "C-29",
+      "_name": "Rick policial",
+      "_description": "Una versión alternativa de Rick que se convirtió en policía, conocido por su sentido de la justicia y su deseo de proteger a los demás",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "Q-888",
+        "_name": "Dimensión de la distopía",
+        "_description": "Una dimensión de la distopía con una sociedad opresiva",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
+      },
+      "_state": "Vivo",
+      "_affiliation": "Consejo de Ricks",
+      "_intelligence": 6
+    },
+    {
+      "_id": "C-30",
+      "_name": "Rick feliz",
+      "_description": "Una versión alternativa de Rick que es feliz y optimista, conocido por su actitud positiva y su capacidad para disfrutar de las cosas simples de la vida",
+      "_Species": {
+        "_id": "S-01",
+        "_name": "Humano",
+        "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+        "_originLocation": {
+          "_id": "L-01",
+          "_name": "Tierra (C-137)",
+          "_description": "El planeta de origen de Rick y Morty",
+          "_type": "Planeta",
+          "_dimension": {
+            "_id": "C-137",
+            "_name": "Dimensión Canónica",
+            "_description": "La dimensión original de Rick y Morty",
+            "_state": "Activa",
+            "_tecnologyLevel": 6
+          },
+          "_population": 10000000000
+        },
+        "_speciesType": "Humanoide",
+        "_averageLifespan": 80
+      },
+      "_dimension": {
+        "_id": "L-222",
+        "_name": "Dimensión de la realidad alternativa",
+        "_description": "Una dimensión de la realidad alternativa con eventos históricos diferentes",
+        "_state": "Activa",
+        "_tecnologyLevel": 4
+      },
+      "_state": "Vivo",
+      "_affiliation": "Independiente",
+      "_intelligence": 8
     }
   ],
-  "localizaciones": [
+  "dimensiones": [
     {
-      "id": "idlocation1",
-      "name": "Coruscant",
-      "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 8000000000
+      "_id": "C-137",
+      "_name": "Dimensión Canónica",
+      "_description": "La dimensión original de Rick y Morty",
+      "_state": "Activa",
+      "_tecnologyLevel": 6
     },
     {
-      "id": "idlocation2",
-      "name": "Felucia",
-      "description": "Planeta habitado por una especie violenta y primitiva.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 5000000
+      "_id": "D-99",
+      "_name": "Dimensión alternativa similar",
+      "_description": "Una dimensión alternativa con una historia diferente",
+      "_state": "Activa",
+      "_tecnologyLevel": 4
     },
     {
-      "id": "idlocation3",
-      "name": "Alderaan",
-      "description": "Planeta pacífico y próspero, destruido por la Estrella de la Muerte en la peli IV.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 100
+      "_id": "E123",
+      "_name": "Dimensión exotica",
+      "_description": "Una dimensión exótica con características únicas",
+      "_state": "Destruida",
+      "_tecnologyLevel": 2
     },
     {
-      "id": "idlocation4",
-      "name": "Kamino",
-      "description": "Planeta donde se crea",
-      "type": "Ciudadela",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 10000
+      "_id": "F-456A",
+      "_name": "Dimensión futurista",
+      "_description": "Una dimensión futurista con tecnología avanzada",
+      "_state": "Activa",
+      "_tecnologyLevel": 10
     },
     {
-      "id": "idlocation5",
-      "name": "Geonosis",
-      "description": "Planeta donde residen los geonosianos. Y murió Jango Fett",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 200000
+      "_id": "G-789B",
+      "_name": "Dimensión post-apocalíptica",
+      "_description": "Una dimensión post-apocalíptica con un ambiente hostil",
+      "_state": "Destruida",
+      "_tecnologyLevel": 1
     },
     {
-      "id": "idlocation6",
-      "name": "Tatooine",
-      "description": "Planeta desértico, hogar de Anakin y Luke Skywalker.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 200000
+      "_id": "H-321C",
+      "_name": "Dimensión desconocida",
+      "_description": "Una dimensión desconocida con misterios por descubrir",
+      "_state": "Activa",
+      "_tecnologyLevel": 2
     },
     {
-      "id": "idlocation7",
-      "name": "Hoth",
-      "description": "Planeta helado, escenario de la batalla entre el Imperio y la Alianza Rebelde en la peli V.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 0
+      "_id": "I-654",
+      "_name": "Dimensión de bolsillo",
+      "_description": "Una dimensión de bolsillo con espacio limitado",
+      "_state": "Activa",
+      "_tecnologyLevel": 5
     },
     {
-      "id": "idlocation8",
-      "name": "Endor",
-      "description": "Planeta boscoso, hogar de los ewoks y escenario de la batalla final en la peli VI.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 300000
+      "_id": "J-987",
+      "_name": "Dimensión de ensueño",
+      "_description": "Una dimensión de ensueño con paisajes surrealistas",
+      "_state": "Activa",
+      "_tecnologyLevel": 3
     },
     {
-      "id": "idlocation9",
-      "name": "Mustafar",
-      "description": "Planeta volcánico, escenario del duelo entre Anakin y Obi-Wan en la peli III.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 1000
+      "_id": "K-111",
+      "_name": "Dimensión de pesadilla",
+      "_description": "Una dimensión de pesadilla con criaturas aterradoras",
+      "_state": "Destruida",
+      "_tecnologyLevel": 1
     },
     {
-      "id": "idlocation10",
-      "name": "Naboo",
-      "description": "Planeta pacífico y hermoso, hogar de Padmé Amidala, mi amor platónico.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 4500000000
+      "_id": "L-222",
+      "_name": "Dimensión de la realidad alternativa",
+      "_description": "Una dimensión de la realidad alternativa con eventos históricos diferentes",
+      "_state": "Activa",
+      "_tecnologyLevel": 4
     },
     {
-      "id": "idlocation11",
-      "name": "Dantooine",
-      "description": "Planeta desértico, escenario de la base rebelde en la peli IV.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 100000
+      "_id": "M34A",
+      "_name": "Dimension tóxica",
+      "_description": "Un verdero físico de la toxicidad psicológica",
+      "_state": "Activa",
+      "_tecnologyLevel": 3
     },
     {
-      "id": "idlocation12",
-      "name": "Yavin IV",
-      "description": "Planeta selvático, escenario de la batalla entre el Imperio y la Alianza Rebelde en la peli IV.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 10000
+      "_id": "N-555",
+      "_name": "Dimensión de la paradoja",
+      "_description": "Una dimensión de la paradoja con eventos contradictorios",
+      "_state": "Destruida",
+      "_tecnologyLevel": 2
     },
     {
-      "id": "idlocation13",
-      "name": "Kashyyyk",
-      "description": "Planeta boscoso, hogar de los wookiees y escenario de la batalla en la peli III.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 45000000
+      "_id": "O-666",
+      "_name": "Dimensión de la locura",
+      "_description": "Una dimensión de la locura con un ambiente caótico",
+      "_state": "Activa",
+      "_tecnologyLevel": 1
     },
     {
-      "id": "idlocation14",
-      "name": "Mandalore",
-      "description": "Planeta desértico, hogar de los mandalorianos y escenario de varias batallas en las series animadas.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 2000000
+      "_id": "P-777",
+      "_name": "Dimensión de la utopía",
+      "_description": "Una dimensión de la utopía con una sociedad perfecta",
+      "_state": "Activa",
+      "_tecnologyLevel": 10
     },
     {
-      "id": "idlocation15",
-      "name": "Sullust",
-      "description": "Planeta volcánico, escenario de la batalla en la peli VI.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 1000000
+      "_id": "Q-888",
+      "_name": "Dimensión de la distopía",
+      "_description": "Una dimensión de la distopía con una sociedad opresiva",
+      "_state": "Destruida",
+      "_tecnologyLevel": 2
     },
     {
-      "id": "idlocation16",
-      "name": "Dathomir",
-      "description": "Planeta oscuro y peligroso, hogar de las brujas de las sombras y escenario de varias batallas en las series animadas.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 500000
-    },
-    {
-      "id": "idlocation17",
-      "name": "Ilum",
-      "description": "Planeta helado, hogar de los cristales kyber utilizados para construir sables de luz.",
-      "type": "Planeta",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 0
-    },
-    {
-      "id": "idlocation18",
-      "name": "Poliss Massa",
-      "description": "Estación Espacial en donde nacen Luke y Leia tras el duelo en Mustafar",
-      "type": "Estación Espacial",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 1000
-    },
-    {
-      "id": "idlocation19",
-      "name": "Tantive IV",
-      "description": "Nave espacial de la princesa Leia, escenario de la batalla en la peli IV.",
-      "type": "Estación Espacial",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 100
-    },
-    {
-      "id": "idlocation20",
-      "name": "Death Star",
-      "description": "Estación espacial con capacidad para destruir planetas, escenario de varias batallas en las pelis IV, VI y Rogue One.",
-      "type": "Estación Espacial",
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "population": 1000000
+      "_id": "C-461",
+      "_name": "Dimension Paco",
+      "_description": "Casa Paco",
+      "_state": "Activa",
+      "_tecnologyLevel": 2
     }
   ],
   "especies": [
     {
-      "id": "idspecies1",
-      "name": "Humano",
-      "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-01",
+      "_name": "Humano",
+      "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+      "_originLocation": {
+        "_id": "L-01",
+        "_name": "Tierra (C-137)",
+        "_description": "El planeta de origen de Rick y Morty",
+        "_type": "Planeta",
+        "_dimension": {
+          "_id": "C-137",
+          "_name": "Dimensión Canónica",
+          "_description": "La dimensión original de Rick y Morty",
+          "_state": "Activa",
+          "_tecnologyLevel": 6
         },
-        "population": 8000000000
+        "_population": 10000000000
       },
-      "specieType": "Humanoide",
-      "averageLifespan": 80
+      "_speciesType": "Humanoide",
+      "_averageLifespan": 80
     },
     {
-      "id": "idspecies2",
-      "name": "Wookiee",
-      "description": "Seres peludos y fuertes, conocidos por su lealtad y habilidades de combate.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-02",
+      "_name": "Cronenberg",
+      "_description": "Una especie mutada que surgió después de un experimento fallido de Rick, caracterizada por su apariencia grotesca y su agresividad",
+      "_originLocation": {
+        "_id": "L-06",
+        "_name": "Planeta Cronenberg",
+        "_description": "Un planeta donde todos los seres vivos han sido mutados en criaturas horribles",
+        "_type": "Planeta",
+        "_dimension": {
+          "_id": "G-789B",
+          "_name": "Dimensión post-apocalíptica",
+          "_description": "Una dimensión post-apocalíptica con un ambiente hostil",
+          "_state": "Destruida",
+          "_tecnologyLevel": 1
         },
-        "population": 8000000000
+        "_population": 1000000
       },
-      "specieType": "Humanoide",
-      "averageLifespan": 400
+      "_speciesType": "Parásito",
+      "_averageLifespan": 50
     },
     {
-      "id": "idspecies3",
-      "name": "Twilek",
-      "description": "Seres con piel de colores y tentáculos en la cabeza, conocidos por sus mujeres bellas y hombres horrendos.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-03",
+      "_name": "Squanchy",
+      "_description": "Una especie de gatos antropomórficos llamados Squanchy, caracterizados por su amor por la fiesta y el alcohol",
+      "_originLocation": {
+        "_id": "L-07",
+        "_name": "Planeta Squanch",
+        "_description": "Un planeta habitado por una especie de gatos antropomórficos llamados Squanchy",
+        "_type": "Planeta",
+        "_dimension": {
+          "_id": "F-456A",
+          "_name": "Dimensión futurista",
+          "_description": "Una dimensión futurista con tecnología avanzada",
+          "_state": "Activa",
+          "_tecnologyLevel": 10
         },
-        "population": 8000000000
+        "_population": 200000000
       },
-      "specieType": "Humanoide",
-      "averageLifespan": 150
+      "_speciesType": "Amorfo",
+      "_averageLifespan": 20
     },
     {
-      "id": "idspecies4",
-      "name": "Droid",
-      "description": "Máquinas inteligentes creadas para realizar tareas específicas, desde la limpieza hasta el combate.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-04",
+      "_name": "Meeseeks",
+      "_description": "Una especie de criaturas azules llamadas Meeseeks, que existen para cumplir un propósito específico y luego desaparecen",
+      "_originLocation": {
+        "_id": "L-10",
+        "_name": "Cubo de los Meeseeks",
+        "_description": "Un Cubo habitado por criaturas azules llamadas Meeseeks, que existen para cumplir un propósito específico y luego desaparecen",
+        "_type": "Dimensión de bolsillo",
+        "_dimension": {
+          "_id": "H-321C",
+          "_name": "Dimensión desconocida",
+          "_description": "Una dimensión desconocida con misterios por descubrir",
+          "_state": "Activa",
+          "_tecnologyLevel": 2
         },
-        "population": 8000000000
+        "_population": 1000000
       },
-      "specieType": "Robótico",
-      "averageLifespan": 1000
+      "_speciesType": "Humanoide",
+      "_averageLifespan": 1
     },
     {
-      "id": "idspecies5",
-      "name": "Ewok",
-      "description": "Seres pequeños y peludos, conocidos por su valentía y habilidades de supervivencia en la naturaleza.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-05",
+      "_name": "Naboniano",
+      "_description": "Una especie de seres acuáticos llamados Nabonianos, caracterizados por su piel verde y su capacidad para respirar bajo el agua",
+      "_originLocation": {
+        "_id": "L-17",
+        "_name": "Naboon",
+        "_description": "Un planeta habitado por una especie de seres acuáticos llamados Nabonianos",
+        "_type": "Planeta",
+        "_dimension": {
+          "_id": "P-777",
+          "_name": "Dimensión de la utopía",
+          "_description": "Una dimensión de la utopía con una sociedad perfecta",
+          "_state": "Activa",
+          "_tecnologyLevel": 10
         },
-        "population": 8000000000
+        "_population": 200000000
       },
-      "specieType": "Humanoide",
-      "averageLifespan": 60
+      "_speciesType": "Amorfo",
+      "_averageLifespan": 100
     },
     {
-      "id": "idspecies6",
-      "name": "Zabrak",
-      "description": "Seres con cuernos en la cabeza y tatuajes faciales, conocidos por su ferocidad en el combate.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-06",
+      "_name": "Insecto gigante",
+      "_description": "Una especie de insectos gigantes que son considerados plagas por los habitantes del planeta",
+      "_originLocation": {
+        "_id": "L-15",
+        "_name": "Planeta de los insectos gigantes",
+        "_description": "Un planeta habitado por insectos gigantes que son considerados plagas por los habitantes del planeta",
+        "_type": "Planeta",
+        "_dimension": {
+          "_id": "N-555",
+          "_name": "Dimensión de la paradoja",
+          "_description": "Una dimensión de la paradoja con eventos contradictorios",
+          "_state": "Destruida",
+          "_tecnologyLevel": 2
         },
-        "population": 8000000000
+        "_population": 100000000
       },
-      "specieType": "Humanoide",
-      "averageLifespan": 70
+      "_speciesType": "Parásito",
+      "_averageLifespan": 5
     },
     {
-      "id": "idspecies7",
-      "name": "Togruta",
-      "description": "Seres con piel de colores y grandes orejas, conocidos por su agilidad y habilidades de caza.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-07",
+      "_name": "Perro parlante",
+      "_description": "Una especie de perros parlantes que son tratados como ciudadanos de segunda clase",
+      "_originLocation": {
+        "_id": "L-13",
+        "_name": "Planeta de los perros parlantes",
+        "_description": "Un planeta habitado por perros parlantes que son tratados como ciudadanos de segunda clase",
+        "_type": "Planeta",
+        "_dimension": {
+          "_id": "K-111",
+          "_name": "Dimensión de pesadilla",
+          "_description": "Una dimensión de pesadilla con criaturas aterradoras",
+          "_state": "Destruida",
+          "_tecnologyLevel": 1
         },
-        "population": 8000000000
+        "_population": 50000000
       },
-      "specieType": "Humanoide",
-      "averageLifespan": 85
+      "_speciesType": "Humanoide",
+      "_averageLifespan": 15
     },
     {
-      "id": "idspecies8",
-      "name": "Mon Calamari",
-      "description": "Seres acuáticos con piel escamosa, conocidos por su habilidad para la ingeniería naval.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-08",
+      "_name": "Gato parlante",
+      "_description": "Una especie de gatos parlantes que son tratados como ciudadanos de primera clase",
+      "_originLocation": {
+        "_id": "L-14",
+        "_name": "Planeta de los gatos parlantes",
+        "_description": "Un planeta habitado por gatos parlantes que son tratados como ciudadanos de primera clase",
+        "_type": "Planeta",
+        "_dimension": {
+          "_id": "L-222",
+          "_name": "Dimensión de la realidad alternativa",
+          "_description": "Una dimensión de la realidad alternativa con eventos históricos diferentes",
+          "_state": "Activa",
+          "_tecnologyLevel": 4
         },
-        "population": 8000000000
+        "_population": 50000000
       },
-      "specieType": "Acuático",
-      "averageLifespan": 120
+      "_speciesType": "Humanoide",
+      "_averageLifespan": 20
     },
     {
-      "id": "idspecies9",
-      "name": "Rodiano",
-      "description": "Seres con piel verde y ojos grandes, conocidos por su habilidad para la caza y el rastreo.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-09",
+      "_name": "Robot de cocina",
+      "_description": "Una especie de robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+      "_originLocation": {
+        "_id": "L-19",
+        "_name": "Planeta de los robots de cocina",
+        "_description": "Un planeta habitado por robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+        "_type": "Planeta",
+        "_dimension": {
+          "_id": "N-555",
+          "_name": "Dimensión de la paradoja",
+          "_description": "Una dimensión de la paradoja con eventos contradictorios",
+          "_state": "Destruida",
+          "_tecnologyLevel": 2
         },
-        "population": 8000000000
+        "_population": 100000000
       },
-      "specieType": "Humanoide",
-      "averageLifespan": 70
+      "_speciesType": "Robótico",
+      "_averageLifespan": 10
     },
     {
-      "id": "idspecies10",
-      "name": "Hutt",
-      "description": "Seres grandes y gordos, conocidos por su poder y riqueza en el mundo del crimen.",
-      "originLocation": {
-        "id": "idlocation1",
-        "name": "Coruscant",
-        "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-        "type": "Planeta",
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+      "_id": "S-10",
+      "_name": "Mente colmena",
+      "_description": "Una especie de seres con una mente colmena que pueden controlar a otros seres a través de la telepatía",
+      "_originLocation": {
+        "_id": "L-20",
+        "_name": "Simulacion de los universos paralelos",
+        "_description": "Una simulación habitada por versiones alternativas de Rick y Morty que existen en diferentes universos paralelos",
+        "_type": "Simulación virtual",
+        "_dimension": {
+          "_id": "Q-888",
+          "_name": "Dimensión de la distopía",
+          "_description": "Una dimensión de la distopía con una sociedad opresiva",
+          "_state": "Destruida",
+          "_tecnologyLevel": 2
         },
-        "population": 8000000000
+        "_population": 1000000
       },
-      "specieType": "Amorfo",
-      "averageLifespan": 1000
+      "_speciesType": "Hivemind",
+      "_averageLifespan": 1000
     }
   ],
-  "personajes": [
+  "localizaciones": [
     {
-      "id": "idcharacter1",
-      "name": "Darth Vader",
-      "desc": "El badass de la galaxia, un villano icónico con una historia trágica y redentora.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-01",
+      "_name": "Tierra (C-137)",
+      "_description": "El planeta de origen de Rick y Morty",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Robot-sustituto",
-      "affiliation": "Federación Galáctica",
-      "intelligence": "8"
+      "_population": 10000000000
     },
     {
-      "id": "idcharacter2",
-      "name": "Luke Skywalker",
-      "desc": "El héroe de la saga, un joven granjero que se convierte en un poderoso Jedi y salva la galaxia.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-02",
+      "_name": "Ciudadela de los Ricks",
+      "_description": "Una ciudadela donde viven muchos Ricks de diferentes dimensiones",
+      "_type": "Estación espacial",
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 100000
     },
     {
-      "id": "idcharacter3",
-      "name": "Leia Organa",
-      "desc": "La princesa rebelde, una líder valiente y astuta que lucha por la libertad de la galaxia.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-03",
+      "_name": "Planeta Gazorpazorp",
+      "_description": "Un planeta habitado por una especie violenta y matriarcal",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "D-99",
+        "_name": "Dimensión alternativa similar",
+        "_description": "Una dimensión alternativa con una historia diferente",
+        "_state": "Activa",
+        "_tecnologyLevel": 4
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 500000000
     },
     {
-      "id": "idcharacter4",
-      "name": "Han Solo",
-      "desc": "El contrabandista carismático, un piloto habilidoso y un amigo leal que se une a la lucha contra el Imperio.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-04",
+      "_name": "Planeta Plutón",
+      "_description": "Un planeta helado y desolado en el sistema solar de la Tierra",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 8
+      "_population": 2
     },
     {
-      "id": "idcharacter5",
-      "name": "Obi-Wan Kenobi",
-      "desc": "El maestro Jedi, un sabio y poderoso guerrero que entrena a Luke Skywalker y lucha contra el lado oscuro.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-05",
+      "_name": "Planeta Whale",
+      "_description": "Un planeta habitado por ballenas gigantes",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "E123",
+        "_name": "Dimensión exotica",
+        "_description": "Una dimensión exótica con características únicas",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 300000000
     },
     {
-      "id": "idcharacter6",
-      "name": "Anakin Skywalker",
-      "desc": "El elegido, un joven Jedi con un gran potencial que cae al lado oscuro y se convierte en Darth Vader.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-06",
+      "_name": "Planeta Cronenberg",
+      "_description": "Un planeta donde todos los seres vivos han sido mutados en criaturas horribles",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "G-789B",
+        "_name": "Dimensión post-apocalíptica",
+        "_description": "Una dimensión post-apocalíptica con un ambiente hostil",
+        "_state": "Destruida",
+        "_tecnologyLevel": 1
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 1000000
     },
     {
-      "id": "idcharacter7",
-      "name": "Yoda",
-      "desc": "El maestro Jedi más sabio y poderoso, un pequeño ser verde con una gran conexión con la Fuerza.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-07",
+      "_name": "Planeta Squanch",
+      "_description": "Un planeta habitado por una especie de gatos antropomórficos llamados Squanchy",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "F-456A",
+        "_name": "Dimensión futurista",
+        "_description": "Una dimensión futurista con tecnología avanzada",
+        "_state": "Activa",
+        "_tecnologyLevel": 10
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 10
+      "_population": 200000000
     },
     {
-      "id": "idcharacter8",
-      "name": "Emperor Palpatine",
-      "desc": "El malvado emperador, un maestro del lado oscuro que manipula a la galaxia para su propio beneficio.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-08",
+      "_name": "Parque anatómico",
+      "_description": "Un parque temático ubicado dentro del cuerpo de una persona, donde los visitantes pueden explorar diferentes órganos y sistemas del cuerpo humano",
+      "_type": "Dimensión de bolsillo",
+      "_dimension": {
+        "_id": "I-654",
+        "_name": "Dimensión de bolsillo",
+        "_description": "Una dimensión de bolsillo con espacio limitado",
+        "_state": "Activa",
+        "_tecnologyLevel": 5
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Federación Galáctica",
-      "intelligence": 10
+      "_population": 1000
     },
     {
-      "id": "idcharacter9",
-      "name": "Boba Fett",
-      "desc": "El cazarrecompensas más temido de la galaxia, un guerrero habilidoso y un mercenario implacable.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-09",
+      "_name": "Simulacion de los mini-Ricks",
+      "_description": "Una simulacion habitado por versiones miniatura de Rick y Morty",
+      "_type": "Simulación virtual",
+      "_dimension": {
+        "_id": "M34A",
+        "_name": "Dimension tóxica",
+        "_description": "Un verdero físico de la toxicidad psicológica",
+        "_state": "Activa",
+        "_tecnologyLevel": 3
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 8
+      "_population": 100000
     },
     {
-      "id": "idcharacter10",
-      "name": "Darth Maul",
-      "desc": "El aprendiz de Darth Sidious, un guerrero feroz con una apariencia aterradora y habilidades de combate excepcionales.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-10",
+      "_name": "Cubo de los Meeseeks",
+      "_description": "Un Cubo habitado por criaturas azules llamadas Meeseeks, que existen para cumplir un propósito específico y luego desaparecen",
+      "_type": "Dimensión de bolsillo",
+      "_dimension": {
+        "_id": "H-321C",
+        "_name": "Dimensión desconocida",
+        "_description": "Una dimensión desconocida con misterios por descubrir",
+        "_state": "Activa",
+        "_tecnologyLevel": 2
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 8
+      "_population": 1000000
     },
     {
-      "id": "idcharacter11",
-      "name": "Darth Sidious",
-      "desc": "El maestro del lado oscuro, un manipulador astuto y un estratega brillante que busca el control total de la galaxia.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-11",
+      "_name": "base de la federación galáctica",
+      "_description": "Una base militar de la federación galáctica, una organización que controla gran parte del universo conocido",
+      "_type": "Estación espacial",
+      "_dimension": {
+        "_id": "C-137",
+        "_name": "Dimensión Canónica",
+        "_description": "La dimensión original de Rick y Morty",
+        "_state": "Activa",
+        "_tecnologyLevel": 6
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
+      "_population": 500000
     },
     {
-      "id": "idcharacter12",
-      "name": "Jango Fett",
-      "desc": "El cazarecompensas mandaloriano que sirvio de base para la creación del ejército de clones, un guerrero habilidoso y un mercenario implacable.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-12",
+      "_name": "Planeta de las familias señuelo",
+      "_description": "Un planeta habitado por familias señuelo, que son utilizadas por los Ricks para proteger a sus familias",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "J-987",
+        "_name": "Dimensión de ensueño",
+        "_description": "Una dimensión de ensueño con paisajes surrealistas",
+        "_state": "Activa",
+        "_tecnologyLevel": 3
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 9
+      "_population": 100000000
     },
     {
-      "id": "idcharacter13",
-      "name": "Mace Windu",
-      "desc": "El maestro Jedi n**** con una gran habilidad en el combate con sables de luz, un líder valiente y un defensor de la justicia en la galaxia.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-13",
+      "_name": "Planeta de los perros parlantes",
+      "_description": "Un planeta habitado por perros parlantes que son tratados como ciudadanos de segunda clase",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "K-111",
+        "_name": "Dimensión de pesadilla",
+        "_description": "Una dimensión de pesadilla con criaturas aterradoras",
+        "_state": "Destruida",
+        "_tecnologyLevel": 1
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 50000000
     },
     {
-      "id": "idcharacter14",
-      "name": "Qui-Gon Jinn",
-      "desc": "El maestro Jedi rebelde, un sabio y poderoso guerrero que desafía las normas del Consejo Jedi y sigue su propia intuición.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-14",
+      "_name": "Planeta de los gatos parlantes",
+      "_description": "Un planeta habitado por gatos parlantes que son tratados como ciudadanos de primera clase",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "L-222",
+        "_name": "Dimensión de la realidad alternativa",
+        "_description": "Una dimensión de la realidad alternativa con eventos históricos diferentes",
+        "_state": "Activa",
+        "_tecnologyLevel": 4
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 50000000
     },
     {
-      "id": "idcharacter15",
-      "name": "Plo Koon",
-      "desc": "El maestro Jedi con una apariencia única, un ser sabio y poderoso",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-15",
+      "_name": "Planeta de los insectos gigantes",
+      "_description": "Un planeta habitado por insectos gigantes que son considerados plagas por los habitantes del planeta",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "N-555",
+        "_name": "Dimensión de la paradoja",
+        "_description": "Una dimensión de la paradoja con eventos contradictorios",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 100000000
     },
     {
-      "id": "idcharacter16",
-      "name": "Kit Fisto",
-      "desc": "El maestro Jedi con una apariencia acuática, un ser sabio y poderoso con habilidades excepcionales en el combate submarino.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-16",
+      "_name": "Simulacion de los robots asesinos",
+      "_description": "Un simulacio habitada por robots asesinos que fueron creados para proteger a la humanidad pero se volvieron contra ella",
+      "_type": "Simulación virtual",
+      "_dimension": {
+        "_id": "O-666",
+        "_name": "Dimensión de la locura",
+        "_description": "Una dimensión de la locura con un ambiente caótico",
+        "_state": "Activa",
+        "_tecnologyLevel": 1
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 100000
     },
     {
-      "id": "idcharacter17",
-      "name": "Saesee Tiin",
-      "desc": "El maestro Jedi con una apariencia única, un ser sabio y poderoso con habilidades excepcionales en el combate aéreo.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-17",
+      "_name": "Naboon",
+      "_description": "Un planeta habitado por una especie de seres acuáticos llamados Nabonianos",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "P-777",
+        "_name": "Dimensión de la utopía",
+        "_description": "Una dimensión de la utopía con una sociedad perfecta",
+        "_state": "Activa",
+        "_tecnologyLevel": 10
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 200000000
     },
     {
-      "id": "idcharacter18",
-      "name": "Eeth Koth",
-      "desc": "El maestro Jedi con una apariencia única, un ser sabio y poderoso con habilidades excepcionales en el combate cuerpo a cuerpo.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-18",
+      "_name": "Dagobah",
+      "_description": "Un planeta pantanoso y peligroso, habitado por criaturas hostiles y con una atmósfera tóxica",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "Q-888",
+        "_name": "Dimensión de la distopía",
+        "_description": "Una dimensión de la distopía con una sociedad opresiva",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 50000000
     },
     {
-      "id": "idcharacter19",
-      "name": "Admiral Ackbar",
-      "desc": "El almirante rebelde, un líder valiente y astuto que lucha por la libertad de la galaxia.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-19",
+      "_name": "Planeta de los robots de cocina",
+      "_description": "Un planeta habitado por robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+      "_type": "Planeta",
+      "_dimension": {
+        "_id": "N-555",
+        "_name": "Dimensión de la paradoja",
+        "_description": "Una dimensión de la paradoja con eventos contradictorios",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Familia Smith",
-      "intelligence": 9
+      "_population": 100000000
     },
     {
-      "id": "idcharacter20",
-      "name": "General Grievous",
-      "desc": "El general cyborg, un guerrero temible con habilidades excepcionales en el combate con sables de luz.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
+      "_id": "L-20",
+      "_name": "Simulacion de los universos paralelos",
+      "_description": "Una simulación habitada por versiones alternativas de Rick y Morty que existen en diferentes universos paralelos",
+      "_type": "Simulación virtual",
+      "_dimension": {
+        "_id": "Q-888",
+        "_name": "Dimensión de la distopía",
+        "_description": "Una dimensión de la distopía con una sociedad opresiva",
+        "_state": "Destruida",
+        "_tecnologyLevel": 2
       },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 9
-    },
-    {
-      "id": "idcharacter21",
-      "name": "Count Dooku",
-      "desc": "El conde Sith, un maestro del lado oscuro y un líder carismático que busca el control total de la galaxia.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter22",
-      "name": "Darth Plagueis",
-      "desc": "El maestro Sith legendario, un ser tan poderoso que se dice que podía manipular la vida y la muerte.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter23",
-      "name": "Darth Bane",
-      "desc": "El fundador de la regla de dos, un maestro Sith que estableció que solo puede haber un maestro y un aprendiz en el lado oscuro.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter24",
-      "name": "Darth Revan",
-      "desc": "El maestro Sith redimido, un ser poderoso que cayó al lado oscuro pero luego se arrepintió y luchó por la luz.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter25",
-      "name": "Darth Malgus",
-      "desc": "El guerrero Sith implacable, un ser poderoso que busca la dominación total de la galaxia a través de la fuerza y el miedo.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter26",
-      "name": "Darth Nihilus",
-      "desc": "El señor de la hambre, un ser oscuro y poderoso que se alimenta de la fuerza vital de otros seres para mantener su propia existencia.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter27",
-      "name": "Darth Sion",
-      "desc": "El señor de la ira, un ser oscuro y poderoso que se alimenta de su propio dolor y sufrimiento para mantener su existencia.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter28",
-      "name": "Darth Talon",
-      "desc": "La aprendiz Sith letal, un ser oscuro y poderoso con habilidades excepcionales en el combate cuerpo a cuerpo y el uso de la fuerza.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter29",
-      "name": "Darth Zannah",
-      "desc": "La aprendiz Sith astuta, un ser oscuro y poderoso con habilidades excepcionales en la manipulación de la mente y el uso de la fuerza.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
-    },
-    {
-      "id": "idcharacter30",
-      "name": "Darth Cognus",
-      "desc": "La aprendiz Sith misteriosa, un ser oscuro y poderoso con habilidades excepcionales en la manipulación de la fuerza y el uso de la tecnología Sith.",
-      "specie": {
-        "id": "idspecies1",
-        "name": "Humano",
-        "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-        "originLocation": {
-          "id": "idlocation1",
-          "name": "Coruscant",
-          "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-          "type": "Planeta",
-          "dimension": {
-            "id": "C-120",
-            "name": "Dimensión Cronenberg",
-            "description": "Dimensión loca e irascible.",
-            "state": "Activa",
-            "technologyLevel": 5
-          },
-          "population": 8000000000
-        },
-        "specieType": "Humanoide",
-        "averageLifespan": 80
-      },
-      "dimension": {
-        "id": "C-120",
-        "name": "Dimensión Cronenberg",
-        "description": "Dimensión loca e irascible.",
-        "state": "Activa",
-        "technologyLevel": 5
-      },
-      "state": "Vivo",
-      "affiliation": "Independiente",
-      "intelligence": 10
+      "_population": 1000000
     }
   ],
   "inventos": [
     {
-      "id": "idarma1",
-      "name": "Sable de Luz",
-      "desc": "Objeto cortante y punzante no apto para niños menores de 6 años o usuarios no sensibles a la fuerza.",
-      "inventor": {
-        "id": "idcharacter1",
-        "name": "Darth Vader",
-        "desc": "El badass de la galaxia, un villano icónico con una historia trágica y redentora.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-01",
+      "_name": "Pistola de portales",
+      "_description": "Un dispositivo que permite a Rick y Morty viajar entre dimensiones y universos paralelos",
+      "_inventor": {
+        "_id": "C-01",
+        "_name": "Rick Sanchez",
+        "_description": "Un científico brillante pero alcohólico y cínico, conocido por sus aventuras interdimensionales y su relación complicada con su familia",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "C-137",
+          "_name": "Dimensión Canónica",
+          "_description": "La dimensión original de Rick y Morty",
+          "_state": "Activa",
+          "_tecnologyLevel": 6
         },
-        "state": "Robot-sustituto",
-        "affiliation": "Federación Galáctica",
-        "intelligence": "8"
+        "_state": "Vivo",
+        "_affiliation": "Familia Smith",
+        "_intelligence": 10
       },
-      "type": "Arma",
-      "dangerLevel": "10"
+      "_type": "Dispositivo de viaje",
+      "_danger": 5
     },
     {
-      "id": "idarma2",
-      "name": "Blaster",
-      "desc": "Arma de fuego de energía, utilizada por soldados, cazarrecompensas y criminales en toda la galaxia.",
-      "inventor": {
-        "id": "idcharacter2",
-        "name": "Luke Skywalker",
-        "desc": "El héroe de la saga, un joven granjero que se convierte en un poderoso Jedi y lucha contra el malvado Imperio.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-02",
+      "_name": "Cubo de los Meeseeks",
+      "_description": "Un Cubo que crea criaturas azules llamadas Meeseeks, que existen para cumplir un propósito específico y luego desaparecen",
+      "_inventor": {
+        "_id": "C-01",
+        "_name": "Rick Sanchez",
+        "_description": "Un científico brillante pero alcohólico y cínico, conocido por sus aventuras interdimensionales y su relación complicada con su familia",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "C-137",
+          "_name": "Dimensión Canónica",
+          "_description": "La dimensión original de Rick y Morty",
+          "_state": "Activa",
+          "_tecnologyLevel": 6
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Familia Smith",
+        "_intelligence": 10
       },
-      "type": "Arma",
-      "dangerLevel": 8
+      "_type": "Biotecnología",
+      "_danger": 4
     },
     {
-      "id": "idarma3",
-      "name": "Caza Estelar",
-      "desc": "Nave espacial utilizada para el combate aéreo, equipada con armas y sistemas de defensa avanzados.",
-      "inventor": {
-        "id": "idcharacter3",
-        "name": "Han Solo",
-        "desc": "El contrabandista carismático, un piloto habilidoso y un aliado valioso en la lucha contra el Imperio.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-03",
+      "_name": "Bomba de cronenoides",
+      "_description": "Una bomba que libera una nube de cronenoides, criaturas que pueden mutar a otros seres vivos en formas grotescas",
+      "_inventor": {
+        "_id": "C-01",
+        "_name": "Rick Sanchez",
+        "_description": "Un científico brillante pero alcohólico y cínico, conocido por sus aventuras interdimensionales y su relación complicada con su familia",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "C-137",
+          "_name": "Dimensión Canónica",
+          "_description": "La dimensión original de Rick y Morty",
+          "_state": "Activa",
+          "_tecnologyLevel": 6
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Familia Smith",
+        "_intelligence": 10
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "_type": "Arma",
+      "_danger": 8
     },
     {
-      "id": "idarma4",
-      "name": "Destructor Estelar",
-      "desc": "Una estación espacial masiva y poderosa, equipada con armas de destrucción masiva y capaz de destruir planetas enteros.",
-      "inventor": {
-        "id": "idcharacter4",
-        "name": "Leia Organa",
-        "desc": "La princesa rebelde, una líder valiente y una guerrera habilidosa que lucha por la libertad de la galaxia.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-04",
+      "_name": "Simulador de realidad virtual",
+      "_description": "Un dispositivo que crea una simulación de realidad virtual donde los usuarios pueden experimentar diferentes escenarios y aventuras",
+      "_inventor": {
+        "_id": "C-01",
+        "_name": "Rick Sanchez",
+        "_description": "Un científico brillante pero alcohólico y cínico, conocido por sus aventuras interdimensionales y su relación complicada con su familia",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "C-137",
+          "_name": "Dimensión Canónica",
+          "_description": "La dimensión original de Rick y Morty",
+          "_state": "Activa",
+          "_tecnologyLevel": 6
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Familia Smith",
+        "_intelligence": 10
       },
-      "type": "Arma",
-      "dangerLevel": 10
+      "_type": "Objeto cotidiano absurdo",
+      "_danger": 3
     },
     {
-      "id": "idarma5",
-      "name": "Sith Holocron",
-      "desc": "Un dispositivo de almacenamiento de conocimiento Sith, que contiene secretos oscuros y poderosos que pueden ser peligrosos si caen en las manos equivocadas.",
-      "inventor": {
-        "id": "idcharacter5",
-        "name": "Obi-Wan Kenobi",
-        "desc": "El maestro Jedi sabio, un mentor paciente y un defensor de la justicia en la galaxia.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-05",
+      "_name": "Pistola de rayos láser",
+      "_description": "Un arma que dispara rayos láser, utilizada por Rick y otros personajes para defenderse de amenazas y enemigos",
+      "_inventor": {
+        "_id": "C-06",
+        "_name": "Rick Sanchez (D-99)",
+        "_description": "Una versión alternativa de Rick que proviene de la dimensión D-99, donde tuvo una historia diferente y una relación diferente con su familia",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "D-99",
+          "_name": "Dimensión alternativa similar",
+          "_description": "Una dimensión alternativa con una historia diferente",
+          "_state": "Activa",
+          "_tecnologyLevel": 4
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Independiente",
+        "_intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 10
+      "_type": "Arma",
+      "_danger": 6
     },
     {
-      "id": "idarma6",
-      "name": "Droide de Combate",
-      "desc": "Un robot diseñado para el combate, equipado con armas y sistemas de defensa avanzados.",
-      "inventor": {
-        "id": "idcharacter6",
-        "name": "Yoda",
-        "desc": "El maestro Jedi más sabio, un ser pequeño pero poderoso que ha entrenado a generaciones de Jedi en la galaxia.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-06",
+      "_name": "Television interdimensional",
+      "_description": "Un dispositivo que permite a los usuarios ver programas de televisión de diferentes dimensiones y universos paralelos",
+      "_inventor": {
+        "_id": "C-06",
+        "_name": "Rick Sanchez (D-99)",
+        "_description": "Una versión alternativa de Rick que proviene de la dimensión D-99, donde tuvo una historia diferente y una relación diferente con su familia",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "D-99",
+          "_name": "Dimensión alternativa similar",
+          "_description": "Una dimensión alternativa con una historia diferente",
+          "_state": "Activa",
+          "_tecnologyLevel": 4
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Independiente",
+        "_intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "_type": "Objeto cotidiano absurdo",
+      "_danger": 1
     },
     {
-      "id": "idarma7",
-      "name": "Cortador de Plasma",
-      "desc": "Una herramienta de corte de alta energía, utilizada para cortar a través de metales y otros materiales resistentes.",
-      "inventor": {
-        "id": "idcharacter7",
-        "name": "Mace Windu",
-        "desc": "El maestro Jedi valiente, un guerrero habilidoso y un líder respetado en la Orden Jedi.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-07",
+      "_name": "Cinturón de gravedad",
+      "_description": "Un dispositivo que permite a los usuarios controlar la gravedad a su alrededor, utilizado por Rick y otros personajes para flotar o caminar por las paredes",
+      "_inventor": {
+        "_id": "C-08",
+        "_name": "Rick clon",
+        "_description": "Una versión alternativa de Rick que es un clon creado por el Consejo de Ricks para reemplazar a un Rick original que fue asesinado",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "F-456A",
+          "_name": "Dimensión futurista",
+          "_description": "Una dimensión futurista con tecnología avanzada",
+          "_state": "Activa",
+          "_tecnologyLevel": 10
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Consejo de Ricks",
+        "_intelligence": 8
       },
-      "type": "Arma",
-      "dangerLevel": 8
+      "_type": "Dispositivo de viaje",
+      "_danger": 4
     },
     {
-      "id": "idarma8",
-      "name": "Generador de Escudo",
-      "desc": "Un dispositivo que genera un campo de energía protectora, utilizado para defenderse contra ataques y proteger a las personas y las naves espaciales.",
-      "inventor": {
-        "id": "idcharacter8",
-        "name": "Qui-Gon Jinn",
-        "desc": "El maestro Jedi rebelde, un ser sabio y poderoso que desafía las normas de la Orden Jedi en busca de la verdad y la justicia.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-08",
+      "_name": "Pistola de congelación",
+      "_description": "Un arma que dispara un rayo que congela a los objetivos, utilizada por Rick y otros personajes para defenderse de amenazas y enemigos",
+      "_inventor": {
+        "_id": "C-10",
+        "_name": "Rick robot",
+        "_description": "Una versión alternativa de Rick que es un robot creado por un Rick original para servir como su asistente y compañero de aventuras",
+        "_Species": {
+          "_id": "S-09",
+          "_name": "Robot de cocina",
+          "_description": "Una especie de robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+          "_originLocation": {
+            "_id": "L-19",
+            "_name": "Planeta de los robots de cocina",
+            "_description": "Un planeta habitado por robots de cocina que son utilizados por los habitantes del planeta para preparar sus alimentos",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "N-555",
+              "_name": "Dimensión de la paradoja",
+              "_description": "Una dimensión de la paradoja con eventos contradictorios",
+              "_state": "Destruida",
+              "_tecnologyLevel": 2
             },
-            "population": 8000000000
+            "_population": 100000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Robótico",
+          "_averageLifespan": 10
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "G-789B",
+          "_name": "Dimensión post-apocalíptica",
+          "_description": "Una dimensión post-apocalíptica con un ambiente hostil",
+          "_state": "Destruida",
+          "_tecnologyLevel": 1
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Independiente",
+        "_intelligence": 7
       },
-      "type": "Arma",
-      "dangerLevel": 7
+      "_type": "Arma",
+      "_danger": 5
     },
     {
-      "id": "idarma9",
-      "name": "Cortina de Humo",
-      "desc": "Un dispositivo que emite una nube de humo denso, utilizado para ocultar movimientos y confundir a los enemigos.",
-      "inventor": {
-        "id": "idcharacter9",
-        "name": "Anakin Skywalker",
-        "desc": "El elegido, un joven talentoso que se convierte en un poderoso Jedi pero luego cae al lado oscuro como Darth Vader.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-09",
+      "_name": "Cubo de clonación",
+      "_description": "Un Cubo que crea clones de cualquier ser vivo que se coloque dentro de él, utilizado por Rick y otros personajes para crear copias de sí mismos o de otros personajes",
+      "_inventor": {
+        "_id": "C-08",
+        "_name": "Rick clon",
+        "_description": "Una versión alternativa de Rick que es un clon creado por el Consejo de Ricks para reemplazar a un Rick original que fue asesinado",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "F-456A",
+          "_name": "Dimensión futurista",
+          "_description": "Una dimensión futurista con tecnología avanzada",
+          "_state": "Activa",
+          "_tecnologyLevel": 10
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Consejo de Ricks",
+        "_intelligence": 8
       },
-      "type": "Arma",
-      "dangerLevel": 6
+      "_type": "Biotecnología",
+      "_danger": 7
     },
     {
-      "id": "idarma10",
-      "name": "Granada de Fragmentación",
-      "desc": "Un dispositivo explosivo que emite fragmentos de metal al detonar, utilizado para causar daño a múltiples objetivos en un área determinada.",
-      "inventor": {
-        "id": "idcharacter10",
-        "name": "Padmé Amidala",
-        "desc": "La senadora valiente, una líder política y una defensora de la justicia en la galaxia.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-10",
+      "_name": "Pistola de transformación",
+      "_description": "Un arma que dispara un rayo que transforma a los objetivos en diferentes formas o criaturas, utilizada por Rick y otros personajes para defenderse de amenazas y enemigos",
+      "_inventor": {
+        "_id": "C-12",
+        "_name": "Rick zombie",
+        "_description": "Una versión alternativa de Rick que se convirtió en un zombie después de ser infectado por un virus en una dimensión apocalíptica",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "H-321C",
+          "_name": "Dimensión desconocida",
+          "_description": "Una dimensión desconocida con misterios por descubrir",
+          "_state": "Activa",
+          "_tecnologyLevel": 2
         },
-        "state": "Vivo",
-        "affiliation": "Familia Smith",
-        "intelligence": 9
+        "_state": "Muerto",
+        "_affiliation": "Independiente",
+        "_intelligence": 3
       },
-      "type": "Arma",
-      "dangerLevel": 7
+      "_type": "Arma",
+      "_danger": 6
     },
     {
-      "id": "idarma11",
-      "name": "Lanzallamas",
-      "desc": "Un dispositivo que emite un chorro de fuego, utilizado para quemar objetivos y crear barreras de fuego.",
-      "inventor": {
-        "id": "idcharacter11",
-        "name": "Boba Fett",
-        "desc": "El cazarrecompensas legendario, un mercenario implacable con habilidades excepcionales en el combate y la caza de objetivos.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-11",
+      "_name": "Simulador de universos paralelos",
+      "_description": "Un dispositivo que crea una simulación de universos paralelos, donde los usuarios pueden experimentar diferentes versiones de sí mismos y de la realidad",
+      "_inventor": {
+        "_id": "C-13",
+        "_name": "Morty zombi",
+        "_description": "Una versión alternativa de Morty que se convirtió en un zombie después de ser infectado por un virus en una dimensión apocalíptica",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "H-321C",
+          "_name": "Dimensión desconocida",
+          "_description": "Una dimensión desconocida con misterios por descubrir",
+          "_state": "Activa",
+          "_tecnologyLevel": 2
         },
-        "state": "Vivo",
-        "affiliation": "Independiente",
-        "intelligence": 9
+        "_state": "Muerto",
+        "_affiliation": "Independiente",
+        "_intelligence": 2
       },
-      "type": "Arma",
-      "dangerLevel": 8
+      "_type": "Objeto cotidiano absurdo",
+      "_danger": 4
     },
     {
-      "id": "idarma12",
-      "name": "Cañón de Partículas",
-      "desc": "Un arma de energía que dispara partículas subatómicas a alta velocidad, utilizada para causar daño a objetivos a larga distancia.",
-      "inventor": {
-        "id": "idcharacter12",
-        "name": "Darth Maul",
-        "desc": "El aprendiz Sith letal, un ser oscuro y poderoso con habilidades excepcionales en el combate cuerpo a cuerpo y el uso de la fuerza.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-12",
+      "_name": "Pistola de control mental",
+      "_description": "Un arma que dispara un rayo que controla la mente de los objetivos, utilizada por Rick y otros personajes para manipular a otros personajes o para defenderse de amenazas y enemigos",
+      "_inventor": {
+        "_id": "C-20",
+        "_name": "Rick tóxico",
+        "_description": "Una versión alternativa de Rick que se volvió tóxico y peligroso para los demás después de ser expuesto a una sustancia tóxica en una dimensión tóxica",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "M34A",
+          "_name": "Dimension tóxica",
+          "_description": "Un verdero físico de la toxicidad psicológica",
+          "_state": "Activa",
+          "_tecnologyLevel": 3
         },
-        "state": "Vivo",
-        "affiliation": "Independiente",
-        "intelligence": 9
+        "_state": "Vivo",
+        "_affiliation": "Independiente",
+        "_intelligence": 8
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "_type": "Arma",
+      "_danger": 7
     },
     {
-      "id": "idarma13",
-      "name": "Cañón de iones",
-      "desc": "Un arma de energía que dispara iones a alta velocidad, utilizada para deshabilitar naves espaciales y sistemas electrónicos.",
-      "inventor": {
-        "id": "idcharacter13",
-        "name": "Darth Sidious",
-        "desc": "El emperador malvado, un ser oscuro y poderoso que manipula la política y la fuerza para lograr sus objetivos de dominación galáctica.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-13",
+      "_name": "Cubo de la paradoja",
+      "_description": "Un Cubo que crea una paradoja temporal cuando se activa, causando eventos contradictorios y confusos en el tiempo y el espacio",
+      "_inventor": {
+        "_id": "C-22",
+        "_name": "Rick Sanchez (D-222)",
+        "_description": "Una versión alternativa de Rick que proviene de la dimensión D-222, donde tuvo una historia diferente y una relación diferente con su familia",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "O-666",
+          "_name": "Dimensión de la locura",
+          "_description": "Una dimensión de la locura con un ambiente caótico",
+          "_state": "Activa",
+          "_tecnologyLevel": 1
         },
-        "state": "Vivo",
-        "affiliation": "Independiente",
-        "intelligence": 10
+        "_state": "Vivo",
+        "_affiliation": "Independiente",
+        "_intelligence": 7
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "_type": "Dispositivo de viaje",
+      "_danger": 9
     },
     {
-      "id": "idarma14",
-      "name": "Cañón de Disrupción",
-      "desc": "Un arma de energía que dispara una onda de energía disruptiva, utilizada para causar daño a objetivos a corta distancia y desestabilizar estructuras y sistemas.",
-      "inventor": {
-        "id": "idcharacter14",
-        "name": "Darth Plagueis",
-        "desc": "El maestro Sith inmortal, un ser oscuro y poderoso que busca la inmortalidad y el control total sobre la fuerza.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-14",
+      "_name": "Pistola de la realidad alternativa",
+      "_description": "Un arma que dispara un rayo que altera la realidad a su alrededor, utilizada por Rick y otros personajes para defenderse de amenazas y enemigos o para crear situaciones absurdas",
+      "_inventor": {
+        "_id": "C-28",
+        "_name": "Rick senador",
+        "_description": "Una versión alternativa de Rick que se convirtió en senador, conocido por su habilidad para la política y su deseo de reformar el sistema político",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
             },
-            "population": 8000000000
+            "_population": 10000000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "P-777",
+          "_name": "Dimensión de la utopía",
+          "_description": "Una dimensión de la utopía con una sociedad perfecta",
+          "_state": "Activa",
+          "_tecnologyLevel": 10
         },
-        "state": "Vivo",
-        "affiliation": "Independiente",
-        "intelligence": 10
+        "_state": "Vivo",
+        "_affiliation": "Consejo de Ricks",
+        "_intelligence": 7
       },
-      "type": "Arma",
-      "dangerLevel": 9
+      "_type": "Arma",
+      "_danger": 8
     },
     {
-      "id": "idarma15",
-      "name": "Panzer IV",
-      "desc": "Un arma de energía que manipula la gravedad para atraer o repeler objetos, utilizada para causar daño a objetivos a larga distancia y controlar el campo de batalla.",
-      "inventor": {
-        "id": "idcharacter15",
-        "name": "Darth Revan",
-        "desc": "El señor de la guerra redimido, un ser oscuro y poderoso que lucha por la redención y la justicia en la galaxia.",
-        "specie": {
-          "id": "idspecies1",
-          "name": "Humano",
-          "description": "Mamíferos agresivos y adaptables, con una gran capacidad para la tecnología y la cultura.",
-          "originLocation": {
-            "id": "idlocation1",
-            "name": "Coruscant",
-            "description": "Planeta completamente cubierto por una ciudad, capital de la galaxia.",
-            "type": "Planeta",
-            "dimension": {
-              "id": "C-120",
-              "name": "Dimensión Cronenberg",
-              "description": "Dimensión loca e irascible.",
-              "state": "Activa",
-              "technologyLevel": 5
+      "_id": "I-15",
+      "_name": "Cubo de la mente colmena",
+      "_description": "Un Cubo que permite a los usuarios conectarse a una mente colmena y controlar a otros seres a través de la telepatía, utilizado por Unity para controlar a otros personajes",
+      "_inventor": {
+        "_id": "C-26",
+        "_name": "Unity",
+        "_description": "Un personaje que es una mente colmena llamada Unity, conocida por su capacidad para controlar a otros seres a través de la telepatía y su relación complicada con Rick",
+        "_Species": {
+          "_id": "S-10",
+          "_name": "Mente colmena",
+          "_description": "Una especie de seres con una mente colmena que pueden controlar a otros seres a través de la telepatía",
+          "_originLocation": {
+            "_id": "L-20",
+            "_name": "Simulacion de los universos paralelos",
+            "_description": "Una simulación habitada por versiones alternativas de Rick y Morty que existen en diferentes universos paralelos",
+            "_type": "Simulación virtual",
+            "_dimension": {
+              "_id": "Q-888",
+              "_name": "Dimensión de la distopía",
+              "_description": "Una dimensión de la distopía con una sociedad opresiva",
+              "_state": "Destruida",
+              "_tecnologyLevel": 2
             },
-            "population": 8000000000
+            "_population": 1000000
           },
-          "specieType": "Humanoide",
-          "averageLifespan": 80
+          "_speciesType": "Hivemind",
+          "_averageLifespan": 1000
         },
-        "dimension": {
-          "id": "C-120",
-          "name": "Dimensión Cronenberg",
-          "description": "Dimensión loca e irascible.",
-          "state": "Activa",
-          "technologyLevel": 5
+        "_dimension": {
+          "_id": "Q-888",
+          "_name": "Dimensión de la distopía",
+          "_description": "Una dimensión de la distopía con una sociedad opresiva",
+          "_state": "Destruida",
+          "_tecnologyLevel": 2
         },
-        "state": "Vivo",
-        "affiliation": "Independiente",
-        "intelligence": 10
+        "_state": "Vivo",
+        "_affiliation": "Independiente",
+        "_intelligence": 9
       },
-      "type": "Arma",
-      "dangerLevel": 10
+      "_type": "Biotecnología",
+      "_danger": 10
+    },
+    {
+      "_id": "I-16",
+      "_name": "Sable laser",
+      "_description": "Sable laser clasico",
+      "_inventor": {
+        "_id": "C-01",
+        "_name": "Rick Sanchez",
+        "_description": "Un científico brillante pero alcohólico y cínico, conocido por sus aventuras interdimensionales y su relación complicada con su familia",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
+            },
+            "_population": 10000000000
+          },
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
+        },
+        "_dimension": {
+          "_id": "C-137",
+          "_name": "Dimensión Canónica",
+          "_description": "La dimensión original de Rick y Morty",
+          "_state": "Activa",
+          "_tecnologyLevel": 6
+        },
+        "_state": "Vivo",
+        "_affiliation": "Familia Smith",
+        "_intelligence": 10
+      },
+      "_type": "Arma",
+      "_danger": 8
+    }
+  ],
+  "eventos": [
+    {
+      "_description": "Rick tóxico viajó a la dimensión C-137. Motivo del viaje: Asesinato. Fecha: 1/1/2026, 0:00:00.",
+      "_typeOfEvent": {
+        "characterid": "C-20",
+        "destinationDimensionId": "C-137",
+        "date": "2026-01-01T00:00:00.000Z",
+        "reason": "Asesinato"
+      }
+    },
+    {
+      "_description": "Despliegue del artefacto Sable laser en la localización undefined",
+      "_typeOfEvent": {
+        "_itemId": "I-16",
+        "_locationId": "L-01"
+      }
     }
   ]
 }

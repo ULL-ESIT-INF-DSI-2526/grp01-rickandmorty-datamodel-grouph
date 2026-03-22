@@ -6,8 +6,14 @@ export class NeutralizationEvent implements TypeOfEvent {
   constructor(private itemId: string, private locationId: string) {}
 
   createDescription(): string {
-    const item = database.data.inventos.find(item => item.id === this.itemId);
-    const location = database.data.localizaciones.find(loc => loc.id === this.locationId);
+    const item = database.data.inventos.find(item => {
+      const itemId = (item as any)._id;
+      return itemId === this.itemId;
+    });
+    const location = database.data.localizaciones.find(loc => {
+      const locId = (loc as any)._id;
+      return locId === this.locationId;
+    });
     if (!item) {
       throw new Error(`Evento fallido. No se encontró el personaje con ID ${this.itemId}.`);
     }

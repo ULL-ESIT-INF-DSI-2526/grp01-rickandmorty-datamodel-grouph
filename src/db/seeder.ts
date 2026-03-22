@@ -116,8 +116,8 @@ export async function seedDatabase() {
     database.data.localizaciones.push(location1, location2, location3, location4, location5, location6, location7, location8, location9, location10, location11, location12, location13, location14, location15, location16, location17, location18, location19, location20);
     database.data.especies.push(species1, species2, species3, species4, species5, species6, species7, species8, species9, species10);
     database.data.personajes.push(character1, character2, character3, character4, character5, character6, character7, character8, character9, character10,
-      character11, character12, character13, character14, character15, character16, character17, character18, character19, character20,
-      character21, character22, character23, character24, character25, character26, character27, character28, character29, character30);
+    character11, character12, character13, character14, character15, character16, character17, character18, character19, character20,
+    character21, character22, character23, character24, character25, character26, character27, character28, character29, character30);
     database.data.inventos.push(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15);
 
     await database.write();

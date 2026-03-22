@@ -7,7 +7,7 @@ import { Affiliation } from "../types/affiliation.js";
 import { CharacterState } from "../types/characterState.js";
 import { CRUD } from "./crud/isCRUD.js";
 import { ItemCRUD } from "./crud/itemCRUD.js";
-import { Event } from "./event.js";
+import { EventClass } from "./event.js";
 import { DeployEvent } from "./deployEvent.js";
 import { BasicUniversalObject } from "./basicUniversalObject.js";
 import { ItemType } from "../types/itemType.js";
@@ -26,10 +26,6 @@ export class MultiverseManager {
     * Implementación del patrón Singleton para asegurar que solo exista una instancia de MultiverseManager en toda la aplicación.
     */
    private static _multiverseInstance: MultiverseManager;
-   
-   /**
-    * Historial de eventos interdimensionales que se han registrado en el multiverso. 
-    */
 
    /**
     * Gestor CRUD para manejar las operaciones de creación, lectura, actualización y eliminación en la base de datos.
@@ -90,25 +86,35 @@ export class MultiverseManager {
     * @param x - El ID del objeto que se desea leer del multiverso.
     * @returns - El objeto con el ID especificado que se encuentra en el multiverso. Puede ser un personaje, dimensión, invento, localización, especie... 
     */
-   public async read(x: string): Promise<BasicUniversalObject> {
+   public read(x: string): BasicUniversalObject | undefined{
       return this._crudManager.read(x);
    }
    
 
    public consultLocationByName(name: string): Location[] {
-      const locations: Location[] = database.data.localizaciones.filter(loc => loc.name.toLowerCase().includes(name.toLowerCase()));
+      const locations: Location[] = database.data.localizaciones.filter(loc => {
+         const locName = (loc as any)._name || loc.name;
+         return locName.toLowerCase().includes(name.toLowerCase());
+      });
       if (locations.length === 0) throw new Error(`La localización con name ${name} no existe.`)
       return locations;
    }
 
    public consultLocationByType(type: LocationType): Location[] {
-      const locations: Location[] = database.data.localizaciones.filter(loc => loc.type.toLowerCase().includes(type.toLowerCase()));
+      const locations: Location[] = database.data.localizaciones.filter(loc => {
+         const locType = (loc as any)._type || loc.type;
+         return locType.toLowerCase().includes(type.toLowerCase());
+      });
       if (locations.length === 0) throw new Error(`La localización con type ${type} no existe.`)
       return locations;
    }
 
    public consultLocationByDimension(dim: string): Location[] {
-      const locations: Location[] = database.data.localizaciones.filter(loc => loc.dimension.id == dim);
+      const locations: Location[] = database.data.localizaciones.filter(loc => {
+         const locDim = (loc as any)._dimension || loc.dimension;
+         const locDimId = locDim.id || locDim._id;
+         return locDimId === dim;
+      });
       if (locations.length === 0) throw new Error(`La localización con dimensión ${dim} no existe.`)
       return locations;
    }
@@ -130,19 +136,30 @@ export class MultiverseManager {
    }
 
    public consultCharacterByDimension(dim: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      const characters = database.data.personajes.filter(pj => pj.dimension.id == dim);
+      const characters = database.data.personajes.filter(pj => {
+         const pjDim = (pj as any)._dimension || pj.dimension;
+         const pjDimId = pjDim.id || pjDim._id;
+         return pjDimId === dim;
+      });
       if (characters.length === 0) throw new Error(`El personaje con dimensión ${dim} no existe.`);
       return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
    public consultCharacterBySpecies(sp: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      const characters = database.data.personajes.filter(pj => pj.specie.name == sp);
+      const characters = database.data.personajes.filter(pj => {
+         const pjSpecie = (pj as any)._specie || pj.specie;
+         const pjSpecieName = pjSpecie.name || pjSpecie._name;
+         return pjSpecieName === sp;
+      });
       if (characters.length === 0) throw new Error(`El personaje con especie ${sp} no existe.`);
       return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
    public consultCharacterByAffiliation(affi: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      const characters = database.data.personajes.filter(pj => pj.affiliation == affi);
+      const characters = database.data.personajes.filter(pj => {
+         const pjAffiliation = (pj as any)._affiliation || pj.affiliation;
+         return pjAffiliation === affi;
+      });
       if (characters.length === 0) throw new Error(`El personaje con afiliación ${affi} no existe.`)
       return this.sortCharacters(characters, nameOrIntelligence, sorttype);   
    }
@@ -189,7 +206,7 @@ export class MultiverseManager {
     * que ocurra en el multiverso.
     * @param event - El evento interdimensional que se desea registrar en el historial de eventos del multiverso.
     */
-   public async addEvent(event: Event): Promise<void> {
+   public async addEvent(event: EventClass): Promise<void> {
       database.data.eventos.push(event);
       await database.write();
    }
@@ -198,7 +215,7 @@ export class MultiverseManager {
     * Devuelve el historial de eventos interdimensionales registrados en el multiverso.
     * @returns array de string representando historial de eventos interdimensionales registrados en el multiverso.
     */
-   get eventHistory(): Event[] {
+   get eventHistory(): EventClass[] {
       return database.data.eventos;
    }
 
@@ -206,7 +223,7 @@ export class MultiverseManager {
       return this.eventHistory.map(event => event.description);
    }
 
-   set crudManager(crud: CRUD<BasicUniversalObject>) {
+   public set crudManager(crud: CRUD<BasicUniversalObject>) {
       this._crudManager = crud;
    }
 
@@ -217,7 +234,12 @@ export class MultiverseManager {
     * Si no se encuentran versiones alternativas, devuelve un array vacío.
     */
    public getAlternativeVersions(characterName: string): Character[] {
-      const alternativeVersions: Character[] = database.data.personajes.filter(pj => pj.name.toLowerCase().includes(characterName.toLowerCase()));
+      if (!characterName) return [];
+        const alternativeVersions: Character[] = database.data.personajes.filter(pj => {
+         const realName = (pj as any)._name;
+         if (realName) return false; 
+         return pj.name.toLowerCase().includes(characterName.toLowerCase());
+      });      
       return alternativeVersions;
    }
 
@@ -226,16 +248,28 @@ export class MultiverseManager {
     */
    public controlStateMultiverse(): string[] {
       const alerts: string[] = [];
-      const destroyedDimensions = database.data.dimensiones.filter(dim => dim.state === "Destruida");
+      const dimensionsData = database.data.dimensiones;
+      const charactersData = database.data.personajes;
+      const destroyedDimensions = dimensionsData.filter(dim => {
+         const dimState = (dim as any)._state;
+         return dimState === "Destruida";
+      });
       for (const dim of destroyedDimensions) {
-         alerts.push(`La dimensión ${dim.id} ha sido destruida`);
+         const dimId = (dim as any)._id;
+         alerts.push(`La dimensión ${dimId} ha sido destruida`);
       }
 
-      for (const pj of database.data.personajes) {
-         const originDim = database.data.dimensiones.find(dim => dim.id === pj.dimension.id);
-         if (!originDim || originDim.state === "Destruida") {
-            alerts.push(` Anomalía:El personaje ${pj.name} proviene de una dimensión destruida`);
-         }
+      for (const pj of charactersData) {
+         const pjName = (pj as any)._name;
+         const pjDim = (pj as any)._dimension;
+         const pjDimId = pjDim.id || pjDim._id;
+         const originDim = dimensionsData.find(dim => {
+            const dimId = (dim as any)._id;
+            return dimId === pjDimId;
+         });
+         if (!originDim || (originDim as any)._state === "Destruida" ) {
+            alerts.push(`El personaje ${pjName} proviene de una dimensión que ya no existe`);
+         } 
       }
       if (alerts.length === 0) {
          alerts.push("No se han detectado anomalías en el estado del multiverso");
@@ -244,70 +278,63 @@ export class MultiverseManager {
    }
    
    public reportDimensions(): string {
-      const activeDimensions = database.data.dimensiones.filter(dim =>dim.state == "Activa");
+      const dimensions = database.data.dimensiones;
+      if (dimensions.length === 0) return "No hay dimensiones en este momento en el multiverso.";
+      const activeDimensions = dimensions.filter(dim => {
+         const dimState = (dim as any)._state;
+         return dimState === "Activa";
+      });
       if (activeDimensions.length === 0) {
          return "No hay dimensiones activas en este momento en el multiverso.";
       }
       let report: string = "Dimensiones activas en el multiverso:\n";
       let techSum: number = 0;
       for ( const dim of activeDimensions) {
-         report += `Dimension: ${dim.name} - Nivel tecnológico: ${dim.tecnologyLevel}\n`;
-         techSum += dim.tecnologyLevel;
+         const dimId = (dim as any)._id;
+         const dimTechLevel = (dim as any)._tecnologyLevel;
+         report += `Dimension: ${dimId} - Nivel tecnológico: ${dimTechLevel}\n`;
+         techSum += dimTechLevel;
       }
       const averageTechLevel = techSum / activeDimensions.length;
       report += `Nivel tecnológico medio de las dimensiones activas: ${averageTechLevel.toFixed(2)}`;
       return report;
    }
 
+   /**
+    * Genera un informe con los personajes que tienen más versiones alternativas.
+    * Agrupa automáticamente a los personajes por su primer nombre (Ej: Rick, Morty).
+    */
    public reportCharacter(): string {
-      const characters = database.data.personajes.filter(pj => pj);
-      if (characters.length === 0) {
-         return "No hay personajes en este momento en el multiverso.";
+      const characters = database.data.personajes;
+      if (characters.length === 0) return "No hay personajes en este momento.";
+      let report = " Personajes con más versiones alternativas:\n";
+      const characterCountMap = new Map<string, number>();
+      for (const pj of characters) {
+         const nombreCompleto = (pj as any)._name;
+         // Nos quedamos solo con la primera palabra
+         const nombreBase = String(nombreCompleto).split(" ")[0].toUpperCase();
+
+         // Sumamos 1 al contador de esa familia
+         const cantidadActual = characterCountMap.get(nombreBase) || 0;
+         characterCountMap.set(nombreBase, cantidadActual + 1);
       }
-      const uniqueNames = Array.from(new Set(characters.map(pj => pj.name)));
-      let versionCounter: { characterName: string, versions: number }[] = [];
-      for (const name of uniqueNames) {
-         const numberOfVersions = this.getAlternativeVersions(name).length;
-         versionCounter.push({ characterName: name, versions: numberOfVersions });
-      }
-      versionCounter.sort((a, b) => b.versions - a.versions);
-      let report: string = "Personajes con más versiones alternativas en el multiverso:\n";
-      for (const character of versionCounter) {
-         report += `Personaje: ${character.characterName} - Versiones alternativas: ${character.versions}\n`;
+      // Convertimos en array para ordenar de mayor a menor
+      const ranking = Array.from(characterCountMap.entries()).sort((a, b) => b[1] - a[1]);
+
+      // Formateamos la salida (Mostramos el TOP 10)
+      const limite = Math.min(10, ranking.length);
+      for (let i = 0; i < limite; i++) {
+         report += `${i + 1}º '${ranking[i][0]}' - ${ranking[i][1]} versiones registradas.\n`;
       }
       return report;
    }
 
-   // public reportCharacters(): Character[] {
-   //   const characters = database.data.personajes.filter(pj => pj);
-
-   //   let maxVersions: number = this.getAlternativeVersions(characters[0].name).length
-
-   //   // Buscamos el número máximo de versiones
-   //   for (let i = 0; i < characters.length; i++) {
-   //     let newMax = this.getAlternativeVersions(characters[i].name).length
-   //     if (maxVersions < newMax) {
-   //       maxVersions = newMax
-   //     }
-   //   }
-
-   //   // Guardamos los personajes con el número máximo de versiones
-   //   let result: Character[] = [];
-   //   for (let i = 0; i < characters.length; i++) {
-   //     if (maxVersions == this.getAlternativeVersions(characters[i].name).length) {
-   //       result.push(characters[i])
-   //     }
-   //   }
-
-   //   return result;
-   // }
-
-   public reportItems(): string {
-     const deployEvents = database.data.eventos.filter(evento => evento.typeOfEvent && 'itemId' in evento.typeOfEvent);
+   public reportItems(): string {  // evento.typeOfEvent && 'itemId' in evento.typeOfEvent
+     const deployEvents = database.data.eventos.filter(evento => evento.typeOfEvent instanceof DeployEvent);
        if (deployEvents.length === 0) {
          return "No hay eventos de despliegue de inventos registrados en el multiverso.";
        }
-       let deployedItems: { item: Item, locationId: string}[] = [];
+       let deployedItems: { item: Item, locationId: string }[] = [];
 
        for (const event of deployEvents) {
          const deployDetails = event.typeOfEvent as DeployEvent;

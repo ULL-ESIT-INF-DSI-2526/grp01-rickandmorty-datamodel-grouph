@@ -15,6 +15,7 @@
   "type": "module",
   "devDependencies": {
     "@types/node": "^25.5.0",
+    "@types/prompt-sync": "^4.2.3",
     "@types/prompts": "^2.4.9",
     "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9.39.2",
@@ -28,6 +29,7 @@
     "vitest": "^4.0.18"
   },
   "dependencies": {
+    "prompt-sync": "^4.2.0",
     "prompts": "^2.4.2"
   }
 }

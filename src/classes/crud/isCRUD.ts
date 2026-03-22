@@ -8,6 +8,6 @@ export abstract class CRUD<T extends BasicUniversalObject> implements isAddable<
   constructor() {}
   abstract add(item: T): Promise<void>;
   abstract delete(id: string): Promise<void>;
-  abstract read(id: string):T;
+  abstract read(id: string):T | undefined;
   abstract update(id: string, item: T): Promise<void>;
 }
