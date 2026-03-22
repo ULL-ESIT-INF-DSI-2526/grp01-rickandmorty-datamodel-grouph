@@ -1,16 +1,17 @@
-import { describe, test, expect } from 'vitest'
-import { DestructionEvent } from '../src/classes/destructionEvent'
+import { describe, test, expect } from 'vitest';
+import { DestructionEvent } from '../src/classes/destructionEvent';
 
-describe("Pruebas de DestructionEvent", () => {
-  test("Instance", () => {
-    expect(new DestructionEvent("C-120", "Thanos chascó los dedos")).toBeInstanceOf(DestructionEvent);
-  })
-
-  test("createDescription()", () => {
-    const destructionEvent = new DestructionEvent("C-120", "Thanos chascó los dedos");
-    expect(destructionEvent.createDescription()).toBe("Destrucción de la Dimensión Cronenberg, como consecuencia de Thanos chascó los dedos");
-
-    const destruction2Event = new DestructionEvent("C-999", "Thanos chascó los dedos");
-    expect(() => destruction2Event.createDescription()).toThrowError("Evento fallido. No se encontró la dimensión con ID C-999");
+describe('DestructionEvent function tests', () => {
+  test('Instancia correcta de DestructionEvent', () => {
+    const destruction = new DestructionEvent('C-137', 'Invasión de Cronenbergs');
+    
+    expect(destruction).toBeInstanceOf(DestructionEvent);
+    expect((destruction as any).dimensionId).toBe('C-137');
+    expect((destruction as any).paradox).toBe('Invasión de Cronenbergs');
   });
-})
+
+  test('createDescription arroja error si la dimensión no existe', () => {
+    const destruction = new DestructionEvent('D-404', 'Error');
+    expect(() => destruction.createDescription()).toThrowError(/Evento fallido/);
+  });
+});

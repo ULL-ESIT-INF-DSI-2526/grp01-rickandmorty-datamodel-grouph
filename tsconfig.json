@@ -3,7 +3,8 @@
     "./tests/*.spec.ts",
     "./dist",
     "./docs",
-    "./node_modules"
+    "./node_modules",
+    "./vitest.config.ts"
   ],
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {

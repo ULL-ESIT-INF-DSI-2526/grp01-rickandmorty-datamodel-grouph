@@ -45,7 +45,7 @@ export class Character extends BasicUniversalObject implements HasState<Characte
    * Devuelve la eSpecies
    * @returns La eSpecies del personaje
    */
-  get specie(): Species { return this._Species }
+  get species(): Species { return this._Species }
   
   /**
    * Devuelve la dimensión

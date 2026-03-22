@@ -11,7 +11,7 @@ export class DestructionEvent implements TypeOfEvent {
    * @param dimensionId - El ID de la dimensión que se va a destruir.
    * @param paradox - La paradoja que causó la destrucción de la dimensión.
    */
-  constructor(private dimensionId: string, private paradox: string) {}
+  constructor(public readonly dimensionId: string, public readonly paradox: string) {}
 
   /**
    * Crea una descripción del evento de destrucción de la dimensión. 

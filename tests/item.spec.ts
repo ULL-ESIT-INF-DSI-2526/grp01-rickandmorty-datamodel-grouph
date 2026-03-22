@@ -5,43 +5,45 @@ import { Species } from '../src/classes/species.js'
 import { Dimension } from '../src/classes/dimension.js'
 import { Location } from '../src/classes/location.js'
 
-
-const dimension = new Dimension('C-137', 'Dimension Canonica', 'Dimensión original de Rick y Morty', 'Activa', 5)
-const humano: Species = new Species('idhumano', 'Humano', 'Especie común en la Tierra', new Location('idlocation', 'Tierra', 'Planeta natal de los humanos', 'Planeta', dimension, 8000000000), 'Humanoide', 80)
-const vader: Character = new Character('Personaje1', 'Vader', 'Era el elegido', humano, dimension, 'Robot-sustituto', 'Federación Galáctica', 8)
+const dimension = new Dimension('C-137', 'Dimension Canonica', 'Dimensión original', 'Activa', 5)
+const humano: Species = new Species('S-01', 'Humano', 'Especie común', new Location('L-01', 'Tierra', 'Planeta natal', 'Planeta', dimension, 8000000000), 'Humanoide', 80)
+const rick: Character = new Character('C-01', 'Rick', 'Científico loco', humano, dimension, 'Vivo', 'Independiente', 10)
 
 describe("Pruebas de Item", () => {
   test("Creación del objeto", () => {
-    expect(new Item('1', "Sable laser","Haz de luz rojo", vader, 'Arma', 10)).toBeInstanceOf(Item) 
+    expect(new Item('I-01', "Sable laser","Haz de luz rojo", rick, 'Arma', 10)).toBeInstanceOf(Item) 
   })
 
   test("Initialization of Item", () => {
-    const item = new Item('1', "Sable laser", "Haz de luz rojo", vader, 'Arma', 10, )
-    expect(item.id).toEqual('1')
+    const item = new Item('I-01', "Sable laser", "Haz de luz rojo", rick, 'Arma', 10)
+    expect(item.id).toEqual('I-01')
     expect(item.name).toEqual("Sable laser")
     expect(item.description).toEqual("Haz de luz rojo")
+    expect(item.inventor).toEqual(rick)
     expect(item.type).toEqual('Arma')
     expect(item.danger).toEqual(10)
   })
 
-  test("Invalid danger value", () => {
-    expect(() => new Item('1', "Sable laser", 'Haz de luz rojo', vader, 'Arma', -1)).toThrowError('Danger debe estar en el rango 0-10')
-    expect(() => new Item('1', "Sable laser", 'Haz de luz rojo', vader, 'Arma', 11)).toThrowError('Danger debe estar en el rango 0-10')
+  test("Invalid danger value throws error", () => {
+    expect(() => new Item('I-02', "Pistola", 'Piu Piu', rick, 'Arma', -1)).toThrowError('Danger debe estar en el rango 0-10')
+    expect(() => new Item('I-02', "Pistola", 'Piu Piu', rick, 'Arma', 11)).toThrowError('Danger debe estar en el rango 0-10')
   })
 
-  test("Updating type and power", () => {
-    const item = new Item('1', "Sable laser", 'Haz de luz rojo', vader, 'Arma', 10)
+  test("Updating mutable properties", () => {
+    const item = new Item('I-01', "Sable laser", 'Haz de luz rojo', rick, 'Arma', 10)
     item.type = 'Biotecnología'
     item.danger = 8
+    
     expect(item.type).toEqual('Biotecnología')
     expect(item.danger).toEqual(8)
   })
 
-  test("Inventor is read-only", () => {
-    const inventor = new Character('1', 'Inventor', 'Un gran inventor', humano, dimension, 'Vivo', 'Federación Galáctica', 10)
-    const item = new Item('1', "Sable laser", 'Haz de luz rojo', inventor, 'Arma', 10)
-    expect(item.inventor).toEqual(inventor)
+  test("Read-only properties throw error on assignment", () => {
+    const item = new Item('I-01', "Sable laser", 'Haz de luz', rick, 'Arma', 10)
+    
      // @ts-expect-error
-    expect(() => item.inventor = new Character('2', 'Otro Inventor', 'Otro gran inventor', humano, dimension, 'Vivo', 'Federación Galáctica', 10)).toThrowError()
+    expect(() => item.inventor = new Character('C-02', 'Otro Inventor', 'Genio', humano, dimension, 'Vivo', 'Independiente', 9)).toThrowError()
+    // @ts-expect-error
+    expect(() => item.id = "I-99").toThrowError()
   })
 })

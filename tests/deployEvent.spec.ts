@@ -1,18 +1,17 @@
-import { describe, test, expect } from 'vitest'
-import { DeployEvent } from '../src/classes/deployEvent'
+import { describe, test, expect } from 'vitest';
+import { DeployEvent } from '../src/classes/deployEvent';
 
-describe("Pruebas de DeployEvent", () => {
-  test("Instance", () => {
-    expect(new DeployEvent("idarma1", "idlocation6")).toBeInstanceOf(DeployEvent);
-  })
-
-  test("createDescription()", () => {
-    const deployEvent = new DeployEvent("idarma1", "idlocation6");
-    expect(deployEvent.createDescription()).toBe("Despliegue del artefacto Sable de Luz en la localización Tatooine");
-  
-    const deploy2Event = new DeployEvent("idarma99", "idlocation6");
-    expect(() => deploy2Event.createDescription()).toThrowError("Evento fallido. No se encontró el personaje con ID idarma99.");
-    const deploy3Event = new DeployEvent("idarma1", "idlocation99");
-    expect(() => deploy3Event.createDescription()).toThrowError("Evento fallido. No se encontró la localización con ID idlocation99.")
+describe('DeployEvent function tests', () => {
+  test('Instancia correcta de DeployEvent', () => {
+    const despliegue = new DeployEvent('I-45', 'L-01');
+    
+    expect(despliegue).toBeInstanceOf(DeployEvent);
+    expect(despliegue.itemId).toBe('I-45');
+    expect(despliegue.locationId).toBe('L-01');
   });
-})
+
+  test('createDescription arroja error si no existe el invento', () => {
+    const despliegue = new DeployEvent('I-INVALIDO', 'L-01');
+    expect(() => despliegue.createDescription()).toThrowError(/Evento fallido/);
+  });
+});

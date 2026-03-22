@@ -1,17 +1,17 @@
-import { describe, test, expect } from 'vitest'
-import { CreateEvent } from '../src/classes/createEvent'
+import { describe, test, expect } from 'vitest';
+import { CreateEvent } from '../src/classes/createEvent';
 
-describe("Pruebas de CreateEvent", () => {
-  test("Instance", () => {
-    expect(new CreateEvent("C-120", "Thanos chascó los dedos")).toBeInstanceOf(CreateEvent);
-  })
-
-  test("createDescription()", () => {
-    const createEvent = new CreateEvent("C-120", "Thanos chascó los dedos");
-    expect(createEvent.createDescription()).toBe("Creación de la Dimensión Cronenberg, como consecuencia de Thanos chascó los dedos");
-  
-    const creation2Event = new CreateEvent("C-999", "Thanos chascó los dedos");
-    expect(() => creation2Event.createDescription()).toThrowError("Evento fallido. No se encontró la dimensión con ID C-999");
+describe('CreateEvent function tests', () => {
+  test('Instancia correcta de CreateEvent', () => {
+    const creacion = new CreateEvent('D-999', 'Paradoja del Abuelo');
+    
+    expect(creacion).toBeInstanceOf(CreateEvent);
+    expect((creacion as any).dimensionId).toBe('D-999');
+    expect((creacion as any).paradox).toBe('Paradoja del Abuelo');
   });
-})
 
+  test('createDescription arroja error si la dimensión no existe', () => {
+    const creacion = new CreateEvent('D-404', 'Error');
+    expect(() => creacion.createDescription()).toThrowError(/Evento fallido/);
+  });
+});

@@ -22,6 +22,8 @@ export class Dimension extends BasicUniversalObject implements HasState<Dimensio
   constructor(id: string, name: string, desc: string, state: DimensionState, tecnologyLevel: number) {
     const idRegex = /^[a-zA-Z]-?[a-zA-Z0-9]+$/;
     if (!idRegex.test(id)) throw new Error('El ID no sigue la nomenclatura del Consejo de Ricks');
+    if (name.length === 0) throw new Error('Name no puede ser vacío');
+    if (desc.length === 0) throw new Error('Description no puede ser vacío');
     super(id, name, desc);
     this._state = state;
     // Control de nivel tecnológico
@@ -56,7 +58,7 @@ export class Dimension extends BasicUniversalObject implements HasState<Dimensio
   /**
    * Setter de tecnologyLevel
    * @param level - El nuevo nivel tecnológico de la dimensión
-   * @throws Error si el nivel tecnológico no es válido (menor que 0 o mayor que 10)
+   * @throws Error si el nivel tecnológico no es válido (menor o igual a 0 o mayor a 10)
    */
   set tecnologyLevel(level: number) {
     if (level < 0 || level > 10) throw new Error("Nivel tecnológico no válido")

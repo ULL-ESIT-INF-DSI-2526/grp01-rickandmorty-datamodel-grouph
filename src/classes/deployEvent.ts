@@ -12,7 +12,7 @@ export class DeployEvent implements TypeOfEvent {
    * @param _itemId - ID del artefacto que se va a desplegar.
    * @param _locationId - ID de la localización donde se va a desplegar el artefacto.
    */
-  constructor(private _itemId: string, private _locationId: string) {}
+  constructor(public readonly _itemId: string, public readonly _locationId: string) {}
 
   /**
    * Getters para obtener el ID del artefacto
@@ -43,7 +43,7 @@ export class DeployEvent implements TypeOfEvent {
       return locId === this.locationId;
     });
     if (!item) {
-      throw new Error(`Evento fallido. No se encontró el personaje con ID ${this.itemId}.`);
+      throw new Error(`Evento fallido. No se encontró el invento con ID ${this.itemId}.`);
     }
     if (!location) {
       throw new Error(`Evento fallido. No se encontró la localización con ID ${this.locationId}.`);

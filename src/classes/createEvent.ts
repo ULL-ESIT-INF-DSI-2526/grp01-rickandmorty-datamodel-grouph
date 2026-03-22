@@ -11,7 +11,7 @@ export class CreateEvent implements TypeOfEvent {
    * @param dimensionId - El ID de la dimensión que se ha creado.
    * @param paradox - La paradoja que ha causado la creación de la dimensión.
    */
-  constructor(private dimensionId: string, private paradox: string) {}
+  constructor(public readonly dimensionId: string, public readonly paradox: string) {}
 
   /**
    * Genera una descripción del evento de creación de la dimensión.

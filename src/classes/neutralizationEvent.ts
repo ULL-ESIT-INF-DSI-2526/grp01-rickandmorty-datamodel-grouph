@@ -11,7 +11,7 @@ export class NeutralizationEvent implements TypeOfEvent {
    * @param itemId - El ID del artefacto que se neutraliza.
    * @param locationId - El ID de la localización donde se neutraliza el artefacto.
    */
-  constructor(private itemId: string, private locationId: string) {}
+  constructor(public readonly itemId: string, public readonly locationId: string) {}
 
   /**
    * Crea una descripción del evento de neutralización, incluyendo el nombre del artefacto y la localización.

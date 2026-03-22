@@ -13,7 +13,7 @@ export class TravelEvent implements TypeOfEvent {
    * @param date - Fecha del viaje.
    * @param reason - Motivo del viaje.
    */
-  constructor(private characterid: string, private destinationDimensionId: string, private date: Date, private reason: string) {}
+  constructor(public readonly characterid: string, public readonly destinationDimensionId: string, public readonly date: Date, public readonly reason: string) {}
 
   /**
    * Crea una descripción del evento de viaje, incluyendo el nombre del personaje, la dimensión de destino, el motivo del viaje y la fecha.
