@@ -605,12 +605,12 @@ async function menuConsultaPersonajes(gestor: MultiverseManager) {
             break;
         case 'status':
             let status: string | null = prompt("Introduce el estado (vivo/muerto/desconocido/robot-sustituto): ");
-            let op1: string | null = prompt("¿Quieres que la búsqueda sea por inteligencia? (s/n): ");
-            let op2: string | null = prompt("¿Quieres que la búsqueda sea ascendente? (s/n): ");
-            if (status && op1 && op2) {
-                const sortByIntelligence = op1.toLowerCase() === 's';
+            let statusOp1: string | null = prompt("¿Quieres que la búsqueda sea por inteligencia? (s/n): ");
+            let statusOp2: string | null = prompt("¿Quieres que la búsqueda sea ascendente? (s/n): ");
+            if (status && statusOp1 && statusOp2) {
+                const sortByIntelligence = statusOp1.toLowerCase() === 's';
                 const op1Value = sortByIntelligence ? "intelligence" : "name";
-                const ascending = op2.toLowerCase() === 's';
+                const ascending = statusOp2.toLowerCase() === 's';
                 const op2Value = ascending ? "asc" : "desc";
                 console.log(gestor.consultCharacterByState(status, op1Value, op2Value));
             }
