@@ -90,7 +90,14 @@ export class MultiverseManager {
       return this._crudManager.read(x);
    }
    
-
+   /**
+    * Consulta las localizaciones del multiverso por su nombre, tipo o dimensión.
+     * @param name - El nombre de la localización que se desea consultar. Puede ser una coincidencia parcial.
+     * @param type - El tipo de la localización que se desea consultar. Puede ser una coincidencia parcial.
+     * @param dim - La dimensión de la localización que se desea consultar. Debe coincidir exactamente con el ID de la dimensión.
+     * @returns Lista de localizaciones que coinciden con los criterios de búsqueda especificados. Si no se encuentran localizaciones, devuelve un array vacío.
+     * @throws Error si no se encuentra ninguna localización que coincida con los criterios de búsqueda especificados.
+    */
    public consultLocationByName(name: string): Location[] {
       const locations: Location[] = database.data.localizaciones.filter(loc => {
          const locName = (loc as any)._name || loc.name;
@@ -100,6 +107,13 @@ export class MultiverseManager {
       return locations;
    }
 
+   /**
+    * Consulta las localizaciones del multiverso por su tipo.
+     * @param type - El tipo de la localización que se desea consultar. Puede ser una coincidencia parcial.
+     * @returns Lista de localizaciones que coinciden con el tipo de búsqueda especificado. Si no se encuentran localizaciones, devuelve un array vacío.
+     * @throws Error si no se encuentra ninguna localización que coincida con el tipo de búsqueda especificado.
+     *
+    */
    public consultLocationByType(type: LocationType): Location[] {
       const locations: Location[] = database.data.localizaciones.filter(loc => {
          const locType = (loc as any)._type || loc.type;
@@ -109,6 +123,12 @@ export class MultiverseManager {
       return locations;
    }
 
+   /**
+    * Consulta las localizaciones del multiverso por su dimensión de origen.
+    * @param dim - La dimensión de la localización que se desea consultar. Debe coincidir exactamente con el ID de la dimensión.
+    * @returns Lista de localizaciones que coinciden con la dimensión de búsqueda especificada. Si no se encuentran localizaciones, devuelve un array vacío.
+    * @throws Error si no se encuentra ninguna localización que coincida con la dimensión de búsqueda especificada.  
+    */
    public consultLocationByDimension(dim: string): Location[] {
       const locations: Location[] = database.data.localizaciones.filter(loc => {
          const locDim = (loc as any)._dimension || loc.dimension;
@@ -119,25 +139,43 @@ export class MultiverseManager {
       return locations;
    }
 
+   /**
+    * Método privado para ordenar una lista de personajes por su nombre o inteligencia, en orden ascendente o descendente.
+     * @param characters - La lista de personajes que se desea ordenar.
+     * @param nameOrIntelligence - El criterio por el cual se desea ordenar la lista de personajes. Puede ser "name" para ordenar por nombre o "intelligence" para ordenar por inteligencia.
+     * @param sorttype - El tipo de ordenamiento que se desea aplicar a la lista de personajes. Puede ser "asc" para orden ascendente o "desc" para orden descendente.
+     * @returns Lista de personajes ordenada según el criterio y tipo de ordenamiento especificados.
+     * @throws Error si el criterio de ordenamiento especificado no es válido.
+     * @throws Error si el tipo de ordenamiento especificado no es válido.
+     * @throws Error si la lista de personajes está vacía.
+    */
    private sortCharacters(characters: Character[], nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      if (nameOrIntelligence === "name") {
-         if (sorttype === "asc") {
-            return characters.sort((a, b) => a.name.localeCompare(b.name));
+      return characters.sort((a, b) => {
+         const nameA = String(a.name || (a as any)._name || "");
+         const nameB = String(b.name || (b as any)._name || "");
+         const intA = Number(a.intelligence || (a as any)._intelligence || 0);
+         const intB = Number(b.intelligence || (b as any)._intelligence || 0);
+
+         if (nameOrIntelligence === "name") {
+            return sorttype === "asc" ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
          } else {
-            return characters.sort((a, b) => b.name.localeCompare(a.name));
+            return sorttype === "asc" ? intA - intB : intB - intA;
          }
-      } else {
-         if (sorttype === "asc") {
-            return characters.sort((a, b) => a.intelligence - b.intelligence);
-         } else {
-            return characters.sort((a, b) => b.intelligence - a.intelligence);
-         }
-      }
+      });
    }
 
+   /**
+    * Consulta los personajes del multiverso por su dimensión de origen.
+    * @param dim - La dimensión de origen del personaje que se desea consultar. Debe coincidir exactamente con el ID de la dimensión.
+    * @param nameOrIntelligence - El criterio por el cual se desea ordenar la lista de personajes. Puede ser "name" para ordenar por nombre o "intelligence" para ordenar por inteligencia.
+    * @param sorttype - El tipo de ordenamiento que se desea aplicar a la lista de personajes. Puede ser "asc" para orden ascendente o "desc" para orden descendente.
+    * @returns Lista de personajes que coinciden con la dimensión de búsqueda especificada, ordenada según el criterio y tipo de ordenamiento especificados. Si no se encuentran personajes, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún personaje que coincida con la dimensión de búsqueda especificada.
+    */
    public consultCharacterByDimension(dim: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
       const characters = database.data.personajes.filter(pj => {
          const pjDim = (pj as any)._dimension || pj.dimension;
+         if (!pjDim) return false;
          const pjDimId = pjDim.id || pjDim._id;
          return pjDimId === dim;
       });
@@ -145,60 +183,135 @@ export class MultiverseManager {
       return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
-   public consultCharacterBySpecies(sp: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
+   /**
+    * Consulta los personajes del multiverso por su especie.
+    * @param sp - La especie del personaje que se desea consultar. Debe coincidir exactamente con el nombre de la especie.
+    * @param nameOrIntelligence - El criterio por el cual se desea ordenar la lista de personajes. Puede ser "name" para ordenar por nombre o "intelligence" para ordenar por inteligencia.
+    * @param sorttype - El tipo de ordenamiento que se desea aplicar a la lista de personajes. Puede ser "asc" para orden ascendente o "desc" para orden descendente.
+    * @returns Lista de personajes que coinciden con la especie de búsqueda especificada, ordenada según el criterio y tipo de ordenamiento especificados. Si no se encuentran personajes, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún personaje que coincida con la especie de búsqueda especificada.
+    */
+public consultCharacterBySpecies(sp: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
       const characters = database.data.personajes.filter(pj => {
-         const pjSpecie = (pj as any)._specie || pj.specie;
-         const pjSpecieName = pjSpecie.name || pjSpecie._name;
-         return pjSpecieName === sp;
+         const pjSpecies = (pj as any)._Species;
+         const pjSpeciesName = pjSpecies.name || pjSpecies._name;
+         return String(pjSpeciesName).toLowerCase().includes(sp.toLowerCase());
       });
-      if (characters.length === 0) throw new Error(`El personaje con especie ${sp} no existe.`);
+      if (characters.length === 0) throw new Error(`El personaje con especie '${sp}' no existe en la base de datos.`);
       return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
+   /**
+    * Consulta los personajes del multiverso por su afiliación.
+    * @param affi - La afiliación del personaje que se desea consultar. Debe coincidir exactamente con el nombre de la afiliación.
+    * @param nameOrIntelligence - El criterio por el cual se desea ordenar la lista de personajes. Puede ser "name" para ordenar por nombre o "intelligence" para ordenar por inteligencia.
+    * @param sorttype - El tipo de ordenamiento que se desea aplicar a la lista de personajes. Puede ser "asc" para orden ascendente o "desc" para orden descendente.
+    * @returns Lista de personajes que coinciden con la afiliación de búsqueda especificada, ordenada según el criterio y tipo de ordenamiento especificados. Si no se encuentran personajes, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún personaje que coincida con la afiliación de búsqueda especificada.
+    */
    public consultCharacterByAffiliation(affi: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
       const characters = database.data.personajes.filter(pj => {
          const pjAffiliation = (pj as any)._affiliation || pj.affiliation;
-         return pjAffiliation === affi;
+         return pjAffiliation.toLowerCase() === affi.toLowerCase();
       });
       if (characters.length === 0) throw new Error(`El personaje con afiliación ${affi} no existe.`)
       return this.sortCharacters(characters, nameOrIntelligence, sorttype);   
    }
 
+   /**
+    * Consulta los personajes del multiverso por su estado (vivo, muerto, desconocido).
+    * @param state - El estado del personaje que se desea consultar. Debe ser "vivo", "muerto" o "desconocido".
+    * @param nameOrIntelligence - El criterio por el cual se desea ordenar la lista de personajes. Puede ser "name" para ordenar por nombre o "intelligence" para ordenar por inteligencia.
+    * @param sorttype - El tipo de ordenamiento que se desea aplicar a la lista de personajes. Puede ser "asc" para orden ascendente o "desc" para orden descendente.
+    * @returns Lista de personajes que coinciden con el estado de búsqueda especificado, ordenada según el criterio y tipo de ordenamiento especificados. Si no se encuentran personajes, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún personaje que coincida con el estado de búsqueda especificado.
+    */
    public consultCharacterByState(state: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-      const characters = database.data.personajes.filter(pj => pj.state == state);
-      if (characters.length === 0) throw new Error(`El personaje con  ${state} no existe.`)
+      const characters = database.data.personajes.filter(pj => {
+         const pjState = (pj as any)._state || pj.state;
+         return pjState.toLowerCase() === state.toLowerCase();
+      });
+      if (characters.length === 0) throw new Error(`Los personajes con estado ${state} no existe.`)
       return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
+   /**
+    * Consulta los personajes del multiverso por su nombre. 
+    * @param name - El nombre del personaje que se desea consultar. Puede ser una coincidencia parcial.
+    * @param nameOrIntelligence - El criterio por el cual se desea ordenar la lista de personajes. Puede ser "name" para ordenar por nombre o "intelligence" para ordenar por inteligencia.
+    * @param sorttype - El tipo de ordenamiento que se desea aplicar a la lista de personajes. Puede ser "asc" para orden ascendente o "desc" para orden descendente.
+    * @returns Lista de personajes que coinciden con el nombre de búsqueda especificado, ordenada según el criterio y tipo de ordenamiento especificados. Si no se encuentran personajes, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún personaje que coincida con el nombre de búsqueda especificado.
+    */
    public consultCharacterByName(name: string, nameOrIntelligence: "name" | "intelligence", sorttype: "asc" | "desc"): Character[] {
-     const characters = database.data.personajes.filter(pj => pj.name == name);
+     const characters = database.data.personajes.filter(pj => {
+         const pjName = (pj as any)._name || pj.name;
+         return pjName.toLowerCase().includes(name.toLowerCase());
+     });
       if (characters.length === 0) throw new Error(`El personaje con name ${name} no existe.`)
       return this.sortCharacters(characters, nameOrIntelligence, sorttype);
    }
 
-      public consultItemByName(name: string): Item[]{
-         const items: Item[] = database.data.inventos.filter(inv => inv.name.toLowerCase().includes(name.toLowerCase()));
-         if (items.length === 0) throw new Error(`El invento con name ${name} no existe.`)
-         return items;
-      }
+   /**
+    * Consulta los inventos del multiverso por su nombre.
+    * @param name - El nombre del invento que se desea consultar. Puede ser una coincidencia parcial.
+    * @returns Lista de inventos que coinciden con el nombre de búsqueda especificado. Si no se encuentran inventos, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún invento que coincida con el nombre de búsqueda especificado.
+    */
+   public consultItemByName(name: string): Item[]{
+      const items: Item[] = database.data.inventos.filter(inv => {
+         const invName = (inv as any)._name || inv.name;
+         return invName.toLowerCase().includes(name.toLowerCase());
+      });
+      if (items.length === 0) throw new Error(`El invento con name ${name} no existe.`)
+      return items;
+   }
 
-      public consultItemByType(type: ItemType): Item[]{
-         const items: Item[] = database.data.inventos.filter(inv => inv.type.toLowerCase().includes(type.toLowerCase()));
-         if (items.length === 0) throw new Error(`El invento con type ${type} no existe.`)
-         return items;
-      }
+   /**
+    * Consulta los inventos del multiverso por su tipo.
+    * @param type - El tipo del invento que se desea consultar. Puede ser una coincidencia parcial.
+    * @returns Lista de inventos que coinciden con el tipo de búsqueda especificado. Si no se encuentran inventos, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún invento que coincida con el tipo de búsqueda especificado.
+    */
+   public consultItemByType(type: ItemType): Item[]{
+      const items: Item[] = database.data.inventos.filter(inv => {
+         const invType = (inv as any)._type || inv.type;
+         return invType.toLowerCase().includes(type.toLowerCase());
+      });
+      if (items.length === 0) throw new Error(`El invento con type ${type} no existe.`)
+      return items;
+   }
 
-      public consultItemByInventor(inventor: string): Item[]{
-         const items: Item[] = database.data.inventos.filter(inv => inv.inventor.name.toLowerCase().includes(inventor.toLowerCase()));
-         if (items.length === 0) throw new Error(`El invento con inventor ${inventor} no existe.`)
-         return items;
-      }
+   /**
+    * Consulta los inventos del multiverso por su inventor.
+    * @param inventor - El nombre del inventor del invento que se desea consultar. Puede ser una coincidencia parcial.
+    * @returns Lista de inventos que coinciden con el inventor de búsqueda especificado. Si no se encuentran inventos, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún invento que coincida con el inventor de búsqueda especificado.
+    */
+   public consultItemByInventor(inventor: string): Item[]{
+      const items: Item[] = database.data.inventos.filter(inv => {
+         const invInventor = (inv as any)._inventor;
+         const invInventorName = invInventor.name || invInventor._name;
+         return invInventorName.toLowerCase().includes(inventor.toLowerCase());
+      });
+      if (items.length === 0) throw new Error(`El invento con inventor ${inventor} no existe.`)
+      return items;
+   }
 
-      public consultItemByDanger(danger: number): Item[]{
-         const items: Item[] = database.data.inventos.filter(inv => inv.danger == danger);
-         if (items.length === 0) throw new Error(`El invento con nivel de peligro ${danger} no existe.`)
-         return items;
-      }
+   /**
+    * Consulta los inventos del multiverso por su nivel de peligro.
+    * @param danger - El nivel de peligro del invento que se desea consultar. 
+    * @returns Lista de inventos que coinciden con el nivel de peligro de búsqueda especificado. Si no se encuentran inventos, devuelve un array vacío.
+    * @throws Error si no se encuentra ningún invento que coincida con el nivel de peligro de búsqueda especificado.
+    */
+   public consultItemByDanger(danger: number): Item[]{
+      const items: Item[] = database.data.inventos.filter(inv => {
+         const invDanger = (inv as any)._danger || inv.danger;
+         return invDanger === danger;
+      });
+      if (items.length === 0) throw new Error(`El invento con nivel de peligro ${danger} no existe.`)
+      return items;
+   }
       
    /**
     * Registra un evento interdimensional en el historial de eventos del multiverso. 
@@ -219,10 +332,18 @@ export class MultiverseManager {
       return database.data.eventos;
    }
 
+   /**
+    * Devuelve el historial de eventos interdimensionales registrados en el multiverso en formato de string.
+    * @returns array de string representando historial de eventos interdimensionales registrados en el multiverso.
+    */
    public eventHistoryString(): string[] {
       return this.eventHistory.map(event => event.description);
    }
 
+   /**
+    * Getter para obtener el gestor CRUD utilizado por el MultiverseManager para manejar las operaciones de creación, lectura, actualización y eliminación en la base de datos.
+    * @param crud - El gestor CRUD que se desea asignar al MultiverseManager.
+    */
    public set crudManager(crud: CRUD<BasicUniversalObject>) {
       this._crudManager = crud;
    }
@@ -277,6 +398,10 @@ export class MultiverseManager {
       return alerts;
    }
    
+   /**
+    * Genera un informe con las dimensiones activas en el multiverso, incluyendo su nivel tecnológico y el nivel tecnológico medio de todas las dimensiones activas.
+     * @returns Un string representando el informe de las dimensiones activas en el multiverso. Si no hay dimensiones activas, devuelve un mensaje indicando que no hay dimensiones activas en este momento en el multiverso.
+    */
    public reportDimensions(): string {
       const dimensions = database.data.dimensiones;
       if (dimensions.length === 0) return "No hay dimensiones en este momento en el multiverso.";
@@ -329,40 +454,79 @@ export class MultiverseManager {
       return report;
    }
 
-   public reportItems(): string {  // evento.typeOfEvent && 'itemId' in evento.typeOfEvent
-     const deployEvents = database.data.eventos.filter(evento => evento.typeOfEvent instanceof DeployEvent);
-       if (deployEvents.length === 0) {
-         return "No hay eventos de despliegue de inventos registrados en el multiverso.";
-       }
-       let deployedItems: { item: Item, locationId: string }[] = [];
-
-       for (const event of deployEvents) {
-         const deployDetails = event.typeOfEvent as DeployEvent;
-         const foundItem = database.data.inventos.find(inv => inv.id === deployDetails.itemId);
-
+   /**
+    * Genera un informe con los inventos desplegados en el multiverso, incluyendo su nivel de peligro y localización.
+    * @returns Un string representando el informe de los inventos desplegados en el multiverso. 
+   */
+   public reportItems(): string {  
+      const eventsData = database.data.eventos;
+      const deployedItems = new Map<string, string>();
+      for (const event of eventsData) {
+         const eventDesc = String((event as any)._description);
+         const eventObj = (event as any)._typeOfEvent;
+         
+         const itemId = eventObj._itemId;
+         const locationId = eventObj._locationId;
+         if (itemId && locationId) {
+            if (eventDesc.toLowerCase().includes("despliegue")){
+               deployedItems.set(itemId, locationId);
+            } else if (eventDesc.toLowerCase().includes("neutralizac")) {
+               deployedItems.delete(itemId);
+            }
+         }
+      }
+      let deployedItemsArray: {item: Item, locationId: string}[] = [];
+      for (const [itemId, locationId] of deployedItems.entries()){
+         const foundItem = database.data.inventos.find(inv => {
+            const invId = (inv as any)._id;
+            return invId === itemId;
+         });
          if (foundItem) {
-            deployedItems.push({ item: foundItem, locationId: deployDetails.locationId });
+            deployedItemsArray.push({item: foundItem, locationId});
          }
-       }
-
-       deployedItems.sort((a, b) => b.item.danger - a.item.danger);
-       
-       let report: string = "Inventos desplegados en el multiverso ordenados por nivel de peligro:\n";
-         for (const deployed of deployedItems) {
-           report += `Invento: ${deployed.item.name} - Nivel de peligro: ${deployed.item.danger}\n`;
-         }
-         return report;
+      }
+      if (deployedItemsArray.length === 0) return "No hay inventos desplegados en este momento en el multiverso.";
+      deployedItemsArray.sort((a, b) => {
+         const itemNameA = Number((a.item as any)._danger);
+         const itemNameB = Number((b.item as any)._danger);
+         return itemNameB - itemNameA;
+      });
+      let report: string = "Inventos desplegados en el multiverso:\n";
+      for (const deployed of deployedItemsArray) {
+         const itemName = (deployed.item as any)._name;
+         const itemDanger = (deployed.item as any)._danger;
+         report += `Invento: ${itemName} - Nivel de peligro: ${itemDanger} - Localización: ${deployed.locationId}\n`;
+      }
+      return report; 
    }
 
+   /**
+    * Genera un informe con los eventos de viajes interdimensionales registrados en el multiverso para un personaje específico.
+    * @param characterName - El nombre del personaje para el cual se desean obtener los eventos de viajes interdimensionales. Puede ser una coincidencia parcial.
+    * @returns Un string representando el informe de los eventos de viajes interdimensionales registrados en el multiverso para el personaje especificado. 
+   */
    public reportInterdimensionalTravels(characterName: string): string{
-      const travelEvents = database.data.eventos.filter(evento => evento.description.includes(`viajó`) && 
-      evento.description.toLowerCase().includes(characterName.toLowerCase()));
+      const travelEvents = database.data.eventos.filter(evento => {
+         const eventAnidado = (evento as any)._typeOfEvent;
+         let eventDesc = (evento as any)._description;
+         if (!eventDesc && eventAnidado){
+            eventDesc = eventAnidado._description;
+         }
+         eventDesc = String(eventDesc || "");
+         return eventDesc.toLowerCase().includes("viaj") && eventDesc.toLowerCase().includes(characterName.toLowerCase());
+      });
       if (travelEvents.length === 0) {
          return `No hay eventos de viajes interdimensionales registrados para este personaje`;
       }
       let report: string = `Viajes interdimensionales registrados para ${characterName}:\n`;
       for (let i = 0; i < travelEvents.length; i++) {
-         report += `${i + 1}. ${travelEvents[i].description}\n`;
+         const event = travelEvents[i];
+         const eventAnidado = (event as any)._typeOfEvent;
+         let eventDesc = (event as any)._description;
+         if (!eventDesc && eventAnidado){
+            eventDesc = eventAnidado._description;
+         }
+         report += `${i + 1}º ${eventDesc}\n`;
       }
       return report;
    }

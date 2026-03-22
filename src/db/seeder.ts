@@ -5,6 +5,10 @@ import { Character } from "../classes/character.js";
 import { Location } from "../classes/location.js";
 import { Item } from "../classes/item.js";
 
+/**
+ * 
+ * @returns - En caso de que la base de datos ya tenga informacion 
+ */
 export async function seedDatabase() {
   if (database.data.personajes.length > 0) {
     return;

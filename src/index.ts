@@ -20,13 +20,13 @@ import { Location } from './classes/location.js';
 import { LocationCRUD } from './classes/crud/locationCRUD.js';
 import { spec } from 'node:test/reporters';
 import { EventClass } from './classes/event.js';
+import { ItemType } from './types/itemType.js';
 
 
-// ==========================================
-// 1. SUBMENÚ: INFORMES GLOBALES (Manejo de Strings)
-// ==========================================
-// NOTA: Como tu Gestor devuelve 'strings' ya formateados y bonitos,
-// la consola solo tiene la responsabilidad de hacer un console.log(). ¡Así de fácil!
+/**
+ * Función para mostrar el menú de informes
+ * @param gestor Instancia del MultiverseManager para generar los informes
+ */
 async function menuInformes(gestor: MultiverseManager) {
     const prompt = promptSync();
     const respuesta = await prompts({
@@ -61,10 +61,10 @@ async function menuInformes(gestor: MultiverseManager) {
 }
 
 
-//==========================================
-//2. SUBMENU: GESTION BASICA (CRUD)
-//==========================================
-
+/**
+ * Función para mostrar el menú de gestión CRUD
+ * @param gestor Instancia del MultiverseManager para realizar las operaciones CRUD
+ */
 async function menuCRUD(gestor: MultiverseManager) {
   const respuesta = await prompts({
     type: 'select',
@@ -106,6 +106,10 @@ async function menuCRUD(gestor: MultiverseManager) {
   }
 }
 
+/**
+ * Función para mostrar el menú de gestión CRUD específico para Dimensiones
+ * @param gestor Instancia del MultiverseManager para realizar las operaciones CRUD de dimensiones
+ */
 async function menuCRUDDimension(gestor: MultiverseManager) {
     const prompt = promptSync();
     const respuesta = await prompts({
@@ -147,15 +151,15 @@ async function menuCRUDDimension(gestor: MultiverseManager) {
         }
         break;
     case 'del':
-        let deleteid: string | null = prompt("Introduce el ID de la dimensión");
+        let deleteid: string | null = prompt("Introduce el ID de la dimensión: ");
         let reason: string | null = prompt("¿Por qué se destruye la dimensión?: ");
         if (deleteid && reason) {
-          gestor.crudManager = new DimensionCRUD();
-          gestor.delete(deleteid);
           const destructionEvent = new DestructionEvent(deleteid, reason);
           const event = new EventClass(destructionEvent);
           event.register();
           gestor.addEvent(event); 
+          gestor.crudManager = new DimensionCRUD();
+          gestor.delete(deleteid);
         }
         break;
     case 'mod':
@@ -184,6 +188,10 @@ async function menuCRUDDimension(gestor: MultiverseManager) {
   }
 }
 
+/**
+ * Función para mostrar el menú de gestión CRUD específico para Personajes
+ * @param gestor Instancia del MultiverseManager para realizar las operaciones CRUD de personajes
+ */
 async function menuCRUDCharacter(gestor: MultiverseManager) {
     const prompt = promptSync();
     const respuesta = await prompts({
@@ -207,7 +215,7 @@ async function menuCRUDCharacter(gestor: MultiverseManager) {
         let affiliation: string | null = prompt("Introduzca la afiliación: ");
         let intelligenceLevel: number | null = Number(prompt("Introduzca el nivel de inteligencia: "));
         let description: string | null = prompt("Introduzca la descripción: ");
-        let species: string | null = prompt("Introduzca la especie: ");
+        let species: string | null = prompt("Introduzca el ID de la especie: ");
 
         if (characterid && name && status && affiliation && dimensionid && intelligenceLevel && description && species) {
             if (status != 'Vivo' && status != 'Muerto' && status != 'Desconocido' && status != 'Robot-sustituto') {
@@ -246,7 +254,7 @@ async function menuCRUDCharacter(gestor: MultiverseManager) {
         let newAffiliation: string | null = prompt("Introduzca la afiliación: ");
         let newIntelligenceLevel: number | null = Number(prompt("Introduzca el nivel de inteligencia: "));
         let newDescription: string | null = prompt("Introduzca la descripción: ");
-        let newSpecies: string | null = prompt("Introduzca la especie: ");
+        let newSpecies: string | null = prompt("Introduzca el ID de la especie: ");
 
         if (modid && newName && newStatus && newAffiliation && newDimensionid && newIntelligenceLevel && newDescription && newSpecies) {
             if (newStatus != 'Vivo' && newStatus != 'Muerto' && newStatus != 'Desconocido' && newStatus != 'Robot-sustituto') {
@@ -272,6 +280,10 @@ async function menuCRUDCharacter(gestor: MultiverseManager) {
   }
 }
 
+/**
+ * Función para mostrar el menú de gestión CRUD específico para Inventos
+ * @param gestor Instancia del MultiverseManager para realizar las operaciones CRUD de inventos
+ */
 async function menuCRUDItem(gestor: MultiverseManager) {
     const prompt = promptSync();
     const respuesta = await prompts({
@@ -318,14 +330,14 @@ async function menuCRUDItem(gestor: MultiverseManager) {
         break;
     case 'del':
         let deleteid: string | null = prompt("Introduce el ID del invento: ");
-        let locationidDel: string | null = prompt("Introduce el ID de la localización donde se despliega: ");
+        let locationidDel: string | null = prompt("Introduce el ID de la localización donde se neutraliza: ");
         if (deleteid && locationidDel) {
-          gestor.crudManager = new ItemCRUD();
-          gestor.delete(deleteid);
           const neutralizationEvent = new NeutralizationEvent(deleteid, locationidDel);
           const event = new EventClass(neutralizationEvent);
           event.register();
           gestor.addEvent(event);
+          gestor.crudManager = new ItemCRUD();
+          gestor.delete(deleteid);     
         }
         break;
     case 'mod':
@@ -358,7 +370,12 @@ async function menuCRUDItem(gestor: MultiverseManager) {
   }
 }
 
+/**
+ * Función para mostrar el menú de gestión CRUD específico para Localizaciones
+ * @param gestor Instancia del MultiverseManager para realizar las operaciones CRUD de localizaciones
+ */
 async function menuCRUDLocation(gestor: MultiverseManager) {
+    const prompt = promptSync();
     const respuesta = await prompts({
     type: 'select',
     name: 'tipo',
@@ -432,7 +449,12 @@ async function menuCRUDLocation(gestor: MultiverseManager) {
   }
 }
 
+/**
+ * Función para mostrar el menú de gestión CRUD específico para Especies
+ * @param gestor Instancia del MultiverseManager para realizar las operaciones CRUD de especies
+ */
 async function menuCRUDSpecies(gestor: MultiverseManager) {
+    const prompt = promptSync();
     const respuesta = await prompts({
     type: 'select',
     name: 'tipo',
@@ -506,6 +528,10 @@ async function menuCRUDSpecies(gestor: MultiverseManager) {
   }
 }
 
+/**
+ * Función para mostrar el menú de gestión CRUD específico para Eventos
+ * @param gestor Instancia del MultiverseManager para realizar las operaciones CRUD de eventos
+ */
 async function menuCRUDEvent(gestor: MultiverseManager) {
     const prompt = promptSync();
     const respuesta = await prompts({
@@ -540,6 +566,10 @@ async function menuCRUDEvent(gestor: MultiverseManager) {
   }
 }
 
+/**
+ * Función para mostrar el menú de consultas avanzadas
+ * @param gestor Instancia del MultiverseManager para realizar las consultas y filtros avanzados
+ */
 async function menuConsultas(gestor: MultiverseManager) {
     const respuesta = await prompts({
         type: 'select',
@@ -569,7 +599,13 @@ async function menuConsultas(gestor: MultiverseManager) {
     }
 }
 
+/**
+ * Función para mostrar el menú de consultas avanzadas específico para personajes
+ * @param gestor Instancia del MultiverseManager para realizar las consultas y filtros avanzados de personajes
+ */
 async function menuConsultaPersonajes(gestor: MultiverseManager) {
+    const prompt = promptSync(); // Instanciamos prompt
+    
     const respuesta = await prompts({
         type: 'select',
         name: 'filtro',
@@ -578,64 +614,159 @@ async function menuConsultaPersonajes(gestor: MultiverseManager) {
             { title: '1. Filtrar por dimensión de origen', value: 'dimension' },
             { title: '2. Filtrar por especie', value: 'species' },
             { title: '3. Filtrar por afiliación', value: 'affiliation' },
-            { title: '4. Filtar por estado (vivo/muerto/desconocido/robot-sustituto)', value: 'status' },
+            { title: '4. Filtar por estado (vivo/muerto...)', value: 'status' },
             { title: '5. Filtrar por nombre', value: 'name' },
             { title: 'Volver al menú anterior', value: 'volver' }
         ]
     });
 
-    switch (respuesta.filtro) {
-        case 'dimension':
-            let dimensionid: string | null = prompt("Introduce el ID de la dimensión de origen: ");
-            if (dimensionid) {
-                console.log(gestor.filterCharactersByDimension(dimensionid));
-            }
-            break;
-        case 'species':
-            let speciesName: string | null = prompt("Introduce el nombre de la especie: ");
-            if (speciesName) {
-                console.log(gestor.filterCharactersBySpecies(speciesName));
-            }
-            break;
-        case 'affiliation':
-            let affiliation: string | null = prompt("Introduce la afiliación: ");
-            if (affiliation) {
-                console.log(gestor.filterCharactersByAffiliation(affiliation));
-            }
-            break;
-        case 'status':
-            let status: string | null = prompt("Introduce el estado (vivo/muerto/desconocido/robot-sustituto): ");
-            let statusOp1: string | null = prompt("¿Quieres que la búsqueda sea por inteligencia? (s/n): ");
-            let statusOp2: string | null = prompt("¿Quieres que la búsqueda sea ascendente? (s/n): ");
-            if (status && statusOp1 && statusOp2) {
-                const sortByIntelligence = statusOp1.toLowerCase() === 's';
-                const op1Value = sortByIntelligence ? "intelligence" : "name";
-                const ascending = statusOp2.toLowerCase() === 's';
-                const op2Value = ascending ? "asc" : "desc";
-                console.log(gestor.consultCharacterByState(status, op1Value, op2Value));
-            }
-            break;
-        case 'name':
-            let name: string | null = prompt("Introduce el nombre o parte del nombre: ");
-            let op1: string | null = prompt("¿Quieres que la búsqueda sea por inteligencia? (s/n): ");
-            let op2: string | null = prompt("¿Quieres que la búsqueda sea ascendente? (s/n): ");
-            if (name && op1 && op2) {
-                const sortByIntelligence = op1.toLowerCase() === 's';
-                const op1Value = sortByIntelligence ? "intelligence" : "name";
-                const ascending = op2.toLowerCase() === 's';
-                const op2Value = ascending ? "asc" : "desc";
-                gestor.consultCharacterByName(name, op1Value, op2Value);
-            }
-            break;
-        default:
-            console.log("Volviendo al menú anterior...");
-            break;
+    if (respuesta.filtro === 'volver') return;
+
+    // PREGUNTAMOS LA ORDENACIÓN UNA SOLA VEZ PARA TODOS LOS FILTROS
+    let op1: string | null = prompt("¿Quieres que la búsqueda se ordene por inteligencia? (s/n): ");
+    let op2: string | null = prompt("¿Quieres que la búsqueda sea ascendente? (s/n): ");
+    
+    if (!op1 || !op2) return;
+
+    const op1Value: "intelligence" | "name" = op1.toLowerCase() === 's' ? "intelligence" : "name";
+    const op2Value: "asc" | "desc" = op2.toLowerCase() === 's' ? "asc" : "desc";
+
+    try {
+        let resultados: Character[] = [];
+
+        switch (respuesta.filtro) {
+            case 'dimension':
+                let dimensionid = prompt("Introduce el ID de la dimensión de origen: ");
+                if (dimensionid) resultados = gestor.consultCharacterByDimension(dimensionid, op1Value, op2Value);
+                break;
+            case 'species':
+                let speciesName = prompt("Introduce el nombre de la especie: ");
+                if (speciesName) resultados = gestor.consultCharacterBySpecies(speciesName, op1Value, op2Value);
+                break;
+            case 'affiliation':
+                let affiliation = prompt("Introduce la afiliación: ");
+                if (affiliation) resultados = gestor.consultCharacterByAffiliation(affiliation, op1Value, op2Value);
+                break;
+            case 'status':
+                let status = prompt("Introduce el estado (Vivo/Muerto/Desconocido/Robot-sustituto): ");
+                if (status) resultados = gestor.consultCharacterByState(status, op1Value, op2Value);
+                break;
+            case 'name':
+                let name = prompt("Introduce el nombre o parte del nombre: ");
+                if (name) resultados = gestor.consultCharacterByName(name, op1Value, op2Value);
+                break;
+        }
+
+        console.log("\n--- RESULTADOS DE LA BÚSQUEDA ---");
+        resultados.forEach(pj => {
+            const nombre = pj.name || (pj as any)._name;
+            const int = pj.intelligence || (pj as any)._intelligence;
+            console.log(`- ${nombre} (Inteligencia: ${int})`);
+        });
+        console.log("---------------------------------\n");
+
+    } catch (error: any) {
+         console.log(`\n Error: ${error.message}\n`);
     }
 }
 
-// ==========================================
-// 3. MENÚ PRINCIPAL Y ARRANQUE
-// ==========================================
+/**
+ * Función para mostrar el menú de consultas avanzadas específico para localizaciones
+ * @param gestor Instancia del MultiverseManager para realizar las consultas y filtros avanzados de localizaciones
+ */
+async function menuConsultaLocalizaciones(gestor: MultiverseManager) {
+    const prompt = promptSync();
+    const respuesta = await prompts({
+        type: 'select',
+        name: 'filtro',
+        message: '¿Qué filtro deseas aplicar a las localizaciones?',
+        choices: [
+            { title: '1. Buscar por Nombre', value: 'name' },
+            { title: '2. Buscar por Tipo', value: 'type' },
+            { title: '3. Buscar por Dimensión (ID)', value: 'dimension' },
+            { title: 'Volver', value: 'volver' }
+        ]
+    });
+
+    if (respuesta.filtro === 'volver') return;
+
+    try {
+        let resultados: Location[] = [];
+        if (respuesta.filtro === 'name') {
+            let name = prompt("Introduce el nombre: ");
+            if (name) resultados = gestor.consultLocationByName(name);
+        } else if (respuesta.filtro === 'type') {
+            let type = prompt("Introduce el tipo (Planeta, Estación espacial...): ");
+            if (type) resultados = gestor.consultLocationByType(type as any);
+        } else if (respuesta.filtro === 'dimension') {
+            let dimId = prompt("Introduce el ID de la dimensión: ");
+            if (dimId) resultados = gestor.consultLocationByDimension(dimId);
+        }
+
+        console.log("\n--- LOCALIZACIONES ENCONTRADAS ---");
+        resultados.forEach(loc => {
+            const nombre = loc.name || (loc as any)._name;
+            console.log(`- ${nombre}`);
+        });
+        console.log("----------------------------------\n");
+    } catch (error: any) {
+        console.log(`\n Error: ${error.message}\n`);
+    }
+}
+
+/**
+ * Función para mostrar el menú de consultas avanzadas específico para inventos
+ * @param gestor Instancia del MultiverseManager para realizar las consultas y filtros avanzados de inventos
+ */
+async function menuConsultaInventos(gestor: MultiverseManager) {
+    const prompt = promptSync();
+    const respuesta = await prompts({
+        type: 'select',
+        name: 'filtro',
+        message: '¿Qué filtro deseas aplicar a los inventos?',
+        choices: [
+            { title: '1. Buscar por Nombre', value: 'name' },
+            { title: '2. Buscar por Tipo', value: 'type' },
+            { title: '3. Buscar por Nombre del Inventor', value: 'inventor' },
+            { title: '4. Buscar por Nivel de Peligrosidad', value: 'danger' },
+            { title: 'Volver', value: 'volver' }
+        ]
+    });
+
+    if (respuesta.filtro === 'volver') return;
+
+    try {
+        let resultados: Item[] = [];
+        
+        if (respuesta.filtro === 'name') {
+            let name = prompt("Introduce el nombre: ");
+            if (name) resultados = gestor.consultItemByName(name);
+        } else if (respuesta.filtro === 'type') {
+            let type: ItemType = prompt("Introduce el tipo (Arma, Biotecnología...): ") as ItemType;
+            if (type) resultados = gestor.consultItemByType(type);
+        } else if (respuesta.filtro === 'inventor') {
+            let inv = prompt("Introduce el nombre del inventor (Ej: Rick): ");
+            if (inv) resultados = gestor.consultItemByInventor(inv);
+        } else if (respuesta.filtro === 'danger') {
+            let danger = prompt("Introduce el nivel exacto de peligro (número): ");
+            if (danger) resultados = gestor.consultItemByDanger(Number(danger));
+        }
+
+        console.log("\n--- INVENTOS ENCONTRADOS ---");
+        resultados.forEach(item => {
+            const nombre = item.name || (item as any)._name;
+            const peligro = item.danger || (item as any)._danger;
+            console.log(`- ${nombre} (Peligro: ${peligro})`);
+        });
+        console.log("----------------------------\n");
+    } catch (error: any) {
+        console.log(`\n Error: ${error.message}\n`);
+    }
+}
+
+/**
+ * Función principal que inicia el programa, muestra el menú principal y gestiona la interacción con el usuario
+ */
 async function main() {
     console.clear();
     console.log("==================================================");
@@ -690,19 +821,16 @@ async function main() {
 
             case 'consultas':
                 await menuConsultas(gestor);
-                console.log("\n[!] Módulo en construcción. Empezaremos con él pronto...\n");
                 break;
 
             case 'salir':
-            default: // Por si el usuario pulsa Ctrl+C para forzar la salida
+            default: 
                 salir = true;
-                console.log("\nApagando el portal... ¡Hasta la próxima, pedazo de Jerry!\n");
+                console.log("\nApagando el portal...\n");
                 break;
         }
     }
 }
 
-// ==========================================
-// ARRANQUE DE LA APLICACIÓN
-// ==========================================
+
 main();

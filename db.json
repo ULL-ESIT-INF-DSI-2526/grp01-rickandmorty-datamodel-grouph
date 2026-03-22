@@ -1189,10 +1189,10 @@
     },
     {
       "_id": "C-461",
-      "_name": "Dimension Paco",
-      "_description": "Casa Paco",
-      "_state": "Activa",
-      "_tecnologyLevel": 2
+      "_name": "casa paco",
+      "_description": "Casa paco destruida despues de pepe chiringo",
+      "_state": "Destruida",
+      "_tecnologyLevel": 5
     }
   ],
   "especies": [
@@ -2336,13 +2336,13 @@
       "_danger": 10
     },
     {
-      "_id": "I-16",
-      "_name": "Sable laser",
-      "_description": "Sable laser clasico",
+      "_id": "I-17",
+      "_name": "Maquina de creacion de clones malvados",
+      "_description": "\"Máquina que crea versiones malvadas de otros personajes",
       "_inventor": {
-        "_id": "C-01",
-        "_name": "Rick Sanchez",
-        "_description": "Un científico brillante pero alcohólico y cínico, conocido por sus aventuras interdimensionales y su relación complicada con su familia",
+        "_id": "C-12",
+        "_name": "Rick zombie",
+        "_description": "Una versión alternativa de Rick que se convirtió en un zombie después de ser infectado por un virus en una dimensión apocalíptica",
         "_Species": {
           "_id": "S-01",
           "_name": "Humano",
@@ -2365,18 +2365,104 @@
           "_averageLifespan": 80
         },
         "_dimension": {
-          "_id": "C-137",
-          "_name": "Dimensión Canónica",
-          "_description": "La dimensión original de Rick y Morty",
+          "_id": "H-321C",
+          "_name": "Dimensión desconocida",
+          "_description": "Una dimensión desconocida con misterios por descubrir",
           "_state": "Activa",
-          "_tecnologyLevel": 6
+          "_tecnologyLevel": 2
         },
-        "_state": "Vivo",
-        "_affiliation": "Familia Smith",
-        "_intelligence": 10
+        "_state": "Muerto",
+        "_affiliation": "Independiente",
+        "_intelligence": 3
+      },
+      "_type": "Biotecnología",
+      "_danger": 7
+    },
+    {
+      "_id": "I-18",
+      "_name": "Cronómetro de Neutrinos",
+      "_description": "Un cronometro normal que usa absurda cantidad de energia",
+      "_inventor": {
+        "_id": "C-13",
+        "_name": "Morty zombi",
+        "_description": "Una versión alternativa de Morty que se convirtió en un zombie después de ser infectado por un virus en una dimensión apocalíptica",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
+            },
+            "_population": 10000000000
+          },
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
+        },
+        "_dimension": {
+          "_id": "H-321C",
+          "_name": "Dimensión desconocida",
+          "_description": "Una dimensión desconocida con misterios por descubrir",
+          "_state": "Activa",
+          "_tecnologyLevel": 2
+        },
+        "_state": "Muerto",
+        "_affiliation": "Independiente",
+        "_intelligence": 2
+      },
+      "_type": "Objeto cotidiano absurdo",
+      "_danger": 1
+    },
+    {
+      "_id": "I-19",
+      "_name": "Pistola",
+      "_description": "Pistola normal",
+      "_inventor": {
+        "_id": "C-18",
+        "_name": "Abradolf Lincler",
+        "_description": "Un personaje que es una combinación genética de Abraham Lincoln y cierto personaje historico, conocido por su personalidad inestable y su relación complicada con los demás personajes",
+        "_Species": {
+          "_id": "S-01",
+          "_name": "Humano",
+          "_description": "La especie humana, caracterizada por su inteligencia y adaptabilidad",
+          "_originLocation": {
+            "_id": "L-01",
+            "_name": "Tierra (C-137)",
+            "_description": "El planeta de origen de Rick y Morty",
+            "_type": "Planeta",
+            "_dimension": {
+              "_id": "C-137",
+              "_name": "Dimensión Canónica",
+              "_description": "La dimensión original de Rick y Morty",
+              "_state": "Activa",
+              "_tecnologyLevel": 6
+            },
+            "_population": 10000000000
+          },
+          "_speciesType": "Humanoide",
+          "_averageLifespan": 80
+        },
+        "_dimension": {
+          "_id": "K-111",
+          "_name": "Dimensión de pesadilla",
+          "_description": "Una dimensión de pesadilla con criaturas aterradoras",
+          "_state": "Destruida",
+          "_tecnologyLevel": 1
+        },
+        "_state": "Muerto",
+        "_affiliation": "Independiente",
+        "_intelligence": 5
       },
       "_type": "Arma",
-      "_danger": 8
+      "_danger": 10
     }
   ],
   "eventos": [
@@ -2393,6 +2479,66 @@
       "_description": "Despliegue del artefacto Sable laser en la localización undefined",
       "_typeOfEvent": {
         "_itemId": "I-16",
+        "_locationId": "L-01"
+      }
+    },
+    {
+      "_description": "Despliegue del artefacto Maquina de creacion de clones en la localización undefined",
+      "_typeOfEvent": {
+        "_itemId": "I-17",
+        "_locationId": "L-17"
+      }
+    },
+    {
+      "_description": "Neutralización del artefacto undefined en la localización Tierra (C-137)",
+      "_typeOfEvent": {
+        "itemId": "I-16",
+        "locationId": "L-01"
+      }
+    },
+    {
+      "_description": "Rick Sanchez viajó a la dimensión P-777. Motivo del viaje: Rick quería romper la cuarta pared y conocer a Hornet de hollow knight silksong. Fecha: 22/3/2025, 0:00:00.",
+      "_typeOfEvent": {
+        "characterid": "C-01",
+        "destinationDimensionId": "P-777",
+        "date": "2025-03-22T00:00:00.000Z",
+        "reason": "Rick quería romper la cuarta pared y conocer a Hornet de hollow knight silksong"
+      }
+    },
+    {
+      "_description": "Rick Sanchez viajó a la dimensión C-137. Motivo del viaje: Viaje de regreso despues de conocer a Hornet. Fecha: 23/3/2023, 0:00:00.",
+      "_typeOfEvent": {
+        "characterid": "C-01",
+        "destinationDimensionId": "C-137",
+        "date": "2023-03-23T00:00:00.000Z",
+        "reason": "Viaje de regreso despues de conocer a Hornet"
+      }
+    },
+    {
+      "_description": "Despliegue del artefacto Cronómetro de Neutrinos en la localización Planeta de los insectos gigantes",
+      "_typeOfEvent": {
+        "_itemId": "I-18",
+        "_locationId": "L-15"
+      }
+    },
+    {
+      "_description": "Destrucción de la dimension C-461, como consecuencia de Por hacerle competencia a pepe chiringo",
+      "_typeOfEvent": {
+        "dimensionId": "C-461",
+        "paradox": "Por hacerle competencia a pepe chiringo"
+      }
+    },
+    {
+      "_description": "Creación de la dimension C-461, como consecuencia de Venganza",
+      "_typeOfEvent": {
+        "dimensionId": "C-461",
+        "paradox": "Venganza"
+      }
+    },
+    {
+      "_description": "Despliegue del artefacto Pistola en la localización Tierra (C-137)",
+      "_typeOfEvent": {
+        "_itemId": "I-19",
         "_locationId": "L-01"
       }
     }
